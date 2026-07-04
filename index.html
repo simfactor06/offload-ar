@@ -279,6 +279,13 @@
   .size-row{
     display:flex; gap:6px; flex-wrap:wrap;
   }
+  .size-note{
+    font-family:'Space Mono', monospace;
+    font-size:11px;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:.05em;
+  }
   .size-row select{
     font-family:'Space Mono', monospace;
     font-size:12px;
@@ -418,9 +425,11 @@
     }
 
     grid.innerHTML = list.map(p => {
-      const sizes = (p.sizes && p.sizes.length)
-        ? p.sizes.map(s => `<option value="${s}">Talle ${s}</option>`).join('')
-        : '<option value="">Consultar talles</option>';
+      const sizePicker = (p.sizes && p.sizes.length)
+        ? `<div class="size-row"><select id="size-${p.id}" ${p.available === false ? 'disabled' : ''}>
+            ${p.sizes.map(s => `<option value="${s}">Talle ${s}</option>`).join('')}
+          </select></div>`
+        : `<div class="size-note">Consultá talles disponibles</div>`;
 
       const media = p.image
         ? `<img src="${p.image}" alt="${p.name}" loading="lazy">`
@@ -445,11 +454,7 @@
           ${notes}
           <div class="card-foot">
             <div class="price">${money(p.price)}</div>
-            <div class="size-row">
-              <select id="size-${p.id}" ${p.available === false ? 'disabled' : ''}>
-                ${sizes}
-              </select>
-            </div>
+            ${sizePicker}
             <button class="btn btn-solid" ${p.available === false ? 'disabled' : ''}
               onclick="orderProduct('${p.id}')">
               ${p.available === false ? 'Sin stock' : 'Consultar por WhatsApp'}
