@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Offload.ar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16150F;
+    --bone:#F3EFE3;
+    --paper:#EAE4D2;
+    --red:#C8203D;
+    --green:#3D6B3F;
+    --line:rgba(22,21,15,.16);
+    --muted:#726F5E;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--bone);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    padding-bottom:80px;
+  }
+  header{
+    padding:20px 5vw;
+    border-bottom:1px solid var(--line);
+    display:flex; align-items:center; justify-content:space-between;
+    position:sticky; top:0; background:var(--bone); z-index:10;
+  }
+  header h1{
+    font-family:'Anton', sans-serif;
+    font-size:22px;
+  }
+  header button{
+    font-family:'Space Mono', monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    background:none;
+    border:1px solid var(--line);
+    padding:8px 12px;
+    cursor:pointer;
+  }
+  main{max-width:720px; margin:0 auto; padding:4vh 5vw;}
+
+  .card{
+    background:#fff;
+    border:1px solid var(--line);
+    padding:20px;
+    margin-bottom:18px;
+  }
+  .card h2{
+    font-family:'Anton', sans-serif;
+    font-size:18px;
+    margin-bottom:14px;
+  }
+  label{
+    display:block;
+    font-family:'Space Mono', monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--muted);
+    margin-bottom:6px;
+    margin-top:14px;
+  }
+  label:first-child{margin-top:0;}
+  input[type=text], input[type=number], input[type=password], select, textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid var(--line);
+    background:var(--bone);
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+  }
+  input[type=file]{
+    width:100%;
+    padding:12px 0;
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+  }
+  .hint{
+    font-size:12px;
+    color:var(--muted);
+    margin-top:6px;
+    line-height:1.5;
+  }
+  .sizes{
+    display:flex; flex-wrap:wrap; gap:8px; margin-top:4px;
+  }
+  .sizes label{
+    display:flex; align-items:center; gap:6px;
+    border:1px solid var(--line);
+    padding:8px 12px;
+    margin:0;
+    text-transform:none;
+    letter-spacing:0;
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    color:var(--ink);
+    cursor:pointer;
+  }
+  .sizes input{width:auto;}
+  .row{display:flex; gap:12px;}
+  .row > div{flex:1;}
+
+  .btn{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    padding:14px 18px;
+    border:1px solid var(--ink);
+    background:var(--ink);
+    color:var(--bone);
+    cursor:pointer;
+    width:100%;
+    margin-top:18px;
+  }
+  .btn:disabled{opacity:.5; cursor:wait;}
+  .btn-outline{
+    background:none; color:var(--ink);
+  }
+  .btn-danger{
+    background:none; color:var(--red); border-color:var(--red);
+  }
+
+  .status{
+    margin-top:12px;
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    padding:10px 12px;
+    display:none;
+  }
+  .status.show{display:block;}
+  .status.ok{background:#e4efe1; color:var(--green);}
+  .status.err{background:#f6e0e0; color:var(--red);}
+  .status.loading{background:var(--paper); color:var(--muted);}
+
+  .list-item{
+    display:flex; gap:14px; align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .list-item:last-child{border-bottom:none;}
+  .list-item img, .list-item .noimg{
+    width:56px; height:56px; object-fit:cover; flex-shrink:0;
+    background:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-size:9px; text-align:center; color:var(--muted);
+  }
+  .list-item .info{flex:1; min-width:0;}
+  .list-item .name{font-weight:700; font-size:14px;}
+  .list-item .meta{font-size:12px; color:var(--muted);}
+  .list-item .actions{display:flex; gap:8px;}
+  .list-item .actions button{
+    font-family:'Space Mono', monospace;
+    font-size:10px;
+    text-transform:uppercase;
+    border:1px solid var(--line);
+    background:none;
+    padding:6px 10px;
+    cursor:pointer;
+  }
+  .sold-tag{
+    font-family:'Space Mono', monospace;
+    font-size:9px;
+    text-transform:uppercase;
+    background:var(--red);
+    color:#fff;
+    padding:2px 6px;
+    margin-left:6px;
+  }
+  .setup-lock{
+    text-align:center;
+    padding:10vh 5vw;
+  }
+  .setup-lock h1{font-family:'Anton', sans-serif; font-size:26px; margin-bottom:10px;}
+  .setup-lock p{color:var(--muted); font-size:14px; margin-bottom:20px;}
+  #toggleSettings{
+    background:none; border:none; text-decoration:underline;
+    font-family:'Space Mono', monospace; font-size:11px;
+    color:var(--muted); cursor:pointer; margin-top:24px;
+  }
+</style>
+</head>
+<body>
+
+<div id="lockScreen" class="setup-lock" style="display:none;">
+  <h1>Configurar acceso</h1>
+  <p>Esto lo hace una sola vez la persona que armó la página.<br>Después queda guardado en este celular/computadora.</p>
+  <div class="card" style="text-align:left; max-width:420px; margin:0 auto;">
+    <label>Usuario y repositorio de GitHub</label>
+    <input type="text" id="setupRepo" placeholder="usuario/nombre-del-repo">
+    <div class="hint">Ejemplo: simfactor06/offload-ar</div>
+
+    <label>Rama</label>
+    <input type="text" id="setupBranch" value="main">
+
+    <label>Token de acceso (GitHub → Settings → Developer settings → Personal access tokens)</label>
+    <input type="password" id="setupToken" placeholder="ghp_xxxxxxxxxxxx">
+    <div class="hint">El token necesita permiso "repo". Se guarda solo en este navegador, nunca se comparte.</div>
+
+    <button class="btn" onclick="saveSetup()">Guardar y entrar</button>
+    <div class="status" id="setupStatus"></div>
+  </div>
+</div>
+
+<div id="app" style="display:none;">
+  <header>
+    <h1>Panel · Offload.ar</h1>
+    <button onclick="location.reload()">Actualizar</button>
+  </header>
+
+  <main>
+    <div class="card" id="formCard">
+      <h2 id="formTitle">Agregar camiseta</h2>
+      <form id="productForm" onsubmit="return false;">
+        <label>Foto</label>
+        <input type="file" id="fImage" accept="image/*">
+        <div class="hint">Sacala directo de la galería del celular. Si no cargás una foto nueva al editar, se mantiene la que ya tenía.</div>
+
+        <label>Nombre</label>
+        <input type="text" id="fName" placeholder="Ej: Los Pumas Titular 2024">
+
+        <label>Categoría</label>
+        <input type="text" id="fCategory" list="catList" placeholder="Ej: Selecciones, Clubes, Retro">
+        <datalist id="catList"></datalist>
+
+        <div class="row">
+          <div>
+            <label>Precio ($)</label>
+            <input type="number" id="fPrice" placeholder="45000">
+          </div>
+          <div>
+            <label>N° de camiseta (opcional)</label>
+            <input type="text" id="fNumber" placeholder="01">
+          </div>
+        </div>
+
+        <label>Talles disponibles</label>
+        <div class="sizes" id="sizeBoxes">
+          <label><input type="checkbox" value="S"> S</label>
+          <label><input type="checkbox" value="M"> M</label>
+          <label><input type="checkbox" value="L"> L</label>
+          <label><input type="checkbox" value="XL"> XL</label>
+          <label><input type="checkbox" value="XXL"> XXL</label>
+        </div>
+
+        <label>Notas (opcional)</label>
+        <textarea id="fNotes" rows="2" placeholder="Ej: cuello redondo, réplica hincha"></textarea>
+
+        <label style="display:flex; align-items:center; gap:8px; margin-top:16px;">
+          <input type="checkbox" id="fAvailable" checked style="width:auto;"> Disponible (tildado = hay stock)
+        </label>
+
+        <button class="btn" id="saveBtn" onclick="saveProduct()">Guardar camiseta</button>
+        <button class="btn btn-outline" id="cancelEditBtn" style="display:none;" onclick="cancelEdit()">Cancelar edición</button>
+        <div class="status" id="formStatus"></div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Camisetas cargadas</h2>
+      <div id="productList"><div class="hint">Cargando…</div></div>
+    </div>
+
+    <div class="card">
+      <h2>Datos de contacto</h2>
+      <label>Nombre de la tienda</label>
+      <input type="text" id="cfgName">
+      <label>Bajada (frase corta debajo del nombre)</label>
+      <input type="text" id="cfgTagline">
+      <label>WhatsApp (con código de país, sin +, sin espacios)</label>
+      <input type="text" id="cfgWhatsapp" placeholder="5493834040581">
+      <button class="btn" onclick="saveConfig()">Guardar contacto</button>
+      <div class="status" id="cfgStatus"></div>
+    </div>
+
+    <button id="toggleSettings" onclick="showSetup()">Cambiar repositorio / token</button>
+  </main>
+</div>
+
+<script>
+  const REPO_KEY = 'offload_admin_repo';
+  const BRANCH_KEY = 'offload_admin_branch';
+  const TOKEN_KEY = 'offload_admin_token';
+
+  let PRODUCTS = [];
+  let PRODUCTS_SHA = null;
+  let CONFIG_SHA = null;
+  let editingId = null;
+
+  function getSetup(){
+    return {
+      repo: localStorage.getItem(REPO_KEY) || '',
+      branch: localStorage.getItem(BRANCH_KEY) || 'main',
+      token: localStorage.getItem(TOKEN_KEY) || ''
+    };
+  }
+
+  function showSetup(){
+    const s = getSetup();
+    document.getElementById('setupRepo').value = s.repo;
+    document.getElementById('setupBranch').value = s.branch;
+    document.getElementById('setupToken').value = s.token;
+    document.getElementById('lockScreen').style.display = 'block';
+    document.getElementById('app').style.display = 'none';
+  }
+
+  function saveSetup(){
+    const repo = document.getElementById('setupRepo').value.trim();
+    const branch = document.getElementById('setupBranch').value.trim() || 'main';
+    const token = document.getElementById('setupToken').value.trim();
+    const st = document.getElementById('setupStatus');
+
+    if(!repo.includes('/') || !token){
+      st.className = 'status show err';
+      st.textContent = 'Completá usuario/repositorio y el token.';
+      return;
+    }
+    localStorage.setItem(REPO_KEY, repo);
+    localStorage.setItem(BRANCH_KEY, branch);
+    localStorage.setItem(TOKEN_KEY, token);
+    st.className = 'status show ok';
+    st.textContent = 'Guardado. Cargando panel…';
+    setTimeout(boot, 500);
+  }
+
+  function api(path){
+    const s = getSetup();
+    return `https://api.github.com/repos/${s.repo}/contents/${path}`;
+  }
+
+  function authHeaders(){
+    const s = getSetup();
+    return {
+      'Authorization': `token ${s.token}`,
+      'Accept': 'application/vnd.github+json'
+    };
+  }
+
+  function b64EncodeUnicode(str){
+    return btoa(unescape(encodeURIComponent(str)));
+  }
+  function b64DecodeUnicode(str){
+    return decodeURIComponent(escape(atob(str)));
+  }
+
+  async function ghGetFile(path){
+    const s = getSetup();
+    const res = await fetch(api(path) + `?ref=${s.branch}`, { headers: authHeaders() });
+    if(res.status === 404) return null;
+    if(!res.ok) throw new Error('No pude leer ' + path + ' (revisá el token/repo).');
+    return res.json();
+  }
+
+  async function ghPutFile(path, base64Content, sha, message){
+    const s = getSetup();
+    const body = {
+      message,
+      content: base64Content,
+      branch: s.branch
+    };
+    if(sha) body.sha = sha;
+    const res = await fetch(api(path), {
+      method: 'PUT',
+      headers: { ...authHeaders(), 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if(!res.ok){
+      const err = await res.json().catch(()=>({}));
+      throw new Error(err.message || 'GitHub rechazó el guardado.');
+    }
+    return res.json();
+  }
+
+  async function ghDeleteFile(path, sha, message){
+    const s = getSetup();
+    const res = await fetch(api(path), {
+      method: 'DELETE',
+      headers: { ...authHeaders(), 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, sha, branch: s.branch })
+    });
+    return res.ok;
+  }
+
+  function fileToBase64(file){
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result.split(',')[1]);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function slugify(str){
+    return str.toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+  }
+
+  function setStatus(el, type, text){
+    el.className = 'status show ' + type;
+    el.textContent = text;
+  }
+
+  async function loadProducts(){
+    const listEl = document.getElementById('productList');
+    try{
+      const file = await ghGetFile('data/products.json');
+      if(file){
+        PRODUCTS = JSON.parse(b64DecodeUnicode(file.content));
+        PRODUCTS_SHA = file.sha;
+      } else {
+        PRODUCTS = [];
+        PRODUCTS_SHA = null;
+      }
+      renderList();
+      renderCategoryList();
+    }catch(e){
+      listEl.innerHTML = `<div class="status show err">${e.message}</div>`;
+    }
+  }
+
+  function renderCategoryList(){
+    const cats = [...new Set(PRODUCTS.map(p => p.category).filter(Boolean))];
+    document.getElementById('catList').innerHTML = cats.map(c => `<option value="${c}">`).join('');
+  }
+
+  function renderList(){
+    const listEl = document.getElementById('productList');
+    if(!PRODUCTS.length){
+      listEl.innerHTML = '<div class="hint">Todavía no cargaste ninguna camiseta.</div>';
+      return;
+    }
+    listEl.innerHTML = PRODUCTS.map(p => `
+      <div class="list-item">
+        ${p.image ? `<img src="${p.image}" alt="">` : `<div class="noimg">sin foto</div>`}
+        <div class="info">
+          <div class="name">${p.name} ${p.available === false ? '<span class="sold-tag">Agotada</span>' : ''}</div>
+          <div class="meta">${p.category || 'Sin categoría'} · $${Number(p.price||0).toLocaleString('es-AR')}</div>
+        </div>
+        <div class="actions">
+          <button onclick="editProduct('${p.id}')">Editar</button>
+          <button onclick="deleteProduct('${p.id}')" style="color:#C8203D;">Borrar</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function resetForm(){
+    editingId = null;
+    document.getElementById('formTitle').textContent = 'Agregar camiseta';
+    document.getElementById('fImage').value = '';
+    document.getElementById('fName').value = '';
+    document.getElementById('fCategory').value = '';
+    document.getElementById('fPrice').value = '';
+    document.getElementById('fNumber').value = '';
+    document.getElementById('fNotes').value = '';
+    document.getElementById('fAvailable').checked = true;
+    document.querySelectorAll('#sizeBoxes input').forEach(cb => cb.checked = false);
+    document.getElementById('cancelEditBtn').style.display = 'none';
+    document.getElementById('saveBtn').textContent = 'Guardar camiseta';
+  }
+
+  window.cancelEdit = resetForm;
+
+  window.editProduct = function(id){
+    const p = PRODUCTS.find(x => x.id === id);
+    if(!p) return;
+    editingId = id;
+    document.getElementById('formTitle').textContent = 'Editar camiseta';
+    document.getElementById('fName').value = p.name || '';
+    document.getElementById('fCategory').value = p.category || '';
+    document.getElementById('fPrice').value = p.price || '';
+    document.getElementById('fNumber').value = p.number || '';
+    document.getElementById('fNotes').value = p.notes || '';
+    document.getElementById('fAvailable').checked = p.available !== false;
+    document.querySelectorAll('#sizeBoxes input').forEach(cb => {
+      cb.checked = (p.sizes || []).includes(cb.value);
+    });
+    document.getElementById('cancelEditBtn').style.display = 'block';
+    document.getElementById('saveBtn').textContent = 'Guardar cambios';
+    window.scrollTo({top:0, behavior:'smooth'});
+  };
+
+  window.deleteProduct = async function(id){
+    const p = PRODUCTS.find(x => x.id === id);
+    if(!p) return;
+    if(!confirm(`¿Borrar "${p.name}"? No se puede deshacer.`)) return;
+    PRODUCTS = PRODUCTS.filter(x => x.id !== id);
+    await persistProducts(`Borra ${p.name}`);
+  };
+
+  async function persistProducts(message){
+    const listStatus = document.getElementById('formStatus');
+    setStatus(listStatus, 'loading', 'Guardando en GitHub…');
+    try{
+      const content = b64EncodeUnicode(JSON.stringify(PRODUCTS, null, 2));
+      const result = await ghPutFile('data/products.json', content, PRODUCTS_SHA, message);
+      PRODUCTS_SHA = result.content.sha;
+      renderList();
+      renderCategoryList();
+      setStatus(listStatus, 'ok', 'Guardado ✓ — puede tardar ~1 minuto en verse en la página.');
+    }catch(e){
+      setStatus(listStatus, 'err', 'Error: ' + e.message);
+    }
+  }
+
+  window.saveProduct = async function(){
+    const btn = document.getElementById('saveBtn');
+    const st = document.getElementById('formStatus');
+    const name = document.getElementById('fName').value.trim();
+    const price = document.getElementById('fPrice').value;
+
+    if(!name || !price){
+      setStatus(st, 'err', 'Poné al menos el nombre y el precio.');
+      return;
+    }
+
+    btn.disabled = true;
+    setStatus(st, 'loading', 'Guardando…');
+
+    try{
+      let imagePath = null;
+      const fileInput = document.getElementById('fImage');
+
+      if(fileInput.files && fileInput.files[0]){
+        setStatus(st, 'loading', 'Subiendo foto…');
+        const file = fileInput.files[0];
+        const base64 = await fileToBase64(file);
+        const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
+        const filename = `${Date.now()}-${slugify(name)}.${ext}`;
+        imagePath = `images/${filename}`;
+        await ghPutFile(imagePath, base64, null, `Sube foto de ${name}`);
+      }
+
+      const sizes = [...document.querySelectorAll('#sizeBoxes input:checked')].map(cb => cb.value);
+      const s = getSetup();
+      const rawUrl = imagePath
+        ? `https://raw.githubusercontent.com/${s.repo}/${s.branch}/${imagePath}`
+        : null;
+
+      const data = {
+        id: editingId || (Date.now().toString(36)),
+        number: document.getElementById('fNumber').value.trim(),
+        name,
+        category: document.getElementById('fCategory').value.trim(),
+        price: Number(price),
+        sizes,
+        notes: document.getElementById('fNotes').value.trim(),
+        available: document.getElementById('fAvailable').checked,
+        image: rawUrl || (editingId ? (PRODUCTS.find(p => p.id === editingId)?.image || '') : '')
+      };
+
+      if(editingId){
+        PRODUCTS = PRODUCTS.map(p => p.id === editingId ? data : p);
+      } else {
+        PRODUCTS.push(data);
+      }
+
+      setStatus(st, 'loading', 'Guardando catálogo…');
+      const content = b64EncodeUnicode(JSON.stringify(PRODUCTS, null, 2));
+      const result = await ghPutFile('data/products.json', content, PRODUCTS_SHA, `${editingId ? 'Edita' : 'Agrega'} ${name}`);
+      PRODUCTS_SHA = result.content.sha;
+
+      setStatus(st, 'ok', 'Guardado ✓ — puede tardar ~1 minuto en verse en la página.');
+      renderList();
+      renderCategoryList();
+      resetForm();
+    }catch(e){
+      setStatus(st, 'err', 'Error: ' + e.message);
+    }finally{
+      btn.disabled = false;
+    }
+  };
+
+  async function loadConfig(){
+    try{
+      const file = await ghGetFile('data/config.json');
+      if(file){
+        const cfg = JSON.parse(b64DecodeUnicode(file.content));
+        CONFIG_SHA = file.sha;
+        document.getElementById('cfgName').value = cfg.storeName || '';
+        document.getElementById('cfgTagline').value = cfg.tagline || '';
+        document.getElementById('cfgWhatsapp').value = cfg.whatsappNumber || '';
+      }
+    }catch(e){
+      console.error(e);
+    }
+  }
+
+  window.saveConfig = async function(){
+    const st = document.getElementById('cfgStatus');
+    setStatus(st, 'loading', 'Guardando…');
+    try{
+      const cfg = {
+        storeName: document.getElementById('cfgName').value.trim(),
+        tagline: document.getElementById('cfgTagline').value.trim(),
+        whatsappNumber: document.getElementById('cfgWhatsapp').value.trim().replace(/\D/g,'')
+      };
+      const content = b64EncodeUnicode(JSON.stringify(cfg, null, 2));
+      const result = await ghPutFile('data/config.json', content, CONFIG_SHA, 'Actualiza datos de contacto');
+      CONFIG_SHA = result.content.sha;
+      setStatus(st, 'ok', 'Guardado ✓');
+    }catch(e){
+      setStatus(st, 'err', 'Error: ' + e.message);
+    }
+  };
+
+  async function boot(){
+    const s = getSetup();
+    if(!s.repo || !s.token){
+      showSetup();
+      return;
+    }
+    document.getElementById('lockScreen').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    await Promise.all([loadProducts(), loadConfig()]);
+  }
+
+  boot();
+</script>
+</body>
+</html>
