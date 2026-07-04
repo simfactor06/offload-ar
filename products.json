@@ -1,0 +1,24 @@
+[
+  {
+    "id": "demo-1",
+    "number": "01",
+    "name": "Los Pumas Titular 2024",
+    "category": "Selecciones",
+    "price": 45000,
+    "sizes": ["S", "M", "L", "XL"],
+    "image": "",
+    "available": true,
+    "notes": "Réplica hincha, cuello redondo"
+  },
+  {
+    "id": "demo-2",
+    "number": "02",
+    "name": "All Blacks Alternativa",
+    "category": "Selecciones",
+    "price": 48000,
+    "sizes": ["M", "L", "XL", "XXL"],
+    "image": "",
+    "available": true,
+    "notes": ""
+  }
+]

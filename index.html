@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offload.ar — Camisetas de Rugby</title>
+<meta name="description" content="Camisetas de rugby de selecciones y clubes. Consultá stock y precio por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16150F;
+    --bone:#F3EFE3;
+    --paper:#EAE4D2;
+    --red:#C8203D;
+    --moss:#454F3C;
+    --line:rgba(22,21,15,.14);
+    --muted:#726F5E;
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bone);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+  a{color:inherit;}
+  img{display:block; max-width:100%;}
+
+  /* ---------- focus ---------- */
+  a:focus-visible, button:focus-visible, select:focus-visible{
+    outline:2px solid var(--red); outline-offset:2px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:20px 6vw;
+    border-bottom:1px solid var(--line);
+    position:sticky; top:0; z-index:20;
+    background:var(--bone);
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand img{height:44px; width:44px; border-radius:50%; object-fit:cover;}
+  .brand-text{display:flex; flex-direction:column; line-height:1;}
+  .brand-text b{
+    font-family:'Anton', sans-serif;
+    font-size:20px;
+    letter-spacing:0.02em;
+  }
+  .brand-text span{
+    font-family:'Space Mono', monospace;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--muted);
+    margin-top:2px;
+  }
+  .wa-header{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    text-decoration:none;
+    border:1px solid var(--ink);
+    padding:10px 16px;
+    white-space:nowrap;
+    transition:background .2s, color .2s;
+  }
+  .wa-header:hover{background:var(--ink); color:var(--bone);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:9vh 6vw 7vh;
+    text-align:center;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero:before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(180deg, transparent, transparent 78px, var(--line) 78px, var(--line) 79px);
+    opacity:.5;
+    pointer-events:none;
+  }
+  .eyebrow{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    color:var(--red);
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(38px, 8vw, 88px);
+    line-height:0.92;
+    letter-spacing:-0.01em;
+    max-width:18ch;
+    margin:0 auto;
+  }
+  h1 em{font-style:normal; color:var(--red);}
+  .hero p{
+    margin:22px auto 0;
+    max-width:44ch;
+    color:var(--muted);
+    font-size:16px;
+    line-height:1.6;
+  }
+  .hero-actions{
+    margin-top:34px;
+    display:flex;
+    gap:14px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .btn{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    text-decoration:none;
+    padding:14px 22px;
+    border:1px solid var(--ink);
+    transition:transform .15s, background .2s, color .2s;
+    display:inline-block;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-solid{background:var(--ink); color:var(--bone);}
+  .btn-solid:hover{background:var(--red); border-color:var(--red);}
+  .btn-ghost:hover{background:var(--ink); color:var(--bone);}
+
+  /* ---------- Filters ---------- */
+  .filters{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    padding:26px 6vw;
+    border-bottom:1px solid var(--line);
+    position:sticky; top:81px; z-index:15;
+    background:var(--bone);
+  }
+  .chip{
+    font-family:'Space Mono', monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    padding:8px 14px;
+    border:1px solid var(--line);
+    background:transparent;
+    cursor:pointer;
+    color:var(--ink);
+    transition:background .2s, border-color .2s, color .2s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--ink); color:var(--bone); border-color:var(--ink);
+  }
+  .chip:hover{border-color:var(--ink);}
+
+  /* ---------- Catalog ---------- */
+  .catalog{
+    padding:6vh 6vw 12vh;
+    max-width:1400px;
+    margin:0 auto;
+  }
+  .catalog-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    margin-bottom:34px; flex-wrap:wrap; gap:8px;
+  }
+  .catalog-head h2{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(26px,4vw,40px);
+  }
+  .count{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));
+    gap:2px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .card{
+    background:var(--bone);
+    display:flex;
+    flex-direction:column;
+    position:relative;
+  }
+  .card-media{
+    position:relative;
+    aspect-ratio:4/5;
+    background:var(--paper);
+    overflow:hidden;
+  }
+  .card-media img{
+    width:100%; height:100%; object-fit:cover;
+    transition:transform .5s ease;
+  }
+  .card:hover .card-media img{transform:scale(1.04);}
+  .no-photo{
+    width:100%; height:100%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Space Mono', monospace;
+    font-size:11px;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    text-align:center;
+    padding:10px;
+  }
+  .number-badge{
+    position:absolute; top:10px; left:10px;
+    font-family:'Anton', sans-serif;
+    font-size:15px;
+    background:var(--ink);
+    color:var(--bone);
+    width:32px; height:32px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .sold-badge{
+    position:absolute; inset:0;
+    background:rgba(22,21,15,.62);
+    color:var(--bone);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Space Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-size:13px;
+  }
+  .card-body{
+    padding:16px 16px 18px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    flex:1;
+  }
+  .card-cat{
+    font-family:'Space Mono', monospace;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--muted);
+  }
+  .card-name{
+    font-family:'Anton', sans-serif;
+    font-size:19px;
+    line-height:1.15;
+  }
+  .card-notes{font-size:13px; color:var(--muted);}
+  .card-foot{
+    margin-top:auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding-top:6px;
+  }
+  .price{
+    font-family:'Space Mono', monospace;
+    font-weight:700;
+    font-size:18px;
+  }
+  .size-row{
+    display:flex; gap:6px; flex-wrap:wrap;
+  }
+  .size-row select{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    padding:8px 10px;
+    border:1px solid var(--line);
+    background:var(--bone);
+    color:var(--ink);
+    width:100%;
+  }
+  .card .btn{
+    text-align:center;
+    font-size:11px;
+    padding:12px 14px;
+  }
+  .empty{
+    grid-column:1/-1;
+    padding:8vh 2vw;
+    text-align:center;
+    color:var(--muted);
+    font-family:'Space Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:13px;
+    background:var(--bone);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding:6vh 6vw;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:14px;
+    font-family:'Space Mono', monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--muted);
+  }
+  footer a{text-decoration:underline; text-underline-offset:3px;}
+
+  @media (max-width:640px){
+    header{padding:16px 5vw;}
+    .filters{top:76px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img src="assets/logo.png" alt="Logo Offload.ar">
+    <div class="brand-text">
+      <b id="storeName">OFFLOAD.AR</b>
+      <span id="storeTagline">Camisetas de rugby</span>
+    </div>
+  </div>
+  <a class="wa-header" id="waHeader" href="#" target="_blank" rel="noopener">Escribinos →</a>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">Selecciones · Clubes · Retro</div>
+  <h1>Camisetas que <em>se ganan</em> en la cancha.</h1>
+  <p>Réplicas de selecciones y clubes de rugby. Consultá stock, talle y precio directo por WhatsApp.</p>
+  <div class="hero-actions">
+    <a class="btn btn-solid" href="#catalogo">Ver catálogo</a>
+    <a class="btn btn-ghost" id="waHero" href="#" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+  </div>
+</section>
+
+<div class="filters" id="filters"></div>
+
+<main class="catalog" id="catalogo">
+  <div class="catalog-head">
+    <h2>Catálogo</h2>
+    <span class="count" id="countLabel"></span>
+  </div>
+  <div class="grid" id="grid">
+    <div class="empty">Cargando camisetas…</div>
+  </div>
+</main>
+
+<footer>
+  <span>© <span id="year"></span> <span id="storeNameFoot">Offload.ar</span></span>
+  <a id="waFoot" href="#" target="_blank" rel="noopener">Pedidos por WhatsApp</a>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  let CONFIG = { storeName: "Offload.ar", tagline: "Camisetas de rugby", whatsappNumber: "" };
+  let PRODUCTS = [];
+  let activeCategory = "Todas";
+
+  function waLink(text){
+    const num = CONFIG.whatsappNumber.replace(/\D/g,'');
+    return `https://wa.me/${num}?text=${encodeURIComponent(text)}`;
+  }
+
+  function money(n){
+    return '$' + Number(n).toLocaleString('es-AR');
+  }
+
+  function renderFilters(){
+    const cats = ["Todas", ...new Set(PRODUCTS.map(p => p.category).filter(Boolean))];
+    const box = document.getElementById('filters');
+    box.innerHTML = '';
+    cats.forEach(cat => {
+      const b = document.createElement('button');
+      b.className = 'chip';
+      b.type = 'button';
+      b.textContent = cat;
+      b.setAttribute('aria-pressed', cat === activeCategory ? 'true' : 'false');
+      b.addEventListener('click', () => {
+        activeCategory = cat;
+        renderFilters();
+        renderGrid();
+      });
+      box.appendChild(b);
+    });
+  }
+
+  function renderGrid(){
+    const grid = document.getElementById('grid');
+    const list = activeCategory === "Todas"
+      ? PRODUCTS
+      : PRODUCTS.filter(p => p.category === activeCategory);
+
+    document.getElementById('countLabel').textContent =
+      list.length + (list.length === 1 ? ' camiseta' : ' camisetas');
+
+    if(!list.length){
+      grid.innerHTML = '<div class="empty">Todavía no hay camisetas cargadas en esta categoría.</div>';
+      return;
+    }
+
+    grid.innerHTML = list.map(p => {
+      const sizes = (p.sizes && p.sizes.length)
+        ? p.sizes.map(s => `<option value="${s}">Talle ${s}</option>`).join('')
+        : '<option value="">Consultar talles</option>';
+
+      const media = p.image
+        ? `<img src="${p.image}" alt="${p.name}" loading="lazy">`
+        : `<div class="no-photo">Foto próximamente</div>`;
+
+      const sold = p.available === false
+        ? `<div class="sold-badge">Agotada</div>`
+        : '';
+
+      const notes = p.notes ? `<div class="card-notes">${p.notes}</div>` : '';
+
+      return `
+      <article class="card">
+        <div class="card-media">
+          ${media}
+          ${p.number ? `<div class="number-badge">${p.number}</div>` : ''}
+          ${sold}
+        </div>
+        <div class="card-body">
+          <div class="card-cat">${p.category || ''}</div>
+          <div class="card-name">${p.name}</div>
+          ${notes}
+          <div class="card-foot">
+            <div class="price">${money(p.price)}</div>
+            <div class="size-row">
+              <select id="size-${p.id}" ${p.available === false ? 'disabled' : ''}>
+                ${sizes}
+              </select>
+            </div>
+            <button class="btn btn-solid" ${p.available === false ? 'disabled' : ''}
+              onclick="orderProduct('${p.id}')">
+              ${p.available === false ? 'Sin stock' : 'Consultar por WhatsApp'}
+            </button>
+          </div>
+        </div>
+      </article>`;
+    }).join('');
+  }
+
+  window.orderProduct = function(id){
+    const p = PRODUCTS.find(x => x.id === id);
+    if(!p) return;
+    const sizeSelect = document.getElementById('size-' + id);
+    const size = sizeSelect ? sizeSelect.value : '';
+    const msg = `Hola! Te consulto por la camiseta "${p.name}"${size ? ' talle ' + size : ''}. ¿Sigue disponible?`;
+    window.open(waLink(msg), '_blank');
+  };
+
+  async function init(){
+    try{
+      const [cfgRes, prodRes] = await Promise.all([
+        fetch('data/config.json?t=' + Date.now()),
+        fetch('data/products.json?t=' + Date.now())
+      ]);
+      CONFIG = await cfgRes.json();
+      PRODUCTS = await prodRes.json();
+    }catch(e){
+      console.error('No se pudo cargar el catálogo', e);
+    }
+
+    document.getElementById('storeName').textContent = (CONFIG.storeName || 'Offload.ar').toUpperCase();
+    document.getElementById('storeNameFoot').textContent = CONFIG.storeName || 'Offload.ar';
+    document.getElementById('storeTagline').textContent = CONFIG.tagline || '';
+
+    const genericMsg = `Hola! Quería consultar por las camisetas de rugby.`;
+    document.getElementById('waHeader').href = waLink(genericMsg);
+    document.getElementById('waHero').href = waLink(genericMsg);
+    document.getElementById('waFoot').href = waLink(genericMsg);
+
+    renderFilters();
+    renderGrid();
+  }
+
+  init();
+</script>
+</body>
+</html>
