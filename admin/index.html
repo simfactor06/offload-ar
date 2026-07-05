@@ -189,21 +189,13 @@
 <body>
 
 <div id="lockScreen" class="setup-lock" style="display:none;">
-  <h1>Configurar acceso</h1>
-  <p>Esto lo hace una sola vez la persona que armó la página.<br>Después queda guardado en este celular/computadora.</p>
+  <h1>Ingresá la contraseña</h1>
+  <p>Pedísela a la persona que armó la tienda.<br>Una vez que la pongas, queda guardada en este celular/computadora.</p>
   <div class="card" style="text-align:left; max-width:420px; margin:0 auto;">
-    <label>Usuario y repositorio de GitHub</label>
-    <input type="text" id="setupRepo" placeholder="usuario/nombre-del-repo">
-    <div class="hint">Ejemplo: simfactor06/offload-ar</div>
+    <label>Contraseña</label>
+    <input type="password" id="setupPassword" placeholder="••••••••">
 
-    <label>Rama</label>
-    <input type="text" id="setupBranch" value="main">
-
-    <label>Token de acceso (GitHub → Settings → Developer settings → Personal access tokens)</label>
-    <input type="password" id="setupToken" placeholder="ghp_xxxxxxxxxxxx">
-    <div class="hint">El token necesita permiso "repo". Se guarda solo en este navegador, nunca se comparte.</div>
-
-    <button class="btn" onclick="saveSetup()">Guardar y entrar</button>
+    <button class="btn" onclick="saveSetup()">Entrar</button>
     <div class="status" id="setupStatus"></div>
   </div>
 </div>
@@ -279,7 +271,6 @@
       <div class="status" id="cfgStatus"></div>
     </div>
 
-    <button id="toggleSettings" onclick="showSetup()">Cambiar repositorio / token</button>
   </main>
 </div>
 
@@ -302,31 +293,69 @@
   }
 
   function showSetup(){
-    const s = getSetup();
-    document.getElementById('setupRepo').value = s.repo;
-    document.getElementById('setupBranch').value = s.branch;
-    document.getElementById('setupToken').value = s.token;
+    document.getElementById('setupPassword').value = '';
+    document.getElementById('setupStatus').className = 'status';
     document.getElementById('lockScreen').style.display = 'block';
     document.getElementById('app').style.display = 'none';
   }
 
-  function saveSetup(){
-    const repo = document.getElementById('setupRepo').value.trim();
-    const branch = document.getElementById('setupBranch').value.trim() || 'main';
-    const token = document.getElementById('setupToken').value.trim();
+  function b64ToBuf(b64){
+    const binary = atob(b64);
+    const bytes = new Uint8Array(binary.length);
+    for(let i=0; i<binary.length; i++) bytes[i] = binary.charCodeAt(i);
+    return bytes.buffer;
+  }
+
+  async function deriveKey(password, saltBuf){
+    const enc = new TextEncoder();
+    const keyMaterial = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+    return crypto.subtle.deriveKey(
+      { name:'PBKDF2', salt: saltBuf, iterations:150000, hash:'SHA-256' },
+      keyMaterial,
+      { name:'AES-GCM', length:256 },
+      false,
+      ['decrypt']
+    );
+  }
+
+  async function saveSetup(){
+    const password = document.getElementById('setupPassword').value;
     const st = document.getElementById('setupStatus');
 
-    if(!repo.includes('/') || !token){
+    if(!password){
       st.className = 'status show err';
-      st.textContent = 'Completá usuario/repositorio y el token.';
+      st.textContent = 'Escribí la contraseña.';
       return;
     }
-    localStorage.setItem(REPO_KEY, repo);
-    localStorage.setItem(BRANCH_KEY, branch);
-    localStorage.setItem(TOKEN_KEY, token);
-    st.className = 'status show ok';
-    st.textContent = 'Guardado. Cargando panel…';
-    setTimeout(boot, 500);
+
+    st.className = 'status show loading';
+    st.textContent = 'Verificando…';
+
+    try{
+      const res = await fetch('/data/access.json?t=' + Date.now());
+      if(!res.ok) throw new Error('no-access-file');
+      const access = await res.json();
+
+      const salt = b64ToBuf(access.salt);
+      const iv = b64ToBuf(access.iv);
+      const cipher = b64ToBuf(access.cipher);
+      const key = await deriveKey(password, salt);
+      const plainBuf = await crypto.subtle.decrypt({ name:'AES-GCM', iv }, key, cipher);
+      const data = JSON.parse(new TextDecoder().decode(plainBuf));
+
+      localStorage.setItem(REPO_KEY, data.repo);
+      localStorage.setItem(BRANCH_KEY, data.branch || 'main');
+      localStorage.setItem(TOKEN_KEY, data.token);
+
+      st.className = 'status show ok';
+      st.textContent = 'Contraseña correcta. Cargando panel…';
+      setTimeout(boot, 400);
+    }catch(e){
+      st.className = 'status show err';
+      st.textContent = e.message === 'no-access-file'
+        ? 'Todavía no se generó el acceso. Avisale a quien armó la tienda.'
+        : 'Contraseña incorrecta.';
+    }
   }
 
   function api(path){
