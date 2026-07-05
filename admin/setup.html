@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generar acceso — solo para vos</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#16150F; --bone:#F3EFE3; --red:#C8203D; --green:#3D6B3F; --line:rgba(22,21,15,.16); --muted:#726F5E; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--bone); color:var(--ink); font-family:'Inter', sans-serif; padding:5vh 5vw;}
+  .wrap{max-width:560px; margin:0 auto;}
+  h1{font-family:'Anton', sans-serif; font-size:24px; margin-bottom:8px;}
+  .warn{
+    background:#f6e0e0; color:var(--red); padding:12px 14px; font-size:13px; margin-bottom:24px;
+    font-family:'Space Mono', monospace; line-height:1.6;
+  }
+  .card{background:#fff; border:1px solid var(--line); padding:20px; margin-bottom:18px;}
+  label{
+    display:block; font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:.06em; color:var(--muted); margin-bottom:6px; margin-top:14px;
+  }
+  label:first-child{margin-top:0;}
+  input{
+    width:100%; padding:12px; border:1px solid var(--line); background:var(--bone);
+    font-family:'Inter', sans-serif; font-size:14px;
+  }
+  .hint{font-size:12px; color:var(--muted); margin-top:6px; line-height:1.5;}
+  .btn{
+    font-family:'Space Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:.08em;
+    padding:14px 18px; border:1px solid var(--ink); background:var(--ink); color:var(--bone);
+    cursor:pointer; width:100%; margin-top:18px;
+  }
+  textarea{
+    width:100%; min-height:140px; margin-top:14px; padding:12px; border:1px solid var(--line);
+    font-family:'Space Mono', monospace; font-size:12px; background:var(--bone);
+  }
+  .status{margin-top:12px; font-family:'Space Mono', monospace; font-size:12px; padding:10px 12px; display:none;}
+  .status.show{display:block;}
+  .status.ok{background:#e4efe1; color:var(--green);}
+  .status.err{background:#f6e0e0; color:var(--red);}
+  .copybtn{
+    margin-top:10px; font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
+    background:none; border:1px solid var(--ink); padding:8px 12px; cursor:pointer;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Generar código de acceso</h1>
+  <div class="warn">
+    Esta página es solo para vos (quien armó el sitio). No la compartas ni la dejes linkeada en ningún lado visible.
+    Genera un archivo que reemplaza al token de GitHub por una contraseña simple para tu amigo.
+  </div>
+
+  <div class="card">
+    <label>Usuario y repositorio de GitHub</label>
+    <input type="text" id="repo" placeholder="simfactor06/offload-ar">
+
+    <label>Rama</label>
+    <input type="text" id="branch" value="main">
+
+    <label>Token de GitHub (el mismo que usaste vos)</label>
+    <input type="password" id="token" placeholder="ghp_xxxxxxxxxxxx">
+
+    <label>Contraseña que le vas a dar a tu amigo</label>
+    <input type="password" id="password" placeholder="Elegí algo simple pero no obvio">
+
+    <label>Repetí la contraseña</label>
+    <input type="password" id="password2" placeholder="Repetir">
+
+    <button class="btn" onclick="generate()">Generar código</button>
+    <div class="status" id="status"></div>
+  </div>
+
+  <div class="card" id="resultCard" style="display:none;">
+    <label>Contenido para pegar en <code>data/access.json</code></label>
+    <textarea id="resultBox" readonly></textarea>
+    <button class="copybtn" onclick="copyResult()">Copiar</button>
+    <div class="hint">
+      Subí este contenido como el archivo <b>data/access.json</b> en tu repo (reemplazando el que exista).
+      Guardá la contraseña en un lugar seguro — si la perdés, tenés que generar este código de nuevo con el mismo token.
+    </div>
+  </div>
+</div>
+
+<script>
+  function bufToB64(buf){
+    let binary = '';
+    const bytes = new Uint8Array(buf);
+    for(let i=0; i<bytes.byteLength; i++) binary += String.fromCharCode(bytes[i]);
+    return btoa(binary);
+  }
+
+  async function deriveKey(password, salt){
+    const enc = new TextEncoder();
+    const keyMaterial = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+    return crypto.subtle.deriveKey(
+      { name:'PBKDF2', salt, iterations:150000, hash:'SHA-256' },
+      keyMaterial,
+      { name:'AES-GCM', length:256 },
+      false,
+      ['encrypt']
+    );
+  }
+
+  async function generate(){
+    const repo = document.getElementById('repo').value.trim();
+    const branch = document.getElementById('branch').value.trim() || 'main';
+    const token = document.getElementById('token').value.trim();
+    const password = document.getElementById('password').value;
+    const password2 = document.getElementById('password2').value;
+    const status = document.getElementById('status');
+
+    if(!repo.includes('/') || !token || !password){
+      status.className = 'status show err';
+      status.textContent = 'Completá repo, token y contraseña.';
+      return;
+    }
+    if(password !== password2){
+      status.className = 'status show err';
+      status.textContent = 'Las contraseñas no coinciden.';
+      return;
+    }
+
+    const salt = crypto.getRandomValues(new Uint8Array(16));
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const key = await deriveKey(password, salt);
+    const enc = new TextEncoder();
+    const payload = enc.encode(JSON.stringify({ repo, branch, token }));
+    const cipherBuf = await crypto.subtle.encrypt({ name:'AES-GCM', iv }, key, payload);
+
+    const result = {
+      salt: bufToB64(salt),
+      iv: bufToB64(iv),
+      cipher: bufToB64(cipherBuf)
+    };
+
+    document.getElementById('resultBox').value = JSON.stringify(result, null, 2);
+    document.getElementById('resultCard').style.display = 'block';
+    status.className = 'status show ok';
+    status.textContent = 'Listo. Copiá el resultado de abajo.';
+  }
+
+  function copyResult(){
+    const box = document.getElementById('resultBox');
+    box.select();
+    document.execCommand('copy');
+  }
+</script>
+</body>
+</html>
