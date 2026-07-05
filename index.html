@@ -76,43 +76,52 @@
   .view.active{display:block;}
 
   /* ---------- Hero / Carousel ---------- */
-  .hero{position:relative; border-top:1px solid var(--line);}
+  .hero{position:relative; border-top:1px solid var(--line); padding-bottom:5vh;}
   .hero-label{
     font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
-    letter-spacing:.1em; color:var(--muted); padding:26px 6vw 0;
+    letter-spacing:.1em; color:var(--muted); padding:26px 6vw 16px;
   }
-  .carousel-frame{
-    position:relative; height:38vh; min-height:260px; max-height:400px;
-    margin:16px 6vw 0; max-width:1400px; margin-left:auto; margin-right:auto;
+  .dest-wrap{
+    position:relative; margin:0 6vw; max-width:1400px; margin-left:auto; margin-right:auto;
   }
-  @media (max-width:640px){ .carousel-frame{ margin-left:5vw; margin-right:5vw; } }
-  .carousel{position:absolute; inset:0; overflow:hidden; background:var(--ink);}
-  .slide{
-    position:absolute; inset:0; opacity:0; transition:opacity .9s ease;
-    display:flex; align-items:flex-end;
+  .dest-track{
+    display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory;
+    scrollbar-width:none; -ms-overflow-style:none;
   }
-  .slide.show{opacity:1;}
-  .slide img{
-    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top center;
-    opacity:.55;
+  .dest-track::-webkit-scrollbar{display:none;}
+  .dest-card{
+    flex:0 0 calc(50% - 8px); scroll-snap-align:start; background:var(--bone);
+    border:1px solid var(--line); text-align:left; padding:0; display:flex; flex-direction:column;
   }
-  .slide-content{
-    position:relative; z-index:2; padding:6vh 6vw; color:var(--bone); width:100%;
+  @media (max-width:780px){ .dest-card{ flex:0 0 82%; } }
+  .dest-media{
+    aspect-ratio:1/1; background:var(--paper); display:flex; align-items:center; justify-content:center;
+    overflow:hidden; padding:18px;
   }
-  .slide-tag{
-    font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
-    letter-spacing:.15em; color:#e7c9a9; margin-bottom:10px;
+  .dest-media img{width:100%; height:100%; object-fit:contain;}
+  .dest-body{padding:16px 18px 18px; display:flex; flex-direction:column; gap:8px;}
+  .dest-tag{
+    align-self:flex-start; font-family:'Space Mono', monospace; font-size:10px; text-transform:uppercase;
+    letter-spacing:.08em; background:var(--red); color:#fff; padding:5px 12px; border-radius:999px;
   }
-  .slide-name{font-family:'Anton', sans-serif; font-size:clamp(26px,5vw,52px); line-height:1;}
-  .slide-price{font-family:'Space Mono', monospace; font-size:16px; margin-top:10px;}
-  .carousel-dots{
-    position:absolute; bottom:16px; right:16px; z-index:3; display:flex; gap:8px;
+  .dest-name{font-family:'Anton', sans-serif; font-size:17px; line-height:1.2;}
+  .dest-price{font-family:'Space Mono', monospace; font-weight:700; font-size:16px; color:var(--red);}
+  .dest-btn{
+    margin-top:6px; font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:.08em; border:1px solid var(--ink); background:none; padding:11px 14px; text-align:center;
   }
-  .dot{
-    width:8px; height:8px; border-radius:50%; background:rgba(243,239,227,.4);
-    border:none; padding:0;
+  .dest-btn:hover{background:var(--ink); color:var(--bone);}
+  .dest-arrow{
+    position:absolute; top:50%; transform:translateY(-50%); z-index:5;
+    width:38px; height:38px; border-radius:50%; border:none; background:var(--bone);
+    box-shadow:0 2px 8px rgba(0,0,0,.15); font-size:18px; display:flex; align-items:center; justify-content:center;
   }
-  .dot.active{background:var(--bone);}
+  .dest-arrow.left{left:-8px;}
+  .dest-arrow.right{right:-8px;}
+  @media (max-width:780px){ .dest-arrow{display:none;} }
+  .dest-dots{display:flex; gap:8px; justify-content:center; padding-top:16px;}
+  .dest-dot{width:7px; height:7px; border-radius:50%; background:var(--line); border:none; padding:0;}
+  .dest-dot.active{background:var(--red);}
   .hero-intro{
     padding:7vh 6vw; text-align:center;
   }
@@ -283,11 +292,13 @@
       </div>
     </div>
     <div class="hero">
-      <div class="hero-label">Destacados</div>
-      <div class="carousel-frame">
-        <div class="carousel" id="carousel"></div>
-        <div class="carousel-dots" id="carouselDots"></div>
+      <div class="hero-label">Productos destacados</div>
+      <div class="dest-wrap">
+        <button class="dest-arrow left" onclick="destScroll(-1)" aria-label="Anterior">‹</button>
+        <div class="dest-track" id="destTrack"></div>
+        <button class="dest-arrow right" onclick="destScroll(1)" aria-label="Siguiente">›</button>
       </div>
+      <div class="dest-dots" id="destDots"></div>
     </div>
   </section>
 
@@ -367,8 +378,6 @@
   let activeCategory = "Todas";
   let currentProductId = null;
   let cart = JSON.parse(localStorage.getItem('offload_cart') || '[]');
-  let carouselTimer = null;
-  let carouselIndex = 0;
 
   /* ---------- helpers ---------- */
   function money(n){ return '$' + Number(n).toLocaleString('es-AR'); }
@@ -432,52 +441,77 @@
       if(nav) nav.classList.add('active');
       if(view === 'catalog') renderGrid();
       if(view === 'cart') renderCart();
-      if(view === 'home') startCarousel();
+      if(view === 'home') renderDestacados();
     }
-    if(view !== 'home') stopCarousel();
     window.scrollTo({top:0});
   }
 
-  /* ---------- carousel ---------- */
-  function startCarousel(){
-    stopCarousel();
-    const withPhoto = PRODUCTS.filter(p => p.image).slice(0, 8);
-    const box = document.getElementById('carousel');
-    const dots = document.getElementById('carouselDots');
-    if(!withPhoto.length){
-      box.innerHTML = '<div class="slide show"><div class="slide-content"><div class="slide-name">Cargando camisetas…</div></div></div>';
+  /* ---------- destacados ---------- */
+  let destItems = [];
+  let destPerView = 2;
+
+  function updateDestPerView(){
+    destPerView = window.innerWidth <= 780 ? 1 : 2;
+  }
+
+  function renderDestacados(){
+    updateDestPerView();
+    destItems = PRODUCTS.filter(p => p.image).slice(0, 10);
+    const track = document.getElementById('destTrack');
+    const dots = document.getElementById('destDots');
+
+    if(!destItems.length){
+      track.innerHTML = '<div class="empty" style="background:none;">Cargando camisetas…</div>';
       dots.innerHTML = '';
       return;
     }
-    box.innerHTML = withPhoto.map((p, i) => `
-      <div class="slide ${i===0?'show':''}" data-i="${i}">
-        <img src="${p.image}" alt="${p.name}">
-        <div class="slide-content">
-          <div class="slide-tag">${p.category || ''}</div>
-          <div class="slide-name">${p.name}</div>
-          <div class="slide-price">${money(p.price)}</div>
+
+    track.innerHTML = destItems.map(p => `
+      <button class="dest-card" onclick="go('product','${p.id}')">
+        <div class="dest-media"><img src="${p.image}" alt="${p.name}"></div>
+        <div class="dest-body">
+          <span class="dest-tag">${p.category || 'Rugby'}</span>
+          <div class="dest-name">${p.name}</div>
+          <div class="dest-price">${money(p.price)}</div>
+          <span class="dest-btn">Ver detalle</span>
         </div>
-      </div>
+      </button>
     `).join('');
-    dots.innerHTML = withPhoto.map((p, i) => `<button class="dot ${i===0?'active':''}" onclick="setSlide(${i})" aria-label="Ver ${p.name}"></button>`).join('');
 
-    box.querySelectorAll('.slide').forEach(s => {
-      s.style.cursor = 'pointer';
-      s.addEventListener('click', () => go('product', withPhoto[parseInt(s.dataset.i)].id));
-    });
+    const pages = Math.ceil(destItems.length / destPerView);
+    dots.innerHTML = Array.from({length: pages}).map((_, i) =>
+      `<button class="dest-dot ${i===0?'active':''}" onclick="destGoPage(${i})"></button>`
+    ).join('');
 
-    carouselIndex = 0;
-    carouselTimer = setInterval(() => setSlide((carouselIndex + 1) % withPhoto.length), 4200);
+    track.removeEventListener('scroll', onDestScroll);
+    track.addEventListener('scroll', onDestScroll, { passive:true });
   }
-  function setSlide(i){
-    const slides = document.querySelectorAll('#carousel .slide');
-    const dots = document.querySelectorAll('#carouselDots .dot');
-    slides.forEach((s, idx) => s.classList.toggle('show', idx === i));
-    dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
-    carouselIndex = i;
+
+  function cardStep(){
+    const track = document.getElementById('destTrack');
+    const card = track.querySelector('.dest-card');
+    if(!card) return 300;
+    return card.getBoundingClientRect().width + 16;
   }
-  function stopCarousel(){
-    if(carouselTimer){ clearInterval(carouselTimer); carouselTimer = null; }
+
+  function destScroll(dir){
+    const track = document.getElementById('destTrack');
+    track.scrollBy({ left: dir * cardStep() * destPerView, behavior:'smooth' });
+  }
+
+  function destGoPage(i){
+    const track = document.getElementById('destTrack');
+    track.scrollTo({ left: i * cardStep() * destPerView, behavior:'smooth' });
+  }
+
+  let destScrollTimer = null;
+  function onDestScroll(){
+    clearTimeout(destScrollTimer);
+    destScrollTimer = setTimeout(() => {
+      const track = document.getElementById('destTrack');
+      const page = Math.round(track.scrollLeft / (cardStep() * destPerView));
+      document.querySelectorAll('.dest-dot').forEach((d, i) => d.classList.toggle('active', i === page));
+    }, 80);
   }
 
   /* ---------- catalog ---------- */
@@ -704,6 +738,9 @@
     renderFilters();
     updateCartBadge();
     window.addEventListener('hashchange', route);
+    window.addEventListener('resize', () => {
+      if(location.hash === '' || location.hash === '#'){ renderDestacados(); }
+    });
     route();
   }
 
