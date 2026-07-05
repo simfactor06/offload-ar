@@ -140,7 +140,7 @@
   .status.loading{background:var(--paper); color:var(--muted);}
 
   .list-item{
-    display:flex; gap:14px; align-items:center;
+    display:flex; gap:14px; align-items:center; flex-wrap:wrap;
     padding:14px 0;
     border-bottom:1px solid var(--line);
   }
@@ -151,10 +151,10 @@
     display:flex; align-items:center; justify-content:center;
     font-size:9px; text-align:center; color:var(--muted);
   }
-  .list-item .info{flex:1; min-width:0;}
+  .list-item .info{flex:1 1 160px; min-width:0;}
   .list-item .name{font-weight:700; font-size:14px;}
   .list-item .meta{font-size:12px; color:var(--muted);}
-  .list-item .actions{display:flex; gap:8px;}
+  .list-item .actions{display:flex; gap:8px; flex-shrink:0;}
   .list-item .actions button{
     font-family:'Space Mono', monospace;
     font-size:10px;
@@ -163,12 +163,22 @@
     background:none;
     padding:6px 10px;
     cursor:pointer;
+    white-space:nowrap;
   }
   .sold-tag{
     font-family:'Space Mono', monospace;
     font-size:9px;
     text-transform:uppercase;
     background:var(--red);
+    color:#fff;
+    padding:2px 6px;
+    margin-left:6px;
+  }
+  .stock-tag{
+    font-family:'Space Mono', monospace;
+    font-size:9px;
+    text-transform:uppercase;
+    background:var(--green);
     color:#fff;
     padding:2px 6px;
     margin-left:6px;
@@ -247,6 +257,10 @@
         <label style="display:flex; align-items:center; gap:8px; margin-top:16px;">
           <input type="checkbox" id="fAvailable" checked style="width:auto;"> Disponible (tildado = hay stock)
         </label>
+        <label style="display:flex; align-items:center; gap:8px; margin-top:12px;">
+          <input type="checkbox" id="fImmediate" style="width:auto;"> Entrega inmediata (ya la tenés físicamente)
+        </label>
+        <div class="hint">Si no la tildás, aparece solo en el Catálogo (por encargo). Si la tildás, también aparece en la pestaña "Stock".</div>
 
         <button class="btn" id="saveBtn" onclick="saveProduct()">Guardar camiseta</button>
         <button class="btn btn-outline" id="cancelEditBtn" style="display:none;" onclick="cancelEdit()">Cancelar edición</button>
@@ -267,6 +281,8 @@
       <input type="text" id="cfgTagline">
       <label>WhatsApp (con código de país, sin +, sin espacios)</label>
       <input type="text" id="cfgWhatsapp" placeholder="5493834040581">
+      <label>Instagram (usuario o link)</label>
+      <input type="text" id="cfgInstagram" placeholder="@offloadar">
       <button class="btn" onclick="saveConfig()">Guardar contacto</button>
       <div class="status" id="cfgStatus"></div>
     </div>
@@ -470,7 +486,7 @@
       <div class="list-item">
         ${p.image ? `<img src="${p.image}" alt="">` : `<div class="noimg">sin foto</div>`}
         <div class="info">
-          <div class="name">${p.name} ${p.available === false ? '<span class="sold-tag">Agotada</span>' : ''}</div>
+          <div class="name">${p.name} ${p.available === false ? '<span class="sold-tag">Agotada</span>' : ''} ${p.immediate ? '<span class="stock-tag">Stock ya</span>' : ''}</div>
           <div class="meta">${p.category || 'Sin categoría'} · $${Number(p.price||0).toLocaleString('es-AR')}</div>
         </div>
         <div class="actions">
@@ -491,6 +507,7 @@
     document.getElementById('fNumber').value = '';
     document.getElementById('fNotes').value = '';
     document.getElementById('fAvailable').checked = true;
+    document.getElementById('fImmediate').checked = false;
     document.querySelectorAll('#sizeBoxes input').forEach(cb => cb.checked = false);
     document.getElementById('cancelEditBtn').style.display = 'none';
     document.getElementById('saveBtn').textContent = 'Guardar camiseta';
@@ -509,6 +526,7 @@
     document.getElementById('fNumber').value = p.number || '';
     document.getElementById('fNotes').value = p.notes || '';
     document.getElementById('fAvailable').checked = p.available !== false;
+    document.getElementById('fImmediate').checked = !!p.immediate;
     document.querySelectorAll('#sizeBoxes input').forEach(cb => {
       cb.checked = (p.sizes || []).includes(cb.value);
     });
@@ -583,6 +601,7 @@
         sizes,
         notes: document.getElementById('fNotes').value.trim(),
         available: document.getElementById('fAvailable').checked,
+        immediate: document.getElementById('fImmediate').checked,
         image: rawUrl || (editingId ? (PRODUCTS.find(p => p.id === editingId)?.image || '') : '')
       };
 
@@ -617,6 +636,7 @@
         document.getElementById('cfgName').value = cfg.storeName || '';
         document.getElementById('cfgTagline').value = cfg.tagline || '';
         document.getElementById('cfgWhatsapp').value = cfg.whatsappNumber || '';
+        document.getElementById('cfgInstagram').value = cfg.instagram || '';
       }
     }catch(e){
       console.error(e);
@@ -630,7 +650,8 @@
       const cfg = {
         storeName: document.getElementById('cfgName').value.trim(),
         tagline: document.getElementById('cfgTagline').value.trim(),
-        whatsappNumber: document.getElementById('cfgWhatsapp').value.trim().replace(/\D/g,'')
+        whatsappNumber: document.getElementById('cfgWhatsapp').value.trim().replace(/\D/g,''),
+        instagram: document.getElementById('cfgInstagram').value.trim()
       };
       const content = b64EncodeUnicode(JSON.stringify(cfg, null, 2));
       const result = await ghPutFile('data/config.json', content, CONFIG_SHA, 'Actualiza datos de contacto');
