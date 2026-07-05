@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Offload.ar — Camisetas de Rugby</title>
-<meta name="description" content="Camisetas de rugby de selecciones y clubes. Consultá stock y precio por WhatsApp.">
+<meta name="description" content="Camisetas de rugby de selecciones y clubes. Consultá stock, talle y precio, y armá tu pedido por WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,7 +17,6 @@
     --moss:#454F3C;
     --line:rgba(22,21,15,.14);
     --muted:#726F5E;
-    --radius:2px;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
@@ -27,352 +26,328 @@
     font-family:'Inter', sans-serif;
     -webkit-font-smoothing:antialiased;
   }
-  @media (prefers-reduced-motion: reduce){
-    *{animation:none !important; transition:none !important;}
-  }
+  @media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important;} }
   a{color:inherit;}
   img{display:block; max-width:100%;}
-
-  /* ---------- focus ---------- */
-  a:focus-visible, button:focus-visible, select:focus-visible{
+  button{font-family:inherit; cursor:pointer;}
+  a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible{
     outline:2px solid var(--red); outline-offset:2px;
   }
 
-  /* ---------- Header ---------- */
+  /* ---------- Header / Nav ---------- */
   header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:16px;
-    padding:20px 6vw;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:16px; padding:16px 5vw;
     border-bottom:1px solid var(--line);
-    position:sticky; top:0; z-index:20;
+    position:sticky; top:0; z-index:30;
     background:var(--bone);
   }
-  .brand{display:flex; align-items:center; gap:12px;}
-  .brand img{height:44px; width:44px; border-radius:50%; object-fit:cover;}
-  .brand-text{display:flex; flex-direction:column; line-height:1;}
-  .brand-text b{
-    font-family:'Anton', sans-serif;
-    font-size:20px;
-    letter-spacing:0.02em;
-  }
+  .brand{display:flex; align-items:center; gap:12px; cursor:pointer; background:none; border:none; padding:0;}
+  .brand img{height:40px; width:40px; border-radius:50%; object-fit:cover;}
+  .brand-text{display:flex; flex-direction:column; line-height:1; text-align:left;}
+  .brand-text b{font-family:'Anton', sans-serif; font-size:18px; letter-spacing:0.02em;}
   .brand-text span{
-    font-family:'Space Mono', monospace;
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:0.12em;
-    color:var(--muted);
-    margin-top:2px;
+    font-family:'Space Mono', monospace; font-size:9px; text-transform:uppercase;
+    letter-spacing:0.12em; color:var(--muted); margin-top:2px;
   }
-  .wa-header{
-    font-family:'Space Mono', monospace;
-    font-size:12px;
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    text-decoration:none;
-    border:1px solid var(--ink);
-    padding:10px 16px;
-    white-space:nowrap;
-    transition:background .2s, color .2s;
+  nav{display:flex; align-items:center; gap:4px; flex-wrap:wrap;}
+  .navlink{
+    font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:0.06em; background:none; border:1px solid transparent;
+    padding:9px 13px; color:var(--ink); white-space:nowrap;
   }
-  .wa-header:hover{background:var(--ink); color:var(--bone);}
+  .navlink:hover{border-color:var(--line);}
+  .navlink.active{background:var(--ink); color:var(--bone);}
+  .cart-btn{
+    position:relative; display:flex; align-items:center; gap:6px;
+    font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:0.06em; background:none; border:1px solid var(--ink);
+    padding:9px 13px; color:var(--ink);
+  }
+  .cart-btn:hover{background:var(--ink); color:var(--bone);}
+  .cart-badge{
+    background:var(--red); color:#fff; border-radius:50%;
+    font-family:'Space Mono', monospace; font-size:10px;
+    width:17px; height:17px; display:flex; align-items:center; justify-content:center;
+  }
 
-  /* ---------- Hero ---------- */
-  .hero{
-    position:relative;
-    padding:9vh 6vw 7vh;
-    text-align:center;
-    overflow:hidden;
-    border-bottom:1px solid var(--line);
+  main{min-height:60vh;}
+  .view{display:none;}
+  .view.active{display:block;}
+
+  /* ---------- Hero / Carousel ---------- */
+  .hero{position:relative; border-bottom:1px solid var(--line);}
+  .carousel{
+    position:relative; height:62vh; min-height:380px; max-height:640px;
+    overflow:hidden; background:var(--ink);
   }
-  .hero:before{
-    content:"";
-    position:absolute; inset:0;
-    background:
-      repeating-linear-gradient(180deg, transparent, transparent 78px, var(--line) 78px, var(--line) 79px);
-    opacity:.5;
-    pointer-events:none;
+  .slide{
+    position:absolute; inset:0; opacity:0; transition:opacity .9s ease;
+    display:flex; align-items:flex-end;
+  }
+  .slide.show{opacity:1;}
+  .slide img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top center;
+    opacity:.55;
+  }
+  .slide-content{
+    position:relative; z-index:2; padding:6vh 6vw; color:var(--bone); width:100%;
+  }
+  .slide-tag{
+    font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:.15em; color:#e7c9a9; margin-bottom:10px;
+  }
+  .slide-name{font-family:'Anton', sans-serif; font-size:clamp(26px,5vw,52px); line-height:1;}
+  .slide-price{font-family:'Space Mono', monospace; font-size:16px; margin-top:10px;}
+  .carousel-dots{
+    position:absolute; bottom:18px; right:6vw; z-index:3; display:flex; gap:8px;
+  }
+  .dot{
+    width:8px; height:8px; border-radius:50%; background:rgba(243,239,227,.4);
+    border:none; padding:0;
+  }
+  .dot.active{background:var(--bone);}
+  .hero-intro{
+    padding:7vh 6vw; text-align:center;
   }
   .eyebrow{
-    font-family:'Space Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.15em;
-    text-transform:uppercase;
-    color:var(--red);
-    margin-bottom:18px;
+    font-family:'Space Mono', monospace; font-size:12px; letter-spacing:0.15em;
+    text-transform:uppercase; color:var(--red); margin-bottom:16px;
   }
   h1{
-    font-family:'Anton', sans-serif;
-    font-size:clamp(38px, 8vw, 88px);
-    line-height:0.92;
-    letter-spacing:-0.01em;
-    max-width:18ch;
-    margin:0 auto;
+    font-family:'Anton', sans-serif; font-size:clamp(32px, 6vw, 60px);
+    line-height:0.95; letter-spacing:-0.01em; max-width:22ch; margin:0 auto;
   }
   h1 em{font-style:normal; color:var(--red);}
-  .hero p{
-    margin:22px auto 0;
-    max-width:44ch;
-    color:var(--muted);
-    font-size:16px;
-    line-height:1.6;
+  .hero-intro p{
+    margin:20px auto 0; max-width:48ch; color:var(--muted); font-size:15px; line-height:1.6;
   }
-  .hero-actions{
-    margin-top:34px;
-    display:flex;
-    gap:14px;
-    justify-content:center;
-    flex-wrap:wrap;
-  }
+  .hero-actions{margin-top:30px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
   .btn{
-    font-family:'Space Mono', monospace;
-    font-size:12px;
-    text-transform:uppercase;
-    letter-spacing:0.1em;
-    text-decoration:none;
-    padding:14px 22px;
-    border:1px solid var(--ink);
-    transition:transform .15s, background .2s, color .2s;
-    display:inline-block;
+    font-family:'Space Mono', monospace; font-size:12px; text-transform:uppercase;
+    letter-spacing:0.1em; text-decoration:none; padding:14px 22px; border:1px solid var(--ink);
+    transition:transform .15s, background .2s, color .2s; display:inline-block; background:none; color:var(--ink);
   }
   .btn:hover{transform:translateY(-2px);}
   .btn-solid{background:var(--ink); color:var(--bone);}
-  .btn-solid:hover{background:var(--red); border-color:var(--red);}
+  .btn-solid:hover{background:var(--red); border-color:var(--red); color:#fff;}
   .btn-ghost:hover{background:var(--ink); color:var(--bone);}
+  .btn:disabled{opacity:.45; cursor:not-allowed; transform:none;}
 
   /* ---------- Filters ---------- */
   .filters{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    padding:26px 6vw;
-    border-bottom:1px solid var(--line);
-    position:sticky; top:81px; z-index:15;
-    background:var(--bone);
+    display:flex; gap:10px; flex-wrap:wrap; padding:24px 6vw;
+    border-bottom:1px solid var(--line); position:sticky; top:73px; z-index:20; background:var(--bone);
   }
   .chip{
-    font-family:'Space Mono', monospace;
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    padding:8px 14px;
-    border:1px solid var(--line);
-    background:transparent;
-    cursor:pointer;
-    color:var(--ink);
-    transition:background .2s, border-color .2s, color .2s;
+    font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:0.08em; padding:8px 14px; border:1px solid var(--line); background:transparent;
+    color:var(--ink); transition:background .2s, border-color .2s, color .2s;
   }
-  .chip[aria-pressed="true"]{
-    background:var(--ink); color:var(--bone); border-color:var(--ink);
-  }
+  .chip[aria-pressed="true"]{background:var(--ink); color:var(--bone); border-color:var(--ink);}
   .chip:hover{border-color:var(--ink);}
 
   /* ---------- Catalog ---------- */
-  .catalog{
-    padding:6vh 6vw 12vh;
-    max-width:1400px;
-    margin:0 auto;
-  }
-  .catalog-head{
-    display:flex; justify-content:space-between; align-items:baseline;
-    margin-bottom:34px; flex-wrap:wrap; gap:8px;
-  }
-  .catalog-head h2{
-    font-family:'Anton', sans-serif;
-    font-size:clamp(26px,4vw,40px);
-  }
-  .count{
-    font-family:'Space Mono', monospace;
-    font-size:12px;
-    color:var(--muted);
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-  }
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));
-    gap:2px;
-    background:var(--line);
-    border:1px solid var(--line);
-  }
-  .card{
-    background:var(--bone);
-    display:flex;
-    flex-direction:column;
-    position:relative;
-  }
-  .card-media{
-    position:relative;
-    aspect-ratio:4/5;
-    background:var(--paper);
-    overflow:hidden;
-  }
-  .card-media img{
-    width:100%; height:100%; object-fit:cover;
-    transition:transform .5s ease;
-  }
+  .catalog{padding:6vh 6vw 12vh; max-width:1400px; margin:0 auto;}
+  .catalog-head{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:30px; flex-wrap:wrap; gap:8px;}
+  .catalog-head h2{font-family:'Anton', sans-serif; font-size:clamp(24px,4vw,38px);}
+  .count{font-family:'Space Mono', monospace; font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:2px; background:var(--line); border:1px solid var(--line);}
+  .card{background:var(--bone); display:flex; flex-direction:column; position:relative; text-align:left; border:none; padding:0;}
+  .card-media{position:relative; aspect-ratio:4/5; background:var(--paper); overflow:hidden;}
+  .card-media img{width:100%; height:100%; object-fit:cover; transition:transform .5s ease;}
   .card:hover .card-media img{transform:scale(1.04);}
-  .no-photo{
-    width:100%; height:100%;
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Space Mono', monospace;
-    font-size:11px;
-    color:var(--muted);
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    text-align:center;
-    padding:10px;
+  .no-photo{width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-family:'Space Mono', monospace; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; text-align:center; padding:10px;}
+  .number-badge{position:absolute; top:10px; left:10px; font-family:'Anton', sans-serif; font-size:14px; background:var(--ink); color:var(--bone); width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center;}
+  .sold-badge{position:absolute; inset:0; background:rgba(22,21,15,.62); color:var(--bone); display:flex; align-items:center; justify-content:center; font-family:'Space Mono', monospace; text-transform:uppercase; letter-spacing:.12em; font-size:13px;}
+  .card-body{padding:14px 16px 16px; display:flex; flex-direction:column; gap:6px; flex:1;}
+  .card-cat{font-family:'Space Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:var(--muted);}
+  .card-name{font-family:'Anton', sans-serif; font-size:18px; line-height:1.15;}
+  .card-price{font-family:'Space Mono', monospace; font-weight:700; font-size:16px; margin-top:auto; padding-top:8px;}
+  .empty{grid-column:1/-1; padding:8vh 2vw; text-align:center; color:var(--muted); font-family:'Space Mono', monospace; text-transform:uppercase; letter-spacing:.08em; font-size:13px; background:var(--bone);}
+
+  /* ---------- Product view ---------- */
+  .product-wrap{max-width:1100px; margin:0 auto; padding:5vh 6vw 12vh;}
+  .breadcrumb{font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:28px;}
+  .breadcrumb button{background:none; border:none; color:var(--muted); text-decoration:underline; padding:0; font-family:inherit; font-size:inherit;}
+  .product-grid{display:grid; grid-template-columns:1.1fr 1fr; gap:50px;}
+  @media (max-width:780px){ .product-grid{grid-template-columns:1fr;} }
+  .product-media{aspect-ratio:4/5; background:var(--paper); overflow:hidden;}
+  .product-media img{width:100%; height:100%; object-fit:cover;}
+  .product-tag{display:inline-block; font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.08em; background:var(--paper); padding:6px 12px; margin-bottom:16px;}
+  .product-name{font-family:'Anton', sans-serif; font-size:clamp(28px,4vw,42px); line-height:1.05; margin-bottom:14px;}
+  .product-price{font-family:'Space Mono', monospace; font-weight:700; font-size:24px; margin-bottom:20px;}
+  .product-desc{color:var(--muted); font-size:14px; line-height:1.7; margin-bottom:26px;}
+  .field-label{font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:10px;}
+  .size-grid{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px;}
+  .size-opt{
+    font-family:'Space Mono', monospace; font-size:13px; border:1px solid var(--line);
+    background:none; padding:10px 16px; color:var(--ink);
   }
-  .number-badge{
-    position:absolute; top:10px; left:10px;
-    font-family:'Anton', sans-serif;
-    font-size:15px;
-    background:var(--ink);
-    color:var(--bone);
-    width:32px; height:32px;
-    border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
+  .size-opt[aria-pressed="true"]{background:var(--ink); color:var(--bone); border-color:var(--ink);}
+  .qty-row{display:flex; align-items:center; gap:14px; margin-bottom:26px;}
+  .qty-btn{width:38px; height:38px; border:1px solid var(--line); background:none; font-size:16px;}
+  .qty-value{font-family:'Space Mono', monospace; font-size:15px; min-width:20px; text-align:center;}
+  .product-actions{display:flex; flex-direction:column; gap:12px;}
+  .size-guide-link{font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; text-decoration:underline; background:none; border:none; color:var(--muted); padding:0; margin-top:6px; align-self:flex-start;}
+  .add-toast{
+    font-family:'Space Mono', monospace; font-size:12px; background:var(--moss); color:#fff;
+    padding:10px 14px; margin-top:14px; display:none;
   }
-  .sold-badge{
-    position:absolute; inset:0;
-    background:rgba(22,21,15,.62);
-    color:var(--bone);
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Space Mono', monospace;
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    font-size:13px;
+  .add-toast.show{display:block;}
+
+  /* ---------- Size guide ---------- */
+  .sizeguide-wrap{max-width:800px; margin:0 auto; padding:7vh 6vw 12vh;}
+  .sizeguide-wrap h2{font-family:'Anton', sans-serif; font-size:clamp(28px,4vw,42px); margin-bottom:14px;}
+  .sizeguide-wrap > p{color:var(--muted); font-size:14px; line-height:1.6; margin-bottom:34px; max-width:60ch;}
+  table.sizes{width:100%; border-collapse:collapse; margin-bottom:30px;}
+  table.sizes th, table.sizes td{
+    border:1px solid var(--line); padding:12px 14px; text-align:left; font-size:13px;
   }
-  .card-body{
-    padding:16px 16px 18px;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    flex:1;
-  }
-  .card-cat{
-    font-family:'Space Mono', monospace;
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:.1em;
-    color:var(--muted);
-  }
-  .card-name{
-    font-family:'Anton', sans-serif;
-    font-size:19px;
-    line-height:1.15;
-  }
-  .card-notes{font-size:13px; color:var(--muted);}
-  .card-foot{
-    margin-top:auto;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    padding-top:6px;
-  }
-  .price{
-    font-family:'Space Mono', monospace;
-    font-weight:700;
-    font-size:18px;
-  }
-  .size-row{
-    display:flex; gap:6px; flex-wrap:wrap;
-  }
-  .size-note{
-    font-family:'Space Mono', monospace;
-    font-size:11px;
-    color:var(--muted);
-    text-transform:uppercase;
-    letter-spacing:.05em;
-  }
-  .size-row select{
-    font-family:'Space Mono', monospace;
-    font-size:12px;
-    padding:8px 10px;
-    border:1px solid var(--line);
-    background:var(--bone);
-    color:var(--ink);
-    width:100%;
-  }
-  .card .btn{
-    text-align:center;
-    font-size:11px;
-    padding:12px 14px;
-  }
-  .empty{
-    grid-column:1/-1;
-    padding:8vh 2vw;
-    text-align:center;
-    color:var(--muted);
-    font-family:'Space Mono', monospace;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    font-size:13px;
-    background:var(--bone);
-  }
+  table.sizes th{font-family:'Space Mono', monospace; text-transform:uppercase; letter-spacing:.06em; font-size:11px; background:var(--paper);}
+  table.sizes td{font-family:'Inter', sans-serif;}
+  .sizeguide-note{font-size:13px; color:var(--muted); line-height:1.7;}
+
+  /* ---------- Contact ---------- */
+  .contact-wrap{max-width:640px; margin:0 auto; padding:7vh 6vw 12vh; text-align:center;}
+  .contact-wrap h2{font-family:'Anton', sans-serif; font-size:clamp(28px,4vw,42px); margin-bottom:16px;}
+  .contact-wrap p{color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:30px;}
+  .contact-actions{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+
+  /* ---------- Cart ---------- */
+  .cart-wrap{max-width:780px; margin:0 auto; padding:6vh 6vw 12vh;}
+  .cart-wrap h2{font-family:'Anton', sans-serif; font-size:clamp(26px,4vw,38px); margin-bottom:30px;}
+  .cart-item{display:flex; gap:16px; align-items:center; padding:16px 0; border-bottom:1px solid var(--line);}
+  .cart-item img, .cart-item .noimg{width:64px; height:64px; object-fit:cover; background:var(--paper); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:8px; color:var(--muted); text-align:center;}
+  .cart-item .info{flex:1; min-width:0;}
+  .cart-item .name{font-weight:700; font-size:14px;}
+  .cart-item .meta{font-size:12px; color:var(--muted); margin-top:2px;}
+  .cart-item .qty-row{margin:8px 0 0; gap:10px;}
+  .cart-item .qty-btn{width:28px; height:28px; font-size:14px;}
+  .cart-item .line-total{font-family:'Space Mono', monospace; font-weight:700; font-size:14px; white-space:nowrap;}
+  .cart-item .remove{font-family:'Space Mono', monospace; font-size:10px; text-transform:uppercase; text-decoration:underline; background:none; border:none; color:var(--muted); padding:0; margin-top:8px;}
+  .cart-empty{padding:8vh 2vw; text-align:center; color:var(--muted); font-family:'Space Mono', monospace; text-transform:uppercase; letter-spacing:.08em; font-size:13px;}
+  .cart-total-row{display:flex; justify-content:space-between; align-items:center; padding:22px 0 8px; font-family:'Space Mono', monospace;}
+  .cart-total-row .label{text-transform:uppercase; font-size:12px; letter-spacing:.08em; color:var(--muted);}
+  .cart-total-row .value{font-size:22px; font-weight:700;}
 
   /* ---------- Footer ---------- */
-  footer{
-    padding:6vh 6vw;
-    border-top:1px solid var(--line);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:14px;
-    font-family:'Space Mono', monospace;
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    color:var(--muted);
-  }
+  footer{padding:6vh 6vw; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted);}
   footer a{text-decoration:underline; text-underline-offset:3px;}
 
   @media (max-width:640px){
-    header{padding:16px 5vw;}
-    .filters{top:76px;}
+    header{padding:14px 5vw; flex-wrap:wrap;}
+    nav{order:3; width:100%; justify-content:flex-start; overflow-x:auto; padding-top:10px; border-top:1px solid var(--line); margin-top:10px;}
+    .filters{top:110px;}
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="brand">
+  <button class="brand" onclick="go('home')">
     <img src="assets/logo.png" alt="Logo Offload.ar">
     <div class="brand-text">
       <b id="storeName">OFFLOAD.AR</b>
       <span id="storeTagline">Camisetas de rugby</span>
     </div>
-  </div>
-  <a class="wa-header" id="waHeader" href="#" target="_blank" rel="noopener">Escribinos →</a>
+  </button>
+  <nav>
+    <button class="navlink" data-view="home" onclick="go('home')">Inicio</button>
+    <button class="navlink" data-view="catalog" onclick="go('catalog')">Catálogo</button>
+    <button class="navlink" data-view="sizeguide" onclick="go('sizeguide')">Guía de talles</button>
+    <button class="navlink" data-view="contact" onclick="go('contact')">Contacto</button>
+    <button class="cart-btn" onclick="go('cart')">
+      🛒 Carrito <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+  </nav>
 </header>
 
-<section class="hero">
-  <div class="eyebrow">Selecciones · Clubes · Retro</div>
-  <h1>Camisetas que <em>se ganan</em> en la cancha.</h1>
-  <p>Réplicas de selecciones y clubes de rugby. Consultá stock, talle y precio directo por WhatsApp.</p>
-  <div class="hero-actions">
-    <a class="btn btn-solid" href="#catalogo">Ver catálogo</a>
-    <a class="btn btn-ghost" id="waHero" href="#" target="_blank" rel="noopener">Hablar por WhatsApp</a>
-  </div>
-</section>
+<main>
 
-<div class="filters" id="filters"></div>
+  <!-- ===== HOME ===== -->
+  <section class="view" id="view-home">
+    <div class="hero">
+      <div class="carousel" id="carousel"></div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+    <div class="hero-intro">
+      <div class="eyebrow">Selecciones · Clubes · Retro</div>
+      <h1>Camisetas que <em>se ganan</em> en la cancha.</h1>
+      <p>Réplicas de selecciones y clubes de rugby. Elegí tu talle, sumala al carrito y armamos el pedido directo por WhatsApp.</p>
+      <div class="hero-actions">
+        <button class="btn btn-solid" onclick="go('catalog')">Ver catálogo</button>
+        <button class="btn btn-ghost" id="waHero" onclick="openWa(genericMsg())">Hablar por WhatsApp</button>
+      </div>
+    </div>
+  </section>
 
-<main class="catalog" id="catalogo">
-  <div class="catalog-head">
-    <h2>Catálogo</h2>
-    <span class="count" id="countLabel"></span>
-  </div>
-  <div class="grid" id="grid">
-    <div class="empty">Cargando camisetas…</div>
-  </div>
+  <!-- ===== CATALOG ===== -->
+  <section class="view" id="view-catalog">
+    <div class="filters" id="filters"></div>
+    <div class="catalog">
+      <div class="catalog-head">
+        <h2>Catálogo</h2>
+        <span class="count" id="countLabel"></span>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT ===== -->
+  <section class="view" id="view-product">
+    <div class="product-wrap" id="productWrap"></div>
+  </section>
+
+  <!-- ===== SIZE GUIDE ===== -->
+  <section class="view" id="view-sizeguide">
+    <div class="sizeguide-wrap">
+      <h2>Guía de talles</h2>
+      <p>Medidas aproximadas en centímetros para camisetas de rugby réplica. Pueden variar unos centímetros según la marca y el modelo — ante la duda, escribinos por WhatsApp y te ayudamos a elegir.</p>
+      <table class="sizes">
+        <thead>
+          <tr><th>Talle</th><th>Pecho (cm)</th><th>Largo (cm)</th><th>Contextura sugerida</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>S</td><td>96 – 100</td><td>68</td><td>Delgada</td></tr>
+          <tr><td>M</td><td>101 – 106</td><td>70</td><td>Media</td></tr>
+          <tr><td>L</td><td>107 – 112</td><td>72</td><td>Media-robusta</td></tr>
+          <tr><td>XL</td><td>113 – 119</td><td>74</td><td>Robusta</td></tr>
+          <tr><td>2XL</td><td>120 – 126</td><td>76</td><td>Grande</td></tr>
+          <tr><td>3XL</td><td>127 – 133</td><td>78</td><td>Extra grande</td></tr>
+        </tbody>
+      </table>
+      <p class="sizeguide-note">
+        Cómo medir: pecho = contorno completo pasando por debajo de las axilas, con la prenda apoyada plana y estirada. Largo = desde el punto más alto del hombro hasta el borde inferior.<br><br>
+        La mayoría de las réplicas oficiales (adidas, Canterbury, Macron, Castore, Nike) calzan de forma similar al talle indicado, con corte deportivo ajustado.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="view" id="view-contact">
+    <div class="contact-wrap">
+      <h2>Contacto</h2>
+      <p id="contactText">¿Tenés dudas sobre stock, talles o envíos? Escribinos, te respondemos por WhatsApp.</p>
+      <div class="contact-actions">
+        <button class="btn btn-solid" onclick="openWa(genericMsg())">Escribinos por WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CART ===== -->
+  <section class="view" id="view-cart">
+    <div class="cart-wrap">
+      <h2>Tu carrito</h2>
+      <div id="cartList"></div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
   <span>© <span id="year"></span> <span id="storeNameFoot">Offload.ar</span></span>
-  <a id="waFoot" href="#" target="_blank" rel="noopener">Pedidos por WhatsApp</a>
+  <a href="#" onclick="openWa(genericMsg()); return false;">Pedidos por WhatsApp</a>
 </footer>
 
 <script>
@@ -381,16 +356,122 @@
   let CONFIG = { storeName: "Offload.ar", tagline: "Camisetas de rugby", whatsappNumber: "" };
   let PRODUCTS = [];
   let activeCategory = "Todas";
+  let currentProductId = null;
+  let cart = JSON.parse(localStorage.getItem('offload_cart') || '[]');
+  let carouselTimer = null;
+  let carouselIndex = 0;
+
+  /* ---------- helpers ---------- */
+  function money(n){ return '$' + Number(n).toLocaleString('es-AR'); }
 
   function waLink(text){
-    const num = CONFIG.whatsappNumber.replace(/\D/g,'');
-    return `https://wa.me/${num}?text=${encodeURIComponent(text)}`;
+    const num = (CONFIG.whatsappNumber || '').replace(/\D/g,'');
+    return 'https://wa.me/' + num + '?text=' + encodeURIComponent(text);
+  }
+  function openWa(text){ window.open(waLink(text), '_blank'); }
+  function genericMsg(){ return 'Hola! Quería consultar por las camisetas de rugby.'; }
+
+  function saveCart(){
+    localStorage.setItem('offload_cart', JSON.stringify(cart));
+    updateCartBadge();
+  }
+  function updateCartBadge(){
+    const count = cart.reduce((sum, i) => sum + i.qty, 0);
+    document.getElementById('cartBadge').textContent = count;
   }
 
-  function money(n){
-    return '$' + Number(n).toLocaleString('es-AR');
+  /* ---------- routing ---------- */
+  function parseHash(){
+    const h = location.hash.replace('#','');
+    if(!h) return { view:'home' };
+    if(h === 'catalogo') return { view:'catalog' };
+    if(h === 'talles') return { view:'sizeguide' };
+    if(h === 'contacto') return { view:'contact' };
+    if(h === 'carrito') return { view:'cart' };
+    if(h.startsWith('producto/')) return { view:'product', id: h.split('/')[1] };
+    return { view:'home' };
   }
 
+  function go(view, id){
+    if(view === 'product' && id){
+      location.hash = 'producto/' + id;
+    } else if(view === 'catalog'){
+      location.hash = 'catalogo';
+    } else if(view === 'sizeguide'){
+      location.hash = 'talles';
+    } else if(view === 'contact'){
+      location.hash = 'contacto';
+    } else if(view === 'cart'){
+      location.hash = 'carrito';
+    } else {
+      location.hash = '';
+    }
+  }
+
+  function route(){
+    const { view, id } = parseHash();
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.querySelectorAll('.navlink').forEach(n => n.classList.remove('active'));
+
+    if(view === 'product'){
+      renderProduct(id);
+      document.getElementById('view-product').classList.add('active');
+    } else {
+      const el = document.getElementById('view-' + view);
+      if(el) el.classList.add('active');
+      const nav = document.querySelector('.navlink[data-view="' + view + '"]');
+      if(nav) nav.classList.add('active');
+      if(view === 'catalog') renderGrid();
+      if(view === 'cart') renderCart();
+      if(view === 'home') startCarousel();
+    }
+    if(view !== 'home') stopCarousel();
+    window.scrollTo({top:0});
+  }
+
+  /* ---------- carousel ---------- */
+  function startCarousel(){
+    stopCarousel();
+    const withPhoto = PRODUCTS.filter(p => p.image).slice(0, 8);
+    const box = document.getElementById('carousel');
+    const dots = document.getElementById('carouselDots');
+    if(!withPhoto.length){
+      box.innerHTML = '<div class="slide show"><div class="slide-content"><div class="slide-name">Cargando camisetas…</div></div></div>';
+      dots.innerHTML = '';
+      return;
+    }
+    box.innerHTML = withPhoto.map((p, i) => `
+      <div class="slide ${i===0?'show':''}" data-i="${i}">
+        <img src="${p.image}" alt="${p.name}">
+        <div class="slide-content">
+          <div class="slide-tag">${p.category || ''}</div>
+          <div class="slide-name">${p.name}</div>
+          <div class="slide-price">${money(p.price)}</div>
+        </div>
+      </div>
+    `).join('');
+    dots.innerHTML = withPhoto.map((p, i) => `<button class="dot ${i===0?'active':''}" onclick="setSlide(${i})" aria-label="Ver ${p.name}"></button>`).join('');
+
+    box.querySelectorAll('.slide').forEach(s => {
+      s.style.cursor = 'pointer';
+      s.addEventListener('click', () => go('product', withPhoto[parseInt(s.dataset.i)].id));
+    });
+
+    carouselIndex = 0;
+    carouselTimer = setInterval(() => setSlide((carouselIndex + 1) % withPhoto.length), 4200);
+  }
+  function setSlide(i){
+    const slides = document.querySelectorAll('#carousel .slide');
+    const dots = document.querySelectorAll('#carouselDots .dot');
+    slides.forEach((s, idx) => s.classList.toggle('show', idx === i));
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+    carouselIndex = i;
+  }
+  function stopCarousel(){
+    if(carouselTimer){ clearInterval(carouselTimer); carouselTimer = null; }
+  }
+
+  /* ---------- catalog ---------- */
   function renderFilters(){
     const cats = ["Todas", ...new Set(PRODUCTS.map(p => p.category).filter(Boolean))];
     const box = document.getElementById('filters');
@@ -401,23 +482,15 @@
       b.type = 'button';
       b.textContent = cat;
       b.setAttribute('aria-pressed', cat === activeCategory ? 'true' : 'false');
-      b.addEventListener('click', () => {
-        activeCategory = cat;
-        renderFilters();
-        renderGrid();
-      });
+      b.addEventListener('click', () => { activeCategory = cat; renderFilters(); renderGrid(); });
       box.appendChild(b);
     });
   }
 
   function renderGrid(){
     const grid = document.getElementById('grid');
-    const list = activeCategory === "Todas"
-      ? PRODUCTS
-      : PRODUCTS.filter(p => p.category === activeCategory);
-
-    document.getElementById('countLabel').textContent =
-      list.length + (list.length === 1 ? ' camiseta' : ' camisetas');
+    const list = activeCategory === "Todas" ? PRODUCTS : PRODUCTS.filter(p => p.category === activeCategory);
+    document.getElementById('countLabel').textContent = list.length + (list.length === 1 ? ' camiseta' : ' camisetas');
 
     if(!list.length){
       grid.innerHTML = '<div class="empty">Todavía no hay camisetas cargadas en esta categoría.</div>';
@@ -425,24 +498,10 @@
     }
 
     grid.innerHTML = list.map(p => {
-      const sizePicker = (p.sizes && p.sizes.length)
-        ? `<div class="size-row"><select id="size-${p.id}" ${p.available === false ? 'disabled' : ''}>
-            ${p.sizes.map(s => `<option value="${s}">Talle ${s}</option>`).join('')}
-          </select></div>`
-        : `<div class="size-note">Consultá talles disponibles</div>`;
-
-      const media = p.image
-        ? `<img src="${p.image}" alt="${p.name}" loading="lazy">`
-        : `<div class="no-photo">Foto próximamente</div>`;
-
-      const sold = p.available === false
-        ? `<div class="sold-badge">Agotada</div>`
-        : '';
-
-      const notes = p.notes ? `<div class="card-notes">${p.notes}</div>` : '';
-
+      const media = p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy">` : `<div class="no-photo">Foto próximamente</div>`;
+      const sold = p.available === false ? `<div class="sold-badge">Agotada</div>` : '';
       return `
-      <article class="card">
+      <button class="card" onclick="go('product','${p.id}')">
         <div class="card-media">
           ${media}
           ${p.number ? `<div class="number-badge">${p.number}</div>` : ''}
@@ -451,29 +510,172 @@
         <div class="card-body">
           <div class="card-cat">${p.category || ''}</div>
           <div class="card-name">${p.name}</div>
-          ${notes}
-          <div class="card-foot">
-            <div class="price">${money(p.price)}</div>
-            ${sizePicker}
-            <button class="btn btn-solid" ${p.available === false ? 'disabled' : ''}
-              onclick="orderProduct('${p.id}')">
-              ${p.available === false ? 'Sin stock' : 'Consultar por WhatsApp'}
-            </button>
-          </div>
+          <div class="card-price">${money(p.price)}</div>
         </div>
-      </article>`;
+      </button>`;
     }).join('');
   }
 
-  window.orderProduct = function(id){
+  /* ---------- product ---------- */
+  let selectedSize = null;
+  let selectedQty = 1;
+
+  function renderProduct(id){
+    const p = PRODUCTS.find(x => x.id === id);
+    const wrap = document.getElementById('productWrap');
+    if(!p){
+      wrap.innerHTML = '<div class="empty">No encontramos esa camiseta.</div>';
+      return;
+    }
+    selectedSize = (p.sizes && p.sizes.length) ? null : 'Única';
+    selectedQty = 1;
+
+    const media = p.image ? `<img src="${p.image}" alt="${p.name}">` : `<div class="no-photo" style="height:100%;display:flex;align-items:center;justify-content:center;">Foto próximamente</div>`;
+    const sizeBlock = (p.sizes && p.sizes.length)
+      ? `<div class="field-label">Talle</div>
+         <div class="size-grid" id="sizeGrid">
+           ${p.sizes.map(s => `<button class="size-opt" data-size="${s}" onclick="pickSize('${s}')">${s}</button>`).join('')}
+         </div>`
+      : `<div class="field-label">Talle</div><p style="font-size:13px; color:var(--muted); margin-bottom:24px;">Consultá talles disponibles por WhatsApp.</p>`;
+
+    wrap.innerHTML = `
+      <div class="breadcrumb">
+        <button onclick="go('home')">Inicio</button> / <button onclick="go('catalog')">Catálogo</button> / ${p.name}
+      </div>
+      <div class="product-grid">
+        <div class="product-media">${media}</div>
+        <div class="product-info">
+          <span class="product-tag">${p.category || ''}</span>
+          <h1 class="product-name">${p.name}</h1>
+          <div class="product-price">${money(p.price)}</div>
+          <p class="product-desc">${p.notes || ''}</p>
+          ${sizeBlock}
+          <div class="field-label">Cantidad</div>
+          <div class="qty-row">
+            <button class="qty-btn" onclick="changeQty(-1)">–</button>
+            <span class="qty-value" id="qtyValue">1</span>
+            <button class="qty-btn" onclick="changeQty(1)">+</button>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-solid" ${p.available === false ? 'disabled' : ''} onclick="addToCart('${p.id}')">
+              ${p.available === false ? 'Sin stock' : 'Agregar al carrito'}
+            </button>
+            <button class="btn btn-ghost" id="productWaBtn">
+              Preguntar por WhatsApp
+            </button>
+            <button class="size-guide-link" onclick="go('sizeguide')">Ver guía de talles →</button>
+          </div>
+          <div class="add-toast" id="addToast">Agregada al carrito ✓</div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('productWaBtn').addEventListener('click', () => {
+      openWa(`Hola! Te consulto por la camiseta "${p.name}" (${p.category}). ¿Sigue disponible?`);
+    });
+  }
+
+  function pickSize(s){
+    selectedSize = s;
+    document.querySelectorAll('#sizeGrid .size-opt').forEach(b => {
+      b.setAttribute('aria-pressed', b.dataset.size === s ? 'true' : 'false');
+    });
+  }
+
+  function changeQty(delta){
+    selectedQty = Math.max(1, selectedQty + delta);
+    document.getElementById('qtyValue').textContent = selectedQty;
+  }
+
+  function addToCart(id){
     const p = PRODUCTS.find(x => x.id === id);
     if(!p) return;
-    const sizeSelect = document.getElementById('size-' + id);
-    const size = sizeSelect ? sizeSelect.value : '';
-    const msg = `Hola! Te consulto por la camiseta "${p.name}"${size ? ' talle ' + size : ''}. ¿Sigue disponible?`;
-    window.open(waLink(msg), '_blank');
-  };
+    if(p.sizes && p.sizes.length && !selectedSize){
+      alert('Elegí un talle antes de agregar al carrito.');
+      return;
+    }
+    const size = selectedSize || 'Única';
+    const existing = cart.find(i => i.id === id && i.size === size);
+    if(existing){ existing.qty += selectedQty; }
+    else { cart.push({ id, size, qty: selectedQty }); }
+    saveCart();
+    const toast = document.getElementById('addToast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2200);
+  }
 
+  /* ---------- cart ---------- */
+  function renderCart(){
+    const box = document.getElementById('cartList');
+    if(!cart.length){
+      box.innerHTML = '<div class="cart-empty">Tu carrito está vacío. Sumá camisetas desde el catálogo.</div>';
+      return;
+    }
+    let total = 0;
+    const rows = cart.map((item, idx) => {
+      const p = PRODUCTS.find(x => x.id === item.id);
+      if(!p) return '';
+      const lineTotal = p.price * item.qty;
+      total += lineTotal;
+      const media = p.image ? `<img src="${p.image}" alt="${p.name}">` : `<div class="noimg">sin foto</div>`;
+      return `
+        <div class="cart-item">
+          ${media}
+          <div class="info">
+            <div class="name">${p.name}</div>
+            <div class="meta">Talle ${item.size} · ${money(p.price)} c/u</div>
+            <div class="qty-row">
+              <button class="qty-btn" onclick="cartChangeQty(${idx}, -1)">–</button>
+              <span class="qty-value">${item.qty}</span>
+              <button class="qty-btn" onclick="cartChangeQty(${idx}, 1)">+</button>
+            </div>
+            <button class="remove" onclick="cartRemove(${idx})">Quitar</button>
+          </div>
+          <div class="line-total">${money(lineTotal)}</div>
+        </div>`;
+    }).join('');
+
+    box.innerHTML = rows + `
+      <div class="cart-total-row">
+        <span class="label">Total estimado</span>
+        <span class="value">${money(total)}</span>
+      </div>
+      <div class="product-actions" style="margin-top:20px;">
+        <button class="btn btn-solid" onclick="checkoutWa()">Finalizar pedido por WhatsApp</button>
+        <button class="btn btn-ghost" onclick="go('catalog')">Seguir viendo el catálogo</button>
+      </div>
+    `;
+  }
+
+  function cartChangeQty(idx, delta){
+    cart[idx].qty = Math.max(1, cart[idx].qty + delta);
+    saveCart();
+    renderCart();
+  }
+  function cartRemove(idx){
+    cart.splice(idx, 1);
+    saveCart();
+    renderCart();
+  }
+
+  function checkoutWa(){
+    if(!cart.length) return;
+    let total = 0;
+    const lines = cart.map(item => {
+      const p = PRODUCTS.find(x => x.id === item.id);
+      if(!p) return '';
+      const lineTotal = p.price * item.qty;
+      total += lineTotal;
+      return `- ${p.name} (talle ${item.size}) x${item.qty} — ${money(lineTotal)}`;
+    }).join('\n');
+    const msg = `Hola! Quiero hacer este pedido:\n\n${lines}\n\nTotal estimado: ${money(total)}`;
+    openWa(msg);
+    cart = [];
+    saveCart();
+    renderCart();
+  }
+
+  /* ---------- boot ---------- */
   async function init(){
     try{
       const [cfgRes, prodRes] = await Promise.all([
@@ -490,13 +692,10 @@
     document.getElementById('storeNameFoot').textContent = CONFIG.storeName || 'Offload.ar';
     document.getElementById('storeTagline').textContent = CONFIG.tagline || '';
 
-    const genericMsg = `Hola! Quería consultar por las camisetas de rugby.`;
-    document.getElementById('waHeader').href = waLink(genericMsg);
-    document.getElementById('waHero').href = waLink(genericMsg);
-    document.getElementById('waFoot').href = waLink(genericMsg);
-
     renderFilters();
-    renderGrid();
+    updateCartBadge();
+    window.addEventListener('hashchange', route);
+    route();
   }
 
   init();
