@@ -474,7 +474,10 @@
 
 <footer>
   <span>© <span id="year"></span> <span id="storeNameFoot">Offload.ar</span></span>
-  <a href="#" onclick="openWa(genericMsg()); return false;">Pedidos por WhatsApp</a>
+  <span style="display:flex; gap:18px;">
+    <a href="#" id="igLinkFoot" target="_blank" rel="noopener" style="display:none;">Instagram</a>
+    <a href="#" onclick="openWa(genericMsg()); return false;">Pedidos por WhatsApp</a>
+  </span>
 </footer>
 
 <script>
@@ -866,9 +869,13 @@
     document.getElementById('storeTagline').textContent = CONFIG.tagline || '';
 
     if(CONFIG.instagram){
+      const igUrl = CONFIG.instagram.startsWith('http') ? CONFIG.instagram : `https://instagram.com/${CONFIG.instagram.replace('@','')}`;
       const ig = document.getElementById('igLink');
-      ig.href = CONFIG.instagram.startsWith('http') ? CONFIG.instagram : `https://instagram.com/${CONFIG.instagram.replace('@','')}`;
+      ig.href = igUrl;
       ig.style.display = 'inline-block';
+      const igFoot = document.getElementById('igLinkFoot');
+      igFoot.href = igUrl;
+      igFoot.style.display = 'inline';
     }
 
     renderFilters();
@@ -883,4 +890,4 @@
   init();
 </script>
 </body>
-</html>v
+</html>
