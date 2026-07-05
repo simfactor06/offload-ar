@@ -213,7 +213,10 @@
 <div id="app" style="display:none;">
   <header>
     <h1>Panel · Offload.ar</h1>
-    <button onclick="location.reload()">Actualizar</button>
+    <div style="display:flex; gap:8px;">
+      <button onclick="location.reload()">Actualizar</button>
+      <button onclick="resetAccess()">Reiniciar acceso</button>
+    </div>
   </header>
 
   <main>
@@ -269,8 +272,13 @@
     </div>
 
     <div class="card">
-      <h2>Camisetas cargadas</h2>
-      <div id="productList"><div class="hint">Cargando…</div></div>
+      <h2>Stock (entrega inmediata)</h2>
+      <div id="stockList"><div class="hint">Cargando…</div></div>
+    </div>
+
+    <div class="card">
+      <h2>Catálogo (por encargo)</h2>
+      <div id="catalogList"><div class="hint">Cargando…</div></div>
     </div>
 
     <div class="card">
@@ -281,8 +289,6 @@
       <input type="text" id="cfgTagline">
       <label>WhatsApp (con código de país, sin +, sin espacios)</label>
       <input type="text" id="cfgWhatsapp" placeholder="5493834040581">
-      <label>Instagram (usuario o link)</label>
-      <input type="text" id="cfgInstagram" placeholder="@offloadar">
       <button class="btn" onclick="saveConfig()">Guardar contacto</button>
       <div class="status" id="cfgStatus"></div>
     </div>
@@ -306,6 +312,14 @@
       branch: localStorage.getItem(BRANCH_KEY) || 'main',
       token: localStorage.getItem(TOKEN_KEY) || ''
     };
+  }
+
+  function resetAccess(){
+    if(!confirm('Esto borra el acceso guardado en este celular/computadora. Vas a tener que escribir la contraseña de nuevo. ¿Seguir?')) return;
+    localStorage.removeItem(REPO_KEY);
+    localStorage.removeItem(BRANCH_KEY);
+    localStorage.removeItem(TOKEN_KEY);
+    location.reload();
   }
 
   function showSetup(){
@@ -476,17 +490,12 @@
     document.getElementById('catList').innerHTML = cats.map(c => `<option value="${c}">`).join('');
   }
 
-  function renderList(){
-    const listEl = document.getElementById('productList');
-    if(!PRODUCTS.length){
-      listEl.innerHTML = '<div class="hint">Todavía no cargaste ninguna camiseta.</div>';
-      return;
-    }
-    listEl.innerHTML = PRODUCTS.map(p => `
+  function buildListItem(p){
+    return `
       <div class="list-item">
         ${p.image ? `<img src="${p.image}" alt="">` : `<div class="noimg">sin foto</div>`}
         <div class="info">
-          <div class="name">${p.name} ${p.available === false ? '<span class="sold-tag">Agotada</span>' : ''} ${p.immediate ? '<span class="stock-tag">Stock ya</span>' : ''}</div>
+          <div class="name">${p.name} ${p.available === false ? '<span class="sold-tag">Agotada</span>' : ''}</div>
           <div class="meta">${p.category || 'Sin categoría'} · $${Number(p.price||0).toLocaleString('es-AR')}</div>
         </div>
         <div class="actions">
@@ -494,7 +503,23 @@
           <button onclick="deleteProduct('${p.id}')" style="color:#C8203D;">Borrar</button>
         </div>
       </div>
-    `).join('');
+    `;
+  }
+
+  function renderList(){
+    const stockEl = document.getElementById('stockList');
+    const catalogEl = document.getElementById('catalogList');
+
+    const stockItems = PRODUCTS.filter(p => p.immediate);
+    const catalogItems = PRODUCTS.filter(p => !p.immediate);
+
+    stockEl.innerHTML = stockItems.length
+      ? stockItems.map(buildListItem).join('')
+      : '<div class="hint">Ninguna camiseta marcada como "Entrega inmediata" todavía.</div>';
+
+    catalogEl.innerHTML = catalogItems.length
+      ? catalogItems.map(buildListItem).join('')
+      : '<div class="hint">Todavía no cargaste camisetas por encargo.</div>';
   }
 
   function resetForm(){
@@ -627,16 +652,18 @@
     }
   };
 
+  let RAW_CONFIG = {};
+
   async function loadConfig(){
     try{
       const file = await ghGetFile('data/config.json');
       if(file){
         const cfg = JSON.parse(b64DecodeUnicode(file.content));
+        RAW_CONFIG = cfg;
         CONFIG_SHA = file.sha;
         document.getElementById('cfgName').value = cfg.storeName || '';
         document.getElementById('cfgTagline').value = cfg.tagline || '';
         document.getElementById('cfgWhatsapp').value = cfg.whatsappNumber || '';
-        document.getElementById('cfgInstagram').value = cfg.instagram || '';
       }
     }catch(e){
       console.error(e);
@@ -648,14 +675,15 @@
     setStatus(st, 'loading', 'Guardando…');
     try{
       const cfg = {
+        ...RAW_CONFIG,
         storeName: document.getElementById('cfgName').value.trim(),
         tagline: document.getElementById('cfgTagline').value.trim(),
-        whatsappNumber: document.getElementById('cfgWhatsapp').value.trim().replace(/\D/g,''),
-        instagram: document.getElementById('cfgInstagram').value.trim()
+        whatsappNumber: document.getElementById('cfgWhatsapp').value.trim().replace(/\D/g,'')
       };
       const content = b64EncodeUnicode(JSON.stringify(cfg, null, 2));
       const result = await ghPutFile('data/config.json', content, CONFIG_SHA, 'Actualiza datos de contacto');
       CONFIG_SHA = result.content.sha;
+      RAW_CONFIG = cfg;
       setStatus(st, 'ok', 'Guardado ✓');
     }catch(e){
       setStatus(st, 'err', 'Error: ' + e.message);
