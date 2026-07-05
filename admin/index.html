@@ -468,7 +468,6 @@
   }
 
   async function loadProducts(){
-    const listEl = document.getElementById('productList');
     try{
       const file = await ghGetFile('data/products.json');
       if(file){
@@ -481,7 +480,9 @@
       renderList();
       renderCategoryList();
     }catch(e){
-      listEl.innerHTML = `<div class="status show err">${e.message}</div>`;
+      const errBox = `<div class="status show err">${e.message}</div>`;
+      document.getElementById('stockList').innerHTML = errBox;
+      document.getElementById('catalogList').innerHTML = errBox;
     }
   }
 
