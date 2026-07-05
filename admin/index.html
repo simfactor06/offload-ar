@@ -265,6 +265,13 @@
         </label>
         <div class="hint">Si no la tildás, aparece solo en el Catálogo (por encargo). Si la tildás, también aparece en la pestaña "Stock".</div>
 
+        <label>Etiqueta especial (opcional)</label>
+        <select id="fBadge">
+          <option value="">Ninguna</option>
+          <option value="nuevo">Nuevo ingreso</option>
+          <option value="ultimas">Últimas unidades</option>
+        </select>
+
         <button class="btn" id="saveBtn" onclick="saveProduct()">Guardar camiseta</button>
         <button class="btn btn-outline" id="cancelEditBtn" style="display:none;" onclick="cancelEdit()">Cancelar edición</button>
         <div class="status" id="formStatus"></div>
@@ -534,6 +541,7 @@
     document.getElementById('fNotes').value = '';
     document.getElementById('fAvailable').checked = true;
     document.getElementById('fImmediate').checked = false;
+    document.getElementById('fBadge').value = '';
     document.querySelectorAll('#sizeBoxes input').forEach(cb => cb.checked = false);
     document.getElementById('cancelEditBtn').style.display = 'none';
     document.getElementById('saveBtn').textContent = 'Guardar camiseta';
@@ -553,6 +561,7 @@
     document.getElementById('fNotes').value = p.notes || '';
     document.getElementById('fAvailable').checked = p.available !== false;
     document.getElementById('fImmediate').checked = !!p.immediate;
+    document.getElementById('fBadge').value = p.badge || '';
     document.querySelectorAll('#sizeBoxes input').forEach(cb => {
       cb.checked = (p.sizes || []).includes(cb.value);
     });
@@ -628,6 +637,7 @@
         notes: document.getElementById('fNotes').value.trim(),
         available: document.getElementById('fAvailable').checked,
         immediate: document.getElementById('fImmediate').checked,
+        badge: document.getElementById('fBadge').value,
         image: rawUrl || (editingId ? (PRODUCTS.find(p => p.id === editingId)?.image || '') : '')
       };
 
