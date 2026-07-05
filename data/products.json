@@ -5,7 +5,13 @@
     "name": "Lions Camuflaje Azul — Manga Corta",
     "category": "British & Irish Lions",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Jersey Canterbury edición 'Since 1888', estampado camuflaje floral en tonos azules con degradé a negro. Auspicio Howden. Escudo de los cuatro países bordado.",
     "available": true,
     "image": "assets/IMG_2372.jpg",
@@ -17,7 +23,13 @@
     "name": "Lions Camuflaje Azul — Musculosa",
     "category": "British & Irish Lions",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Versión sin mangas del estampado camuflaje azul. Ideal para entrenar o combinar. Tela liviana Canterbury, auspicio Howden.",
     "available": true,
     "image": "assets/IMG_2371.jpg",
@@ -29,7 +41,13 @@
     "name": "Lions Camuflaje Rojo — Musculosa",
     "category": "British & Irish Lions",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Musculosa Canterbury en la clásica gama roja de los Lions, mismo estampado camuflaje floral degradé. Escudo bordado y auspicio Howden.",
     "available": true,
     "image": "assets/IMG_2373.jpg",
@@ -41,7 +59,13 @@
     "name": "Lions Clásica Navy",
     "category": "British & Irish Lions",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Polo rugbero tradicional azul marino con cuello y puños blancos. Escudo bordado 'Since 1888' y auspicio Howden al frente.",
     "available": true,
     "image": "assets/IMG_2375.jpg",
@@ -53,7 +77,13 @@
     "name": "Lions Clásica Roja",
     "category": "British & Irish Lions",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "La versión roja de la polo rugbera tradicional, cuello blanco en contraste. Corte clásico Canterbury, escudo bordado y Howden al frente.",
     "available": true,
     "image": "assets/IMG_2376.jpg",
@@ -65,7 +95,13 @@
     "name": "All Blacks Alternativa",
     "category": "Nueva Zelanda",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Camiseta adidas en negro con paneles celestes, auspicio INEOS. Helecho plateado bordado, tecnología AEROREADY.",
     "available": true,
     "image": "assets/IMG_2381.jpg",
@@ -77,7 +113,13 @@
     "name": "Munster Alternativa Bordó",
     "category": "Munster Rugby",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Camiseta adidas bordó con detalles en violeta oscuro y grabado del venado en el frente. Auspicio Bank of Ireland.",
     "available": true,
     "image": "assets/IMG_2383.jpg",
@@ -89,7 +131,13 @@
     "name": "Northampton Saints Local",
     "category": "Northampton Saints",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Macron con franjas negras, verdes y doradas, cuello polo a tono. Auspicio cinch, escudo del club al pecho.",
     "available": true,
     "image": "assets/IMG_2388.jpg",
@@ -101,7 +149,13 @@
     "name": "Bath Rugby Local",
     "category": "Bath Rugby",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Castore a bandas azul, negro y blanco, escudo dorado de Bath Rugby. Doble auspicio Dyson y Airstrait.",
     "available": true,
     "image": "assets/IMG_2390.jpg",
@@ -113,7 +167,13 @@
     "name": "Francia Local — Le Coq",
     "category": "Francia",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Adidas azul Francia con gallo bordado en rojo, cuello tricolor. Auspicio Altrad al frente.",
     "available": true,
     "image": "assets/IMG_2394.jpg",
@@ -125,7 +185,13 @@
     "name": "Escocia Local Navy",
     "category": "Escocia",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Macron azul marino con cuello blanco, escudo del cardo bordado. Auspicio Arnold Clark, detalle 'Murrayfield 192_' en manga.",
     "available": true,
     "image": "assets/IMG_2398.jpg",
@@ -137,7 +203,13 @@
     "name": "Connacht Rugby 140 Años",
     "category": "Connacht Rugby",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Macron verde con detalles dorados, escudo del águila de Connacht. Edición aniversario '140 · 1885-2025', auspicio Genesys.",
     "available": true,
     "image": "assets/IMG_2400.jpg",
@@ -149,7 +221,13 @@
     "name": "Harlequins Fuegos Artificiales",
     "category": "Harlequins",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Edición especial Castore con estampado de fuegos artificiales sobre negro y detalles verdes. Auspicio DHL.",
     "available": true,
     "image": "assets/IMG_2402.jpg",
@@ -161,7 +239,13 @@
     "name": "Harlequins Cuadrantes",
     "category": "Harlequins",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Castore con diseño de cuatro cuadrantes de color (celeste, rojo, bordó, gris) separados por rayo. Auspicio DHL.",
     "available": true,
     "image": "assets/IMG_2404.jpg",
@@ -173,7 +257,13 @@
     "name": "Escocia Alternativa Lila",
     "category": "Escocia",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Macron en lila con detalles en violeta oscuro, escudo del cardo tono sobre tono. Auspicio Arnold Clark, bandera escocesa en manga.",
     "available": true,
     "image": "assets/IMG_2406.jpg",
@@ -185,7 +275,13 @@
     "name": "Toulouse Local — 1986-2026",
     "category": "Stade Toulousain",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Nike a rayas negras y rojas, escudo 'TS' bordado. Edición aniversario '1986-2026', auspicios Airbus, Rempart y Peugeot.",
     "available": true,
     "image": "assets/IMG_2410.jpg",
@@ -197,7 +293,13 @@
     "name": "Toulouse Edición Especial",
     "category": "Stade Toulousain",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Nike con estampado abstracto rojo y negro efecto ondas, mangas lisas. Auspicios Airbus, Kumho y Peugeot.",
     "available": true,
     "image": "assets/IMG_2409.jpg",
@@ -209,7 +311,13 @@
     "name": "Springboks Local",
     "category": "Sudáfrica",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Nike verde tradicional con el springbok bordado y cuello dorado dentado. Auspicio FNB, bandera sudafricana en manga.",
     "available": true,
     "image": "assets/IMG_2412.jpg",
@@ -221,7 +329,13 @@
     "name": "Irlanda Local Blanca",
     "category": "Irlanda",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Canterbury blanca con cuello y puños verdes, escudo IRFU bordado. Auspicio Vodafone, tecnología Vapodri.",
     "available": true,
     "image": "assets/IMG_2408.jpg",
@@ -233,7 +347,13 @@
     "name": "Francia Visitante Blanca",
     "category": "Francia",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Versión visitante en blanco con cuello tricolor y puños azules. Auspicio Societe Generale. Foto de espalda.",
     "available": true,
     "image": "assets/IMG_2397.jpg",
@@ -245,7 +365,13 @@
     "name": "Bath Rugby Alternativa",
     "category": "Bath Rugby",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Diseño por bloques en azul, negro y blanco, auspicios Thatchers y Grant. Foto de espalda.",
     "available": true,
     "image": "assets/IMG_2391.jpg",
@@ -257,7 +383,13 @@
     "name": "Jersey Lila — Vodafone",
     "category": "Edición Especial",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Camiseta en tono lila con paneles violeta oscuro, auspicio Vodafone. Foto de espalda, consultanos por el detalle del escudo.",
     "available": true,
     "image": "assets/IMG_2407.jpg",
@@ -269,7 +401,13 @@
     "name": "Short Lions — Since 1888",
     "category": "British & Irish Lions",
     "price": 70000,
-    "sizes": [],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "notes": "Short Canterbury azul marino a juego con la línea Lions. Escudo bordado y logo canterbury. Ideal para combinar con cualquiera de las camisetas Lions.",
     "available": true,
     "image": "assets/42a2f715-42f4-44eb-bb1f-eb8719c73de7.jpg",
