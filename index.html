@@ -174,12 +174,40 @@
   .card:hover .card-media img{transform:scale(1.04);}
   .no-photo{width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-family:'Space Mono', monospace; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; text-align:center; padding:10px;}
   .number-badge{position:absolute; top:10px; left:10px; font-family:'Anton', sans-serif; font-size:14px; background:var(--ink); color:var(--bone); width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center;}
+  .stock-badge{
+    position:absolute; top:10px; right:10px; font-family:'Space Mono', monospace; font-size:9px;
+    text-transform:uppercase; letter-spacing:.06em; background:var(--moss); color:#fff; padding:4px 9px; border-radius:999px;
+  }
   .sold-badge{position:absolute; inset:0; background:rgba(22,21,15,.62); color:var(--bone); display:flex; align-items:center; justify-content:center; font-family:'Space Mono', monospace; text-transform:uppercase; letter-spacing:.12em; font-size:13px;}
   .card-body{padding:14px 16px 16px; display:flex; flex-direction:column; gap:6px; flex:1;}
   .card-cat{font-family:'Space Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:var(--muted);}
   .card-name{font-family:'Anton', sans-serif; font-size:18px; line-height:1.15;}
   .card-price{font-family:'Space Mono', monospace; font-weight:700; font-size:16px; margin-top:auto; padding-top:8px;}
   .empty{grid-column:1/-1; padding:8vh 2vw; text-align:center; color:var(--muted); font-family:'Space Mono', monospace; text-transform:uppercase; letter-spacing:.08em; font-size:13px; background:var(--bone);}
+  .stock-note{
+    font-size:13px; color:var(--muted); line-height:1.6; margin:-16px 0 26px;
+    max-width:70ch;
+  }
+  .inline-link{
+    background:none; border:none; padding:0; font:inherit; color:var(--ink);
+    text-decoration:underline; text-underline-offset:2px; cursor:pointer;
+  }
+
+  /* ---------- How to order ---------- */
+  .howto-wrap{max-width:760px; margin:0 auto; padding:7vh 6vw 12vh;}
+  .howto-wrap h2{font-family:'Anton', sans-serif; font-size:clamp(28px,4vw,42px); margin-bottom:10px;}
+  .howto-intro{color:var(--muted); font-size:15px; margin-bottom:36px;}
+  .howto-steps{list-style:none; display:flex; flex-direction:column; gap:26px; margin-bottom:36px;}
+  .howto-steps li{display:flex; gap:18px; align-items:flex-start;}
+  .howto-num{
+    flex-shrink:0; width:34px; height:34px; border-radius:50%; background:var(--ink); color:var(--bone);
+    font-family:'Anton', sans-serif; font-size:15px; display:flex; align-items:center; justify-content:center;
+  }
+  .howto-steps h3{font-family:'Anton', sans-serif; font-size:17px; margin-bottom:6px;}
+  .howto-steps p{font-size:14px; color:var(--muted); line-height:1.6;}
+  .howto-note{
+    background:var(--paper); padding:16px 18px; font-size:13px; line-height:1.8; color:var(--ink);
+  }
 
   /* ---------- Product view ---------- */
   .product-wrap{max-width:1100px; margin:0 auto; padding:5vh 6vw 12vh;}
@@ -252,8 +280,14 @@
 
   @media (max-width:640px){
     header{padding:14px 5vw; flex-wrap:wrap;}
-    nav{order:3; width:100%; justify-content:flex-start; overflow-x:auto; padding-top:10px; border-top:1px solid var(--line); margin-top:10px;}
-    .filters{top:110px;}
+    .brand-text span{display:none;}
+    nav{order:3; width:100%; justify-content:flex-start; overflow-x:auto; padding-top:10px; border-top:1px solid var(--line); margin-top:10px; -webkit-overflow-scrolling:touch;}
+    .filters{position:static; top:auto;}
+    .hero-actions .btn{flex:1 1 auto; text-align:center;}
+    table.sizes{font-size:12px;}
+    table.sizes th, table.sizes td{padding:8px 8px;}
+    .cart-item{flex-wrap:wrap; gap:10px;}
+    .cart-item .line-total{margin-left:auto;}
   }
 </style>
 </head>
@@ -269,9 +303,11 @@
   </button>
   <nav>
     <button class="navlink" data-view="home" onclick="go('home')">Inicio</button>
+    <button class="navlink" data-view="stock" onclick="go('stock')">Stock</button>
     <button class="navlink" data-view="catalog" onclick="go('catalog')">Catálogo</button>
     <button class="navlink" data-view="sizeguide" onclick="go('sizeguide')">Guía de talles</button>
     <button class="navlink" data-view="contact" onclick="go('contact')">Contacto</button>
+    <button class="navlink" data-view="howto" onclick="go('howto')">¿Cómo encargo?</button>
     <button class="cart-btn" onclick="go('cart')">
       🛒 Carrito <span class="cart-badge" id="cartBadge">0</span>
     </button>
@@ -302,6 +338,18 @@
     </div>
   </section>
 
+  <!-- ===== STOCK ===== -->
+  <section class="view" id="view-stock">
+    <div class="catalog">
+      <div class="catalog-head">
+        <h2>Stock disponible</h2>
+        <span class="count" id="stockCountLabel"></span>
+      </div>
+      <p class="stock-note">Estas camisetas ya las tenemos: entrega inmediata (24-72hs). El resto del catálogo es por encargo — mirá <button class="inline-link" onclick="go('howto')">cómo encargar</button>.</p>
+      <div class="grid" id="stockGrid"></div>
+    </div>
+  </section>
+
   <!-- ===== CATALOG ===== -->
   <section class="view" id="view-catalog">
     <div class="filters" id="filters"></div>
@@ -324,6 +372,7 @@
     <div class="sizeguide-wrap">
       <h2>Guía de talles</h2>
       <p>Medidas aproximadas en centímetros para camisetas de rugby réplica. Pueden variar unos centímetros según la marca y el modelo — ante la duda, escribinos por WhatsApp y te ayudamos a elegir.</p>
+      <div style="overflow-x:auto;">
       <table class="sizes">
         <thead>
           <tr><th>Talle</th><th>Pecho (cm)</th><th>Largo (cm)</th><th>Contextura sugerida</th></tr>
@@ -337,10 +386,67 @@
           <tr><td>3XL</td><td>127 – 133</td><td>78</td><td>Extra grande</td></tr>
         </tbody>
       </table>
+      </div>
       <p class="sizeguide-note">
         Cómo medir: pecho = contorno completo pasando por debajo de las axilas, con la prenda apoyada plana y estirada. Largo = desde el punto más alto del hombro hasta el borde inferior.<br><br>
         La mayoría de las réplicas oficiales (adidas, Canterbury, Macron, Castore, Nike) calzan de forma similar al talle indicado, con corte deportivo ajustado.
       </p>
+    </div>
+  </section>
+
+  <!-- ===== HOW TO ORDER ===== -->
+  <section class="view" id="view-howto">
+    <div class="howto-wrap">
+      <h2>¿Cómo encargo?</h2>
+      <p class="howto-intro">Pedir tu camiseta es simple. Te explicamos todo el circuito, paso a paso.</p>
+
+      <ol class="howto-steps">
+        <li>
+          <span class="howto-num">1</span>
+          <div>
+            <h3>Elegí el modelo</h3>
+            <p>Mirá el <button class="inline-link" onclick="go('stock')">Stock disponible</button> si lo querés recibir ya (24-72hs), o el <button class="inline-link" onclick="go('catalog')">Catálogo completo</button> si preferís pedirlo por encargo (llega en 20-40 días).</p>
+          </div>
+        </li>
+        <li>
+          <span class="howto-num">2</span>
+          <div>
+            <h3>Elegí tu talle</h3>
+            <p>Entrá a la camiseta y seleccioná el talle. Si tenés dudas de cuál te queda, revisá la <button class="inline-link" onclick="go('sizeguide')">Guía de talles</button> antes de confirmar.</p>
+          </div>
+        </li>
+        <li>
+          <span class="howto-num">3</span>
+          <div>
+            <h3>Sumala al carrito</h3>
+            <p>Podés agregar más de una camiseta y de distintos talles. El carrito queda guardado aunque cierres la página.</p>
+          </div>
+        </li>
+        <li>
+          <span class="howto-num">4</span>
+          <div>
+            <h3>Finalizá el pedido por WhatsApp</h3>
+            <p>Andá al <button class="inline-link" onclick="go('cart')">Carrito</button> y tocá "Finalizar pedido por WhatsApp". Se abre un mensaje ya armado con cada camiseta, talle y el total estimado — no tenés que escribir nada.</p>
+          </div>
+        </li>
+        <li>
+          <span class="howto-num">5</span>
+          <div>
+            <h3>Confirmamos stock, pago y envío</h3>
+            <p>Por WhatsApp te confirmamos disponibilidad real, coordinamos el medio de pago (transferencia o efectivo) y la forma de envío o retiro. El pedido se confirma una vez acordado el pago.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="howto-note">
+        <b>Tiempos de entrega:</b> Stock disponible 24-72hs · Por encargo 20-40 días hábiles.<br>
+        <b>Envíos:</b> a todo el país. Coordinamos el costo según tu localidad al confirmar el pedido.
+      </div>
+
+      <div class="hero-actions" style="margin-top:30px;">
+        <button class="btn btn-solid" onclick="go('stock')">Ver stock disponible</button>
+        <button class="btn btn-ghost" onclick="go('catalog')">Ver catálogo completo</button>
+      </div>
     </div>
   </section>
 
@@ -351,6 +457,7 @@
       <p id="contactText">¿Tenés dudas sobre stock, talles o envíos? Escribinos, te respondemos por WhatsApp.</p>
       <div class="contact-actions">
         <button class="btn btn-solid" onclick="openWa(genericMsg())">Escribinos por WhatsApp</button>
+        <a class="btn btn-ghost" id="igLink" href="#" target="_blank" rel="noopener" style="display:none;">Seguinos en Instagram</a>
       </div>
     </div>
   </section>
@@ -402,9 +509,11 @@
   function parseHash(){
     const h = location.hash.replace('#','');
     if(!h) return { view:'home' };
+    if(h === 'stock') return { view:'stock' };
     if(h === 'catalogo') return { view:'catalog' };
     if(h === 'talles') return { view:'sizeguide' };
     if(h === 'contacto') return { view:'contact' };
+    if(h === 'encargo') return { view:'howto' };
     if(h === 'carrito') return { view:'cart' };
     if(h.startsWith('producto/')) return { view:'product', id: h.split('/')[1] };
     return { view:'home' };
@@ -413,12 +522,16 @@
   function go(view, id){
     if(view === 'product' && id){
       location.hash = 'producto/' + id;
+    } else if(view === 'stock'){
+      location.hash = 'stock';
     } else if(view === 'catalog'){
       location.hash = 'catalogo';
     } else if(view === 'sizeguide'){
       location.hash = 'talles';
     } else if(view === 'contact'){
       location.hash = 'contacto';
+    } else if(view === 'howto'){
+      location.hash = 'encargo';
     } else if(view === 'cart'){
       location.hash = 'carrito';
     } else {
@@ -440,6 +553,7 @@
       const nav = document.querySelector('.navlink[data-view="' + view + '"]');
       if(nav) nav.classList.add('active');
       if(view === 'catalog') renderGrid();
+      if(view === 'stock') renderStockGrid();
       if(view === 'cart') renderCart();
       if(view === 'home') renderDestacados();
     }
@@ -530,6 +644,26 @@
     });
   }
 
+  function buildCard(p){
+    const media = p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy">` : `<div class="no-photo">Foto próximamente</div>`;
+    const sold = p.available === false ? `<div class="sold-badge">Agotada</div>` : '';
+    const stockTag = p.immediate ? `<div class="stock-badge">Stock ya</div>` : '';
+    return `
+      <button class="card" onclick="go('product','${p.id}')">
+        <div class="card-media">
+          ${media}
+          ${p.number ? `<div class="number-badge">${p.number}</div>` : ''}
+          ${stockTag}
+          ${sold}
+        </div>
+        <div class="card-body">
+          <div class="card-cat">${p.category || ''}</div>
+          <div class="card-name">${p.name}</div>
+          <div class="card-price">${money(p.price)}</div>
+        </div>
+      </button>`;
+  }
+
   function renderGrid(){
     const grid = document.getElementById('grid');
     const list = activeCategory === "Todas" ? PRODUCTS : PRODUCTS.filter(p => p.category === activeCategory);
@@ -539,24 +673,19 @@
       grid.innerHTML = '<div class="empty">Todavía no hay camisetas cargadas en esta categoría.</div>';
       return;
     }
+    grid.innerHTML = list.map(buildCard).join('');
+  }
 
-    grid.innerHTML = list.map(p => {
-      const media = p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy">` : `<div class="no-photo">Foto próximamente</div>`;
-      const sold = p.available === false ? `<div class="sold-badge">Agotada</div>` : '';
-      return `
-      <button class="card" onclick="go('product','${p.id}')">
-        <div class="card-media">
-          ${media}
-          ${p.number ? `<div class="number-badge">${p.number}</div>` : ''}
-          ${sold}
-        </div>
-        <div class="card-body">
-          <div class="card-cat">${p.category || ''}</div>
-          <div class="card-name">${p.name}</div>
-          <div class="card-price">${money(p.price)}</div>
-        </div>
-      </button>`;
-    }).join('');
+  function renderStockGrid(){
+    const grid = document.getElementById('stockGrid');
+    const list = PRODUCTS.filter(p => p.immediate && p.available !== false);
+    document.getElementById('stockCountLabel').textContent = list.length + (list.length === 1 ? ' camiseta' : ' camisetas');
+
+    if(!list.length){
+      grid.innerHTML = '<div class="empty">Por ahora no tenemos stock inmediato cargado — mirá el catálogo completo, disponible por encargo.</div>';
+      return;
+    }
+    grid.innerHTML = list.map(buildCard).join('');
   }
 
   /* ---------- product ---------- */
@@ -614,7 +743,8 @@
     `;
 
     document.getElementById('productWaBtn').addEventListener('click', () => {
-      openWa(`Hola! Te consulto por la camiseta "${p.name}" (${p.category}). ¿Sigue disponible?`);
+      const sizeTxt = (selectedSize && selectedSize !== 'Única') ? ` talle ${selectedSize}` : '';
+      openWa(`Hola! Te consulto por la camiseta "${p.name}"${sizeTxt} (${p.category}). ¿Sigue disponible?`);
     });
   }
 
@@ -735,6 +865,12 @@
     document.getElementById('storeNameFoot').textContent = CONFIG.storeName || 'Offload.ar';
     document.getElementById('storeTagline').textContent = CONFIG.tagline || '';
 
+    if(CONFIG.instagram){
+      const ig = document.getElementById('igLink');
+      ig.href = CONFIG.instagram.startsWith('http') ? CONFIG.instagram : `https://instagram.com/${CONFIG.instagram.replace('@','')}`;
+      ig.style.display = 'inline-block';
+    }
+
     renderFilters();
     updateCartBadge();
     window.addEventListener('hashchange', route);
@@ -747,4 +883,4 @@
   init();
 </script>
 </body>
-</html>
+</html>v
