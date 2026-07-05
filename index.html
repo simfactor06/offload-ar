@@ -24,13 +24,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#16150F;
-    --bone:#F3EFE3;
-    --paper:#EAE4D2;
-    --red:#C8203D;
-    --moss:#454F3C;
-    --line:rgba(22,21,15,.14);
-    --muted:#726F5E;
+    --ink:#F7F5F0;
+    --bone:#151210;
+    --paper:#201C18;
+    --red:#D9A441;
+    --moss:#5C7A5E;
+    --line:rgba(247,245,240,.14);
+    --muted:#A69C8D;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
@@ -66,21 +66,21 @@
   }
   nav{display:flex; align-items:center; gap:4px; flex-wrap:wrap;}
   .navlink{
-    font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
-    letter-spacing:0.06em; background:none; border:1px solid transparent;
+    font-family:'Inter', sans-serif; font-weight:600; font-size:12.5px; text-transform:uppercase;
+    letter-spacing:0.04em; background:none; border:1px solid transparent;
     padding:9px 13px; color:var(--ink); white-space:nowrap;
   }
   .navlink:hover{border-color:var(--line);}
   .navlink.active{background:var(--ink); color:var(--bone);}
   .cart-btn{
     position:relative; display:flex; align-items:center; gap:6px;
-    font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
-    letter-spacing:0.06em; background:none; border:1px solid var(--ink);
+    font-family:'Inter', sans-serif; font-weight:600; font-size:12.5px; text-transform:uppercase;
+    letter-spacing:0.04em; background:none; border:1px solid var(--ink);
     padding:9px 13px; color:var(--ink);
   }
   .cart-btn:hover{background:var(--ink); color:var(--bone);}
   .cart-badge{
-    background:var(--red); color:#fff; border-radius:50%;
+    background:var(--red); color:var(--bone); border-radius:50%;
     font-family:'Space Mono', monospace; font-size:10px;
     width:17px; height:17px; display:flex; align-items:center; justify-content:center;
   }
@@ -116,7 +116,7 @@
   .dest-body{padding:16px 18px 18px; display:flex; flex-direction:column; gap:8px;}
   .dest-tag{
     align-self:flex-start; font-family:'Space Mono', monospace; font-size:10px; text-transform:uppercase;
-    letter-spacing:.08em; background:var(--red); color:#fff; padding:5px 12px; border-radius:999px;
+    letter-spacing:.08em; background:var(--red); color:var(--bone); padding:5px 12px; border-radius:999px;
   }
   .dest-name{font-family:'Anton', sans-serif; font-size:17px; line-height:1.2;}
   .dest-price{font-family:'Space Mono', monospace; font-weight:700; font-size:16px; color:var(--red);}
@@ -159,7 +159,7 @@
   }
   .btn:hover{transform:translateY(-2px);}
   .btn-solid{background:var(--ink); color:var(--bone);}
-  .btn-solid:hover{background:var(--red); border-color:var(--red); color:#fff;}
+  .btn-solid:hover{background:var(--red); border-color:var(--red); color:var(--bone);}
   .btn-ghost:hover{background:var(--ink); color:var(--bone);}
   .btn:disabled{opacity:.45; cursor:not-allowed; transform:none;}
 
@@ -168,6 +168,12 @@
     display:flex; gap:10px; flex-wrap:wrap; padding:24px 6vw;
     border-bottom:1px solid var(--line); position:sticky; top:73px; z-index:20; background:var(--bone);
   }
+  .filter-group{margin-bottom:22px;}
+  .filter-label{
+    display:block; font-family:'Space Mono', monospace; font-size:10px; text-transform:uppercase;
+    letter-spacing:.08em; color:var(--muted); margin-bottom:10px;
+  }
+  .filters-inline{display:flex; gap:10px; flex-wrap:wrap;}
   .chip{
     font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
     letter-spacing:0.08em; padding:8px 14px; border:1px solid var(--line); background:transparent;
@@ -198,8 +204,8 @@
   }
   .stock-badge{background:var(--moss); color:#fff;}
   .badge-nuevo{background:var(--ink); color:var(--bone);}
-  .badge-ultimas{background:var(--red); color:#fff;}
-  .sold-badge{position:absolute; inset:0; background:rgba(22,21,15,.62); color:var(--bone); display:flex; align-items:center; justify-content:center; font-family:'Space Mono', monospace; text-transform:uppercase; letter-spacing:.12em; font-size:13px;}
+  .badge-ultimas{background:var(--red); color:var(--bone);}
+  .sold-badge{position:absolute; inset:0; background:rgba(0,0,0,.62); color:var(--ink); display:flex; align-items:center; justify-content:center; font-family:'Space Mono', monospace; text-transform:uppercase; letter-spacing:.12em; font-size:13px;}
   .card-body{padding:14px 16px 16px; display:flex; flex-direction:column; gap:6px; flex:1;}
   .card-cat{font-family:'Space Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:var(--muted);}
   .card-name{font-family:'Anton', sans-serif; font-size:18px; line-height:1.15;}
@@ -350,8 +356,8 @@
   <section class="view" id="view-home">
     <div class="hero-intro">
       <div class="eyebrow">Selecciones · Clubes · Retro</div>
-      <h1>Camisetas que <em>se ganan</em> en la cancha.</h1>
-      <p>Réplicas de selecciones y clubes de rugby. Elegí tu talle, sumala al carrito y armamos el pedido directo por WhatsApp.</p>
+      <h1>¡Bienvenidos a <em>Offload</em>!</h1>
+      <p>Arrancamos este proyecto con una sola idea: traer las camisetas de rugby que todos queremos tener. 🔝</p>
       <div class="hero-actions">
         <button class="btn btn-solid" onclick="go('catalog')">Ver catálogo</button>
         <button class="btn btn-ghost" id="waHero" onclick="openWa(genericMsg())">Hablar por WhatsApp</button>
@@ -376,17 +382,28 @@
         <span class="count" id="stockCountLabel"></span>
       </div>
       <p class="stock-note">Estas camisetas ya las tenemos: entrega inmediata (24-72hs). El resto del catálogo es por encargo — mirá <button class="inline-link" onclick="go('howto')">cómo encargar</button>.</p>
+      <div class="filter-group">
+        <span class="filter-label">Tipo</span>
+        <div class="filters-inline" id="stockTypeFilters"></div>
+      </div>
       <div class="grid" id="stockGrid"></div>
     </div>
   </section>
 
   <!-- ===== CATALOG ===== -->
   <section class="view" id="view-catalog">
-    <div class="filters" id="filters"></div>
     <div class="catalog">
       <div class="catalog-head">
         <h2>Catálogo</h2>
         <span class="count" id="countLabel"></span>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">Categoría</span>
+        <div class="filters-inline" id="filters"></div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">Tipo</span>
+        <div class="filters-inline" id="catalogTypeFilters"></div>
       </div>
       <div class="grid" id="grid"></div>
     </div>
@@ -401,25 +418,22 @@
   <section class="view" id="view-sizeguide">
     <div class="sizeguide-wrap">
       <h2>Guía de talles</h2>
-      <p>Medidas aproximadas en centímetros para camisetas de rugby réplica. Pueden variar unos centímetros según la marca y el modelo — ante la duda, escribinos por WhatsApp y te ayudamos a elegir.</p>
+      <p>Medidas de la prenda apoyada en plano, en centímetros.</p>
       <div style="overflow-x:auto;">
       <table class="sizes">
         <thead>
-          <tr><th>Talle</th><th>Pecho (cm)</th><th>Largo (cm)</th><th>Contextura sugerida</th></tr>
+          <tr><th>Talle</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th><th>3XL</th></tr>
         </thead>
         <tbody>
-          <tr><td>S</td><td>96 – 100</td><td>68</td><td>Delgada</td></tr>
-          <tr><td>M</td><td>101 – 106</td><td>70</td><td>Media</td></tr>
-          <tr><td>L</td><td>107 – 112</td><td>72</td><td>Media-robusta</td></tr>
-          <tr><td>XL</td><td>113 – 119</td><td>74</td><td>Robusta</td></tr>
-          <tr><td>2XL</td><td>120 – 126</td><td>76</td><td>Grande</td></tr>
-          <tr><td>3XL</td><td>127 – 133</td><td>78</td><td>Extra grande</td></tr>
+          <tr><td>Ancho (cm)</td><td>52</td><td>54</td><td>56</td><td>58</td><td>59</td><td>61</td></tr>
+          <tr><td>Largo (cm)</td><td>71</td><td>74</td><td>76</td><td>78</td><td>79</td><td>81</td></tr>
         </tbody>
       </table>
       </div>
       <p class="sizeguide-note">
-        Cómo medir: pecho = contorno completo pasando por debajo de las axilas, con la prenda apoyada plana y estirada. Largo = desde el punto más alto del hombro hasta el borde inferior.<br><br>
-        La mayoría de las réplicas oficiales (adidas, Canterbury, Macron, Castore, Nike) calzan de forma similar al talle indicado, con corte deportivo ajustado.
+        <b>Ancho:</b> de axila a axila.<br>
+        <b>Largo:</b> desde el hombro hasta la parte inferior.<br><br>
+        Las medidas pueden variar entre 1 y 3 cm. Si estás entre dos talles, te recomendamos elegir el más grande para mayor comodidad.
       </p>
     </div>
   </section>
@@ -455,21 +469,29 @@
         <li>
           <span class="howto-num">4</span>
           <div>
-            <h3>Finalizá el pedido por WhatsApp</h3>
-            <p>Andá al <button class="inline-link" onclick="go('cart')">Carrito</button> y tocá "Finalizar pedido por WhatsApp". Se abre un mensaje ya armado con cada camiseta, talle y el total estimado — no tenés que escribir nada.</p>
+            <h3>Si es por encargo, se paga en dos partes</h3>
+            <p>Para las camisetas por encargo pedimos una seña del 50% para confirmar el pedido, y el 50% restante lo abonás cuando la recibís. El stock disponible se paga completo al confirmar.</p>
           </div>
         </li>
         <li>
           <span class="howto-num">5</span>
           <div>
+            <h3>Finalizá el pedido por WhatsApp</h3>
+            <p>Andá al <button class="inline-link" onclick="go('cart')">Carrito</button> y tocá "Finalizar pedido por WhatsApp". Se abre un mensaje ya armado con cada camiseta, talle y el total estimado — no tenés que escribir nada.</p>
+          </div>
+        </li>
+        <li>
+          <span class="howto-num">6</span>
+          <div>
             <h3>Confirmamos stock, pago y envío</h3>
-            <p>Por WhatsApp te confirmamos disponibilidad real, coordinamos el medio de pago (transferencia o efectivo) y la forma de envío o retiro. El pedido se confirma una vez acordado el pago.</p>
+            <p>Por WhatsApp te confirmamos disponibilidad real, coordinamos el medio de pago (transferencia o efectivo) y la forma de envío o retiro. El pedido se confirma una vez acordada la seña o el pago.</p>
           </div>
         </li>
       </ol>
 
       <div class="howto-note">
         <b>Tiempos de entrega:</b> Stock disponible 24-72hs · Por encargo 20-40 días hábiles.<br>
+        <b>Pago por encargo:</b> 50% de seña al confirmar + 50% contra entrega.<br>
         <b>Envíos:</b> a todo el país. Coordinamos el costo según tu localidad al confirmar el pedido.
       </div>
 
@@ -522,6 +544,8 @@
   let CONFIG = { storeName: "Offload.ar", tagline: "Camisetas de rugby", whatsappNumber: "" };
   let PRODUCTS = [];
   let activeCategory = "Todas";
+  let activeTypeCatalog = "Todos";
+  let activeTypeStock = "Todos";
   let currentProductId = null;
   let cart = JSON.parse(localStorage.getItem('offload_cart') || '[]');
 
@@ -591,8 +615,8 @@
       if(el) el.classList.add('active');
       const nav = document.querySelector('.navlink[data-view="' + view + '"]');
       if(nav) nav.classList.add('active');
-      if(view === 'catalog') renderGrid();
-      if(view === 'stock') renderStockGrid();
+      if(view === 'catalog'){ renderCatalogTypeFilters(); renderGrid(); }
+      if(view === 'stock'){ renderStockTypeFilters(); renderStockGrid(); }
       if(view === 'cart') renderCart();
       if(view === 'home') renderDestacados();
     }
@@ -683,6 +707,41 @@
     });
   }
 
+  const TIPOS = [
+    { key:'partido', label:'Partido' },
+    { key:'entrenamiento', label:'Entrenamiento' },
+    { key:'shorts', label:'Shorts' }
+  ];
+
+  function renderTypeFilters(containerId, getActive, setActive, onChange){
+    const box = document.getElementById(containerId);
+    if(!box) return;
+    const opts = ["Todos", ...TIPOS.map(t => t.label)];
+    box.innerHTML = '';
+    opts.forEach(label => {
+      const b = document.createElement('button');
+      b.className = 'chip';
+      b.type = 'button';
+      b.textContent = label;
+      b.setAttribute('aria-pressed', label === getActive() ? 'true' : 'false');
+      b.addEventListener('click', () => { setActive(label); onChange(); });
+      box.appendChild(b);
+    });
+  }
+
+  function matchesType(p, activeLabel){
+    if(activeLabel === "Todos") return true;
+    const tipo = TIPOS.find(t => t.label === activeLabel);
+    return !!tipo && Array.isArray(p.tipos) && p.tipos.includes(tipo.key);
+  }
+
+  function renderCatalogTypeFilters(){
+    renderTypeFilters('catalogTypeFilters', () => activeTypeCatalog, v => activeTypeCatalog = v, () => { renderCatalogTypeFilters(); renderGrid(); });
+  }
+  function renderStockTypeFilters(){
+    renderTypeFilters('stockTypeFilters', () => activeTypeStock, v => activeTypeStock = v, () => { renderStockTypeFilters(); renderStockGrid(); });
+  }
+
   function badgeLabel(badge){
     if(badge === 'nuevo') return { text:'Nuevo ingreso', cls:'badge-nuevo' };
     if(badge === 'ultimas') return { text:'Últimas unidades', cls:'badge-ultimas' };
@@ -716,11 +775,13 @@
 
   function renderGrid(){
     const grid = document.getElementById('grid');
-    const list = activeCategory === "Todas" ? PRODUCTS : PRODUCTS.filter(p => p.category === activeCategory);
+    const list = PRODUCTS.filter(p =>
+      (activeCategory === "Todas" || p.category === activeCategory) && matchesType(p, activeTypeCatalog)
+    );
     document.getElementById('countLabel').textContent = list.length + (list.length === 1 ? ' camiseta' : ' camisetas');
 
     if(!list.length){
-      grid.innerHTML = '<div class="empty">Todavía no hay camisetas cargadas en esta categoría.</div>';
+      grid.innerHTML = '<div class="empty">Todavía no hay camisetas cargadas con estos filtros.</div>';
       return;
     }
     grid.innerHTML = list.map(buildCard).join('');
@@ -728,11 +789,11 @@
 
   function renderStockGrid(){
     const grid = document.getElementById('stockGrid');
-    const list = PRODUCTS.filter(p => p.immediate && p.available !== false);
+    const list = PRODUCTS.filter(p => p.immediate && p.available !== false && matchesType(p, activeTypeStock));
     document.getElementById('stockCountLabel').textContent = list.length + (list.length === 1 ? ' camiseta' : ' camisetas');
 
     if(!list.length){
-      grid.innerHTML = '<div class="empty">Por ahora no tenemos stock inmediato cargado — mirá el catálogo completo, disponible por encargo.</div>';
+      grid.innerHTML = '<div class="empty">Por ahora no tenemos stock inmediato cargado con estos filtros.</div>';
       return;
     }
     grid.innerHTML = list.map(buildCard).join('');
