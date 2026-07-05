@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Offload.ar — Camisetas de Rugby</title>
 <meta name="description" content="Camisetas de rugby de selecciones y clubes. Consultá stock, talle y precio, y armá tu pedido por WhatsApp.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+
+<!-- Open Graph: la vista previa que se muestra al compartir el link por WhatsApp/Instagram/etc -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Offload.ar">
+<meta property="og:title" content="Offload.ar — Camisetas de Rugby">
+<meta property="og:description" content="Camisetas de rugby de selecciones y clubes. Consultá stock, talle y precio, y armá tu pedido por WhatsApp.">
+<meta property="og:image" content="assets/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Offload.ar — Camisetas de Rugby">
+<meta name="twitter:description" content="Camisetas de rugby de selecciones y clubes.">
+<meta name="twitter:image" content="assets/logo.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -174,10 +188,17 @@
   .card:hover .card-media img{transform:scale(1.04);}
   .no-photo{width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-family:'Space Mono', monospace; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; text-align:center; padding:10px;}
   .number-badge{position:absolute; top:10px; left:10px; font-family:'Anton', sans-serif; font-size:14px; background:var(--ink); color:var(--bone); width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center;}
-  .stock-badge{
-    position:absolute; top:10px; right:10px; font-family:'Space Mono', monospace; font-size:9px;
-    text-transform:uppercase; letter-spacing:.06em; background:var(--moss); color:#fff; padding:4px 9px; border-radius:999px;
+  .badges-topright{
+    position:absolute; top:10px; right:10px; display:flex; flex-direction:column;
+    gap:6px; align-items:flex-end;
   }
+  .stock-badge, .badge-nuevo, .badge-ultimas{
+    font-family:'Space Mono', monospace; font-size:9px;
+    text-transform:uppercase; letter-spacing:.06em; padding:4px 9px; border-radius:999px;
+  }
+  .stock-badge{background:var(--moss); color:#fff;}
+  .badge-nuevo{background:var(--ink); color:var(--bone);}
+  .badge-ultimas{background:var(--red); color:#fff;}
   .sold-badge{position:absolute; inset:0; background:rgba(22,21,15,.62); color:var(--bone); display:flex; align-items:center; justify-content:center; font-family:'Space Mono', monospace; text-transform:uppercase; letter-spacing:.12em; font-size:13px;}
   .card-body{padding:14px 16px 16px; display:flex; flex-direction:column; gap:6px; flex:1;}
   .card-cat{font-family:'Space Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:var(--muted);}
@@ -276,6 +297,15 @@
 
   /* ---------- Footer ---------- */
   footer{padding:6vh 6vw; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted);}
+  .wa-float{
+    position:fixed; bottom:22px; right:22px; z-index:50;
+    width:56px; height:56px; border-radius:50%; border:none;
+    background:#25D366; color:#fff; box-shadow:0 4px 14px rgba(0,0,0,.25);
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+    transition:transform .15s;
+  }
+  .wa-float:hover{transform:scale(1.06);}
+  @media (max-width:640px){ .wa-float{ bottom:16px; right:16px; width:50px; height:50px; } }
   footer a{text-decoration:underline; text-underline-offset:3px;}
 
   @media (max-width:640px){
@@ -472,6 +502,12 @@
 
 </main>
 
+<button class="wa-float" id="waFloat" onclick="openWa(genericMsg())" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true">
+    <path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.23.6 4.32 1.65 6.12L4 29l8.06-1.62c1.72.93 3.7 1.46 5.8 1.46h.01c6.62 0 12.02-5.4 12.02-12.02C29.9 8.4 24.5 3 16.02 3zm0 21.94h-.01c-1.9 0-3.76-.51-5.38-1.47l-.38-.22-4.79.96.99-4.66-.25-.4a9.9 9.9 0 0 1-1.52-5.13c0-5.47 4.46-9.93 9.94-9.93 2.65 0 5.14 1.04 7.02 2.92a9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.46 9.91-9.93 9.91zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/>
+  </svg>
+</button>
+
 <footer>
   <span>© <span id="year"></span> <span id="storeNameFoot">Offload.ar</span></span>
   <span style="display:flex; gap:18px;">
@@ -647,16 +683,27 @@
     });
   }
 
+  function badgeLabel(badge){
+    if(badge === 'nuevo') return { text:'Nuevo ingreso', cls:'badge-nuevo' };
+    if(badge === 'ultimas') return { text:'Últimas unidades', cls:'badge-ultimas' };
+    return null;
+  }
+
   function buildCard(p){
     const media = p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy">` : `<div class="no-photo">Foto próximamente</div>`;
     const sold = p.available === false ? `<div class="sold-badge">Agotada</div>` : '';
-    const stockTag = p.immediate ? `<div class="stock-badge">Stock ya</div>` : '';
+    const b = badgeLabel(p.badge);
+    const topRight = (p.immediate || b) ? `
+      <div class="badges-topright">
+        ${p.immediate ? `<span class="stock-badge">Stock ya</span>` : ''}
+        ${b ? `<span class="${b.cls}">${b.text}</span>` : ''}
+      </div>` : '';
     return `
       <button class="card" onclick="go('product','${p.id}')">
         <div class="card-media">
           ${media}
           ${p.number ? `<div class="number-badge">${p.number}</div>` : ''}
-          ${stockTag}
+          ${topRight}
           ${sold}
         </div>
         <div class="card-body">
@@ -721,6 +768,8 @@
         <div class="product-media">${media}</div>
         <div class="product-info">
           <span class="product-tag">${p.category || ''}</span>
+          ${p.immediate ? `<span class="stock-badge" style="margin-left:8px;">Stock ya</span>` : ''}
+          ${(() => { const b = badgeLabel(p.badge); return b ? `<span class="${b.cls}" style="margin-left:8px;">${b.text}</span>` : ''; })()}
           <h1 class="product-name">${p.name}</h1>
           <div class="product-price">${money(p.price)}</div>
           <p class="product-desc">${p.notes || ''}</p>
