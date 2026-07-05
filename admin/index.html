@@ -254,6 +254,13 @@
           <label><input type="checkbox" value="XXL"> XXL</label>
         </div>
 
+        <label>Tipo (podés marcar más de uno)</label>
+        <div class="sizes" id="tipoBoxes">
+          <label><input type="checkbox" value="partido"> Partido</label>
+          <label><input type="checkbox" value="entrenamiento"> Entrenamiento</label>
+          <label><input type="checkbox" value="shorts"> Shorts</label>
+        </div>
+
         <label>Notas (opcional)</label>
         <textarea id="fNotes" rows="2" placeholder="Ej: cuello redondo, réplica hincha"></textarea>
 
@@ -543,6 +550,7 @@
     document.getElementById('fImmediate').checked = false;
     document.getElementById('fBadge').value = '';
     document.querySelectorAll('#sizeBoxes input').forEach(cb => cb.checked = false);
+    document.querySelectorAll('#tipoBoxes input').forEach(cb => cb.checked = false);
     document.getElementById('cancelEditBtn').style.display = 'none';
     document.getElementById('saveBtn').textContent = 'Guardar camiseta';
   }
@@ -564,6 +572,9 @@
     document.getElementById('fBadge').value = p.badge || '';
     document.querySelectorAll('#sizeBoxes input').forEach(cb => {
       cb.checked = (p.sizes || []).includes(cb.value);
+    });
+    document.querySelectorAll('#tipoBoxes input').forEach(cb => {
+      cb.checked = (p.tipos || []).includes(cb.value);
     });
     document.getElementById('cancelEditBtn').style.display = 'block';
     document.getElementById('saveBtn').textContent = 'Guardar cambios';
@@ -622,6 +633,7 @@
       }
 
       const sizes = [...document.querySelectorAll('#sizeBoxes input:checked')].map(cb => cb.value);
+      const tipos = [...document.querySelectorAll('#tipoBoxes input:checked')].map(cb => cb.value);
       const s = getSetup();
       const rawUrl = imagePath
         ? `https://raw.githubusercontent.com/${s.repo}/${s.branch}/${imagePath}`
@@ -634,6 +646,7 @@
         category: document.getElementById('fCategory').value.trim(),
         price: Number(price),
         sizes,
+        tipos,
         notes: document.getElementById('fNotes').value.trim(),
         available: document.getElementById('fAvailable').checked,
         immediate: document.getElementById('fImmediate').checked,
