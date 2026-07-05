@@ -57,7 +57,7 @@
     background:var(--bone);
   }
   .brand{display:flex; align-items:center; gap:12px; cursor:pointer; background:none; border:none; padding:0;}
-  .brand img{height:40px; width:40px; border-radius:50%; object-fit:cover;}
+  .brand img{height:56px; width:56px; border-radius:50%; object-fit:cover;}
   .brand-text{display:flex; flex-direction:column; line-height:1; text-align:left;}
   .brand-text b{font-family:'Anton', sans-serif; font-size:18px; letter-spacing:0.02em;}
   .brand-text span{
@@ -302,7 +302,13 @@
   .cart-total-row .value{font-size:22px; font-weight:700;}
 
   /* ---------- Footer ---------- */
-  footer{padding:6vh 6vw; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted);}
+  footer{
+    padding:5vh 6vw 4vh; border-top:1px solid var(--line);
+    font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:.08em; color:var(--muted);
+  }
+  .footer-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;}
+  .footer-credit{text-align:center; margin-top:22px; font-size:10px; color:var(--muted); opacity:.7;}
   .wa-float{
     position:fixed; bottom:22px; right:22px; z-index:50;
     width:56px; height:56px; border-radius:50%; border:none;
@@ -531,11 +537,14 @@
 </button>
 
 <footer>
-  <span>© <span id="year"></span> <span id="storeNameFoot">Offload.ar</span></span>
-  <span style="display:flex; gap:18px;">
-    <a href="#" id="igLinkFoot" target="_blank" rel="noopener" style="display:none;">Instagram</a>
-    <a href="#" onclick="openWa(genericMsg()); return false;">Pedidos por WhatsApp</a>
-  </span>
+  <div class="footer-row">
+    <span>© <span id="year"></span> <span id="storeNameFoot">Offload.ar</span></span>
+    <span style="display:flex; gap:18px;">
+      <a href="#" id="igLinkFoot" target="_blank" rel="noopener" style="display:none;">Instagram</a>
+      <a href="#" onclick="openWa(genericMsg()); return false;">Pedidos por WhatsApp</a>
+    </span>
+  </div>
+  <div class="footer-credit">Hecho por SFactory</div>
 </footer>
 
 <script>
