@@ -76,11 +76,17 @@
   .view.active{display:block;}
 
   /* ---------- Hero / Carousel ---------- */
-  .hero{position:relative; border-bottom:1px solid var(--line);}
-  .carousel{
-    position:relative; height:62vh; min-height:380px; max-height:640px;
-    overflow:hidden; background:var(--ink);
+  .hero{position:relative; border-top:1px solid var(--line);}
+  .hero-label{
+    font-family:'Space Mono', monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:.1em; color:var(--muted); padding:26px 6vw 0;
   }
+  .carousel-frame{
+    position:relative; height:38vh; min-height:260px; max-height:400px;
+    margin:16px 6vw 0; max-width:1400px; margin-left:auto; margin-right:auto;
+  }
+  @media (max-width:640px){ .carousel-frame{ margin-left:5vw; margin-right:5vw; } }
+  .carousel{position:absolute; inset:0; overflow:hidden; background:var(--ink);}
   .slide{
     position:absolute; inset:0; opacity:0; transition:opacity .9s ease;
     display:flex; align-items:flex-end;
@@ -100,7 +106,7 @@
   .slide-name{font-family:'Anton', sans-serif; font-size:clamp(26px,5vw,52px); line-height:1;}
   .slide-price{font-family:'Space Mono', monospace; font-size:16px; margin-top:10px;}
   .carousel-dots{
-    position:absolute; bottom:18px; right:6vw; z-index:3; display:flex; gap:8px;
+    position:absolute; bottom:16px; right:16px; z-index:3; display:flex; gap:8px;
   }
   .dot{
     width:8px; height:8px; border-radius:50%; background:rgba(243,239,227,.4);
@@ -267,10 +273,6 @@
 
   <!-- ===== HOME ===== -->
   <section class="view" id="view-home">
-    <div class="hero">
-      <div class="carousel" id="carousel"></div>
-      <div class="carousel-dots" id="carouselDots"></div>
-    </div>
     <div class="hero-intro">
       <div class="eyebrow">Selecciones · Clubes · Retro</div>
       <h1>Camisetas que <em>se ganan</em> en la cancha.</h1>
@@ -278,6 +280,13 @@
       <div class="hero-actions">
         <button class="btn btn-solid" onclick="go('catalog')">Ver catálogo</button>
         <button class="btn btn-ghost" id="waHero" onclick="openWa(genericMsg())">Hablar por WhatsApp</button>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="hero-label">Destacados</div>
+      <div class="carousel-frame">
+        <div class="carousel" id="carousel"></div>
+        <div class="carousel-dots" id="carouselDots"></div>
       </div>
     </div>
   </section>
