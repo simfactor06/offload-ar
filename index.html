@@ -191,6 +191,13 @@
   .card{background:var(--bone); display:flex; flex-direction:column; position:relative; text-align:left; border:none; padding:0;}
   .card-media{position:relative; aspect-ratio:4/5; background:var(--paper); overflow:hidden;}
   .card-media img{width:100%; height:100%; object-fit:cover; transition:transform .5s ease;}
+  .card-media.fit-contain, .product-media.fit-contain, .thumb-btn.fit-contain{background:#fff;}
+  .card-media.fit-contain img, .product-media.fit-contain img, .thumb-btn.fit-contain img{
+    object-fit:contain;
+  }
+  .card-media.fit-contain img{padding:10px;}
+  .product-media.fit-contain img{padding:20px;}
+  .thumb-btn.fit-contain img{padding:4px;}
   .card:hover .card-media img{transform:scale(1.04);}
   .no-photo{width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-family:'Space Mono', monospace; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; text-align:center; padding:10px;}
   .number-badge{position:absolute; top:10px; left:10px; font-family:'Anton', sans-serif; font-size:14px; background:var(--ink); color:var(--bone); width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center;}
@@ -775,7 +782,7 @@
       </div>` : '';
     return `
       <button class="card" onclick="go('product','${p.id}')">
-        <div class="card-media">
+        <div class="card-media ${p.fitContain ? 'fit-contain' : ''}">
           ${media}
           ${p.number ? `<div class="number-badge">${p.number}</div>` : ''}
           ${topRight}
@@ -835,7 +842,7 @@
       : `<div class="no-photo" style="height:100%;display:flex;align-items:center;justify-content:center;">Foto próximamente</div>`;
     const thumbs = images.length > 1
       ? `<div class="product-thumbs">
-           ${images.map((img, i) => `<button class="thumb-btn ${i===0?'active':''}" data-i="${i}"><img src="${img}" alt=""></button>`).join('')}
+           ${images.map((img, i) => `<button class="thumb-btn ${i===0?'active':''} ${p.fitContain ? 'fit-contain' : ''}" data-i="${i}"><img src="${img}" alt=""></button>`).join('')}
          </div>`
       : '';
     const sizeBlock = (p.sizes && p.sizes.length)
@@ -851,7 +858,7 @@
       </div>
       <div class="product-grid">
         <div>
-          <div class="product-media">${media}</div>
+          <div class="product-media ${p.fitContain ? 'fit-contain' : ''}">${media}</div>
           ${thumbs}
         </div>
         <div class="product-info">
