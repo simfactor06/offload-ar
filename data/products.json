@@ -1039,7 +1039,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "fitContain": false,
+    "fitContain": true,
     "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356841363-prenda-a-confirmar-1.png",
     "imageBack": ""
   },
