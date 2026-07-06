@@ -110,7 +110,7 @@
   {
     "id": "ar-06",
     "number": "06",
-    "name": "All Blacks Alternativa",
+    "name": "All Blacks Entrenamiento",
     "category": "Nueva Zelanda",
     "price": 70000,
     "sizes": [
@@ -120,12 +120,14 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "entrenamiento"
+    ],
     "notes": "Camiseta adidas en negro con paneles celestes, auspicio INEOS. Helecho plateado bordado, tecnología AEROREADY.",
     "available": true,
-    "image": "assets/IMG_2381.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/IMG_2381.jpg"
   },
   {
     "id": "ar-07",
