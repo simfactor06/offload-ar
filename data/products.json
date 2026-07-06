@@ -186,12 +186,14 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "partido"
+    ],
     "notes": "Castore a bandas azul, negro y blanco, escudo dorado de Bath Rugby. Doble auspicio Dyson y Airstrait.",
     "available": true,
-    "image": "assets/IMG_2390.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/IMG_2390.jpg"
   },
   {
     "id": "ar-10",
