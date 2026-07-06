@@ -1264,5 +1264,27 @@
     "fitContain": false,
     "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357766847-camiseta-sin-identificar-1.jpg",
     "imageBack": ""
+  },
+  {
+    "id": "mr9h71kj",
+    "number": "",
+    "name": "Camiseta sin identificar #17",
+    "category": "",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357809294-camiseta-sin-identificar-17.jpg",
+    "imageBack": ""
   }
 ]
