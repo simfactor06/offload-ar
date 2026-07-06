@@ -1,139 +1,9 @@
 [
   {
-    "id": "ar-01",
-    "number": "01",
-    "name": "Lions Azul — Manga Corta",
-    "category": "British & Irish Lions",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [
-      "entrenamiento"
-    ],
-    "notes": "Jersey Canterbury edición 'Since 1888', estampado camuflaje floral en tonos azules con degradé a negro. Auspicio Howden. Escudo de los cuatro países bordado.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "image": "assets/IMG_2372.jpg"
-  },
-  {
-    "id": "ar-02",
-    "number": "02",
-    "name": "Lions Azul — Musculosa",
-    "category": "British & Irish Lions",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [
-      "entrenamiento"
-    ],
-    "notes": "Versión sin mangas del estampado camuflaje azul. Ideal para entrenar o combinar. Tela liviana Canterbury, auspicio Howden.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "image": "assets/IMG_2371.jpg"
-  },
-  {
-    "id": "ar-03",
-    "number": "03",
-    "name": "Lions Rojo — Musculosa",
-    "category": "British & Irish Lions",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [
-      "entrenamiento"
-    ],
-    "notes": "Musculosa Canterbury en la clásica gama roja de los Lions, mismo estampado camuflaje floral degradé. Escudo bordado y auspicio Howden.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "image": "assets/IMG_2373.jpg"
-  },
-  {
-    "id": "ar-04",
-    "number": "04",
-    "name": "Lions Clásica Navy",
-    "category": "British & Irish Lions",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [
-      "entrenamiento"
-    ],
-    "notes": "Polo rugbero tradicional azul marino con cuello y puños blancos. Escudo bordado 'Since 1888' y auspicio Howden al frente.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "image": "assets/IMG_2375.jpg"
-  },
-  {
-    "id": "ar-05",
-    "number": "05",
-    "name": "Lions Clásica Roja",
-    "category": "British & Irish Lions",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "notes": "La versión roja de la polo rugbera tradicional, cuello blanco en contraste. Corte clásico Canterbury, escudo bordado y Howden al frente.",
-    "available": true,
-    "image": "assets/IMG_2376.jpg",
-    "immediate": false,
-    "badge": "",
-    "tipos": []
-  },
-  {
-    "id": "ar-06",
-    "number": "06",
-    "name": "All Blacks Entrenamiento",
-    "category": "Nueva Zelanda",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [
-      "entrenamiento"
-    ],
-    "notes": "Camiseta adidas en negro con paneles celestes, auspicio INEOS. Helecho plateado bordado, tecnología AEROREADY.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "image": "assets/IMG_2381.jpg"
-  },
-  {
-    "id": "ar-07",
-    "number": "07",
-    "name": "Munster Alternativa Bordó",
-    "category": "Munster Rugby",
+    "id": "crusaders-01",
+    "number": "",
+    "name": "Crusaders Titular",
+    "category": "Crusaders",
     "price": 70000,
     "sizes": [
       "S",
@@ -145,17 +15,18 @@
     "tipos": [
       "partido"
     ],
-    "notes": "Camiseta adidas bordó con detalles en violeta oscuro y grabado del venado en el frente. Auspicio Bank of Ireland.",
+    "notes": "Réplica titular de los Crusaders, el club más ganador del Super Rugby. Escudo bordado, corte deportivo.",
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/IMG_2383.jpg"
+    "image": "assets/images/crusaders-01.jpg",
+    "imageBack": ""
   },
   {
-    "id": "ar-08",
-    "number": "08",
-    "name": "Northampton Saints Local",
-    "category": "Northampton Saints",
+    "id": "crusaders-02",
+    "number": "",
+    "name": "Crusaders Oficial",
+    "category": "Crusaders",
     "price": 70000,
     "sizes": [
       "S",
@@ -167,17 +38,18 @@
     "tipos": [
       "partido"
     ],
-    "notes": "Macron con franjas negras, verdes y doradas, cuello polo a tono. Auspicio cinch, escudo del club al pecho.",
+    "notes": "Versión oficial de la camiseta de los Crusaders, con escudo y sponsors bordados. Incluye vista de espalda.",
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/IMG_2388.jpg"
+    "image": "assets/images/crusaders-02.jpg",
+    "imageBack": "assets/images/crusaders-02-espalda.jpg"
   },
   {
-    "id": "ar-09",
-    "number": "09",
-    "name": "Bath Rugby Local",
-    "category": "Bath Rugby",
+    "id": "highlanders-01",
+    "number": "",
+    "name": "Highlanders Titular",
+    "category": "Highlanders",
     "price": 70000,
     "sizes": [
       "S",
@@ -189,17 +61,18 @@
     "tipos": [
       "partido"
     ],
-    "notes": "Castore a bandas azul, negro y blanco, escudo dorado de Bath Rugby. Doble auspicio Dyson y Airstrait.",
+    "notes": "Réplica titular de los Highlanders (Otago, Nueva Zelanda), en su clásico azul marino con detalles dorados.",
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/IMG_2390.jpg"
+    "image": "assets/images/highlanders-01.jpg",
+    "imageBack": ""
   },
   {
-    "id": "ar-10",
-    "number": "10",
-    "name": "Francia Local — Le Coq",
-    "category": "Francia",
+    "id": "highlanders-02",
+    "number": "",
+    "name": "Highlanders Oficial",
+    "category": "Highlanders",
     "price": 70000,
     "sizes": [
       "S",
@@ -211,16 +84,178 @@
     "tipos": [
       "partido"
     ],
-    "notes": "Adidas azul Francia con gallo bordado en rojo, cuello tricolor. Auspicio Altrad al frente.",
+    "notes": "Versión oficial de los Highlanders, escudo bordado. Incluye vista de frente y espalda.",
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/IMG_2394.jpg"
+    "image": "assets/images/highlanders-02.jpg",
+    "imageBack": "assets/images/highlanders-02-espalda.jpg"
   },
   {
-    "id": "ar-11",
-    "number": "11",
-    "name": "Escocia Local Navy",
+    "id": "chiefs-01",
+    "number": "",
+    "name": "Chiefs Titular",
+    "category": "Chiefs",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Réplica titular de los Chiefs (Waikato, Nueva Zelanda). Incluye vista de frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/chiefs-01.jpg",
+    "imageBack": "assets/images/chiefs-01-espalda.jpg"
+  },
+  {
+    "id": "chiefs-02",
+    "number": "",
+    "name": "Chiefs Alternativa",
+    "category": "Chiefs",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Versión alternativa de los Chiefs. Incluye vista de frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/chiefs-02.jpg",
+    "imageBack": "assets/images/chiefs-02-espalda.jpg"
+  },
+  {
+    "id": "blues-01",
+    "number": "",
+    "name": "Blues Titular",
+    "category": "Blues",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Réplica titular de los Blues (Auckland, Nueva Zelanda), en azul característico. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/blues-01.jpg",
+    "imageBack": "assets/images/blues-01-espalda.jpg"
+  },
+  {
+    "id": "hurricanes-01",
+    "number": "",
+    "name": "Hurricanes Titular",
+    "category": "Hurricanes",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Réplica titular de los Hurricanes (Wellington, Nueva Zelanda). Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/hurricanes-01.jpg",
+    "imageBack": "assets/images/hurricanes-01-espalda.jpg"
+  },
+  {
+    "id": "hurricanes-02",
+    "number": "",
+    "name": "Hurricanes Alternativa",
+    "category": "Hurricanes",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Versión alternativa de los Hurricanes. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/hurricanes-02.jpg",
+    "imageBack": "assets/images/hurricanes-02-espalda.jpg"
+  },
+  {
+    "id": "irlanda-alt",
+    "number": "",
+    "name": "Irlanda Alternativa",
+    "category": "Irlanda",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de la selección de Irlanda. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/irlanda-alt.jpg",
+    "imageBack": "assets/images/irlanda-alt-espalda.jpg"
+  },
+  {
+    "id": "irlanda-match",
+    "number": "",
+    "name": "Irlanda Titular",
+    "category": "Irlanda",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Irlanda, temporada actual.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/irlanda-match.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "escocia-murrayfield",
+    "number": "",
+    "name": "Escocia Edición Especial Murrayfield",
     "category": "Escocia",
     "price": 70000,
     "sizes": [
@@ -231,80 +266,18 @@
       "XXL"
     ],
     "tipos": [
-      "partido",
-      "entrenamiento"
-    ],
-    "notes": "Macron azul marino con cuello blanco, escudo del cardo bordado. Auspicio Arnold Clark, detalle 'Murrayfield 192_' en manga.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "image": "assets/IMG_2398.jpg"
-  },
-  {
-    "id": "ar-12",
-    "number": "12",
-    "name": "Connacht Rugby 140 Años",
-    "category": "Connacht Rugby",
-    "price": 75000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [
       "partido"
     ],
-    "notes": "Macron verde con detalles dorados, escudo del águila de Connacht. Edición aniversario '140 · 1885-2025', auspicio Genesys.",
+    "notes": "Edición especial de Escocia conmemorativa de Murrayfield. Incluye frente y espalda.",
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/IMG_2400.jpg"
+    "image": "assets/images/escocia-murrayfield.jpg",
+    "imageBack": "assets/images/escocia-murrayfield-espalda.jpg"
   },
   {
-    "id": "ar-13",
-    "number": "13",
-    "name": "Harlequins Fuegos Artificiales",
-    "category": "Harlequins",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "notes": "Edición especial Castore con estampado de fuegos artificiales sobre negro y detalles verdes. Auspicio DHL.",
-    "available": true,
-    "image": "assets/IMG_2402.jpg",
-    "immediate": false,
-    "badge": "",
-    "tipos": []
-  },
-  {
-    "id": "ar-14",
-    "number": "14",
-    "name": "Harlequins Cuadrantes",
-    "category": "Harlequins",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "notes": "Castore con diseño de cuatro cuadrantes de color (celeste, rojo, bordó, gris) separados por rayo. Auspicio DHL.",
-    "available": true,
-    "image": "assets/IMG_2404.jpg",
-    "immediate": false,
-    "badge": "",
-    "tipos": []
-  },
-  {
-    "id": "ar-15",
-    "number": "15",
+    "id": "escocia-lila",
+    "number": "",
     "name": "Escocia Alternativa Lila",
     "category": "Escocia",
     "price": 70000,
@@ -318,157 +291,18 @@
     "tipos": [
       "partido"
     ],
-    "notes": "Macron en lila con detalles en violeta oscuro, escudo del cardo tono sobre tono. Auspicio Arnold Clark, bandera escocesa en manga.",
+    "notes": "Jersey Macron en lila, sponsor Arnold Clark, escudo del cardo bordado. Incluye frente y espalda.",
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/IMG_2406.jpg"
+    "image": "assets/images/escocia-lila.jpg",
+    "imageBack": "assets/images/escocia-lila-espalda.jpg"
   },
   {
-    "id": "ar-16",
-    "number": "16",
-    "name": "Toulouse Local — 1986-2026",
-    "category": "Stade Toulousain",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "notes": "Nike a rayas negras y rojas, escudo 'TS' bordado. Edición aniversario '1986-2026', auspicios Airbus, Rempart y Peugeot.",
-    "available": true,
-    "image": "assets/IMG_2410.jpg",
-    "immediate": false,
-    "badge": "",
-    "tipos": []
-  },
-  {
-    "id": "ar-17",
-    "number": "17",
-    "name": "Toulouse Edición Especial",
-    "category": "Stade Toulousain",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "notes": "Nike con estampado abstracto rojo y negro efecto ondas, mangas lisas. Auspicios Airbus, Kumho y Peugeot.",
-    "available": true,
-    "image": "assets/IMG_2409.jpg",
-    "immediate": false,
-    "badge": "",
-    "tipos": []
-  },
-  {
-    "id": "ar-18",
-    "number": "18",
-    "name": "Springboks Local",
-    "category": "Sudáfrica",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "notes": "Nike verde tradicional con el springbok bordado y cuello dorado dentado. Auspicio FNB, bandera sudafricana en manga.",
-    "available": true,
-    "image": "assets/IMG_2412.jpg",
-    "immediate": false,
-    "badge": "",
-    "tipos": []
-  },
-  {
-    "id": "ar-19",
-    "number": "19",
-    "name": "Irlanda Local Blanca",
-    "category": "Irlanda",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "notes": "Canterbury blanca con cuello y puños verdes, escudo IRFU bordado. Auspicio Vodafone, tecnología Vapodri.",
-    "available": true,
-    "image": "assets/IMG_2408.jpg",
-    "immediate": false,
-    "badge": "",
-    "tipos": []
-  },
-  {
-    "id": "ar-20",
-    "number": "20",
-    "name": "Francia Visitante Blanca",
-    "category": "Francia",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "notes": "Versión visitante en blanco con cuello tricolor y puños azules. Auspicio Societe Generale. Foto de espalda.",
-    "available": true,
-    "image": "assets/IMG_2397.jpg",
-    "immediate": false,
-    "badge": "",
-    "tipos": []
-  },
-  {
-    "id": "ar-21",
-    "number": "21",
-    "name": "Bath Rugby Alternativa",
-    "category": "Bath Rugby",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "notes": "Diseño por bloques en azul, negro y blanco, auspicios Thatchers y Grant. Foto de espalda.",
-    "available": true,
-    "image": "assets/IMG_2391.jpg",
-    "immediate": false,
-    "badge": "",
-    "tipos": []
-  },
-  {
-    "id": "ar-22",
-    "number": "22",
-    "name": "Jersey Lila — Vodafone",
-    "category": "Edición Especial",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "notes": "Camiseta en tono lila con paneles violeta oscuro, auspicio Vodafone. Foto de espalda, consultanos por el detalle del escudo.",
-    "available": true,
-    "image": "assets/IMG_2407.jpg",
-    "immediate": false,
-    "badge": "",
-    "tipos": []
-  },
-  {
-    "id": "short",
-    "number": "SHORT",
-    "name": "Short Lions — Since 1888",
-    "category": "British & Irish Lions",
+    "id": "escocia-titular",
+    "number": "",
+    "name": "Escocia Titular",
+    "category": "Escocia",
     "price": 70000,
     "sizes": [
       "S",
@@ -478,12 +312,1030 @@
       "XXL"
     ],
     "tipos": [
-      "shorts"
+      "partido"
     ],
-    "notes": "Short Canterbury azul marino a juego con la línea Lions. Escudo bordado y logo canterbury. Ideal para combinar con cualquiera de las camisetas Lions.",
+    "notes": "Camiseta titular de la selección de Escocia. Incluye frente y espalda.",
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/42a2f715-42f4-44eb-bb1f-eb8719c73de7.jpg"
+    "image": "assets/images/escocia-titular.jpg",
+    "imageBack": "assets/images/escocia-titular-espalda.jpg"
+  },
+  {
+    "id": "wales-match",
+    "number": "",
+    "name": "Gales Titular",
+    "category": "Gales",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Gales, temporada actual.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/wales-match.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "england-match25",
+    "number": "",
+    "name": "Inglaterra Titular 25",
+    "category": "Inglaterra",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Inglaterra, temporada 2025.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/england-match25.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "england-match26",
+    "number": "",
+    "name": "Inglaterra Titular 26",
+    "category": "Inglaterra",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Inglaterra, temporada 2026.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/england-match26.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "england-gym",
+    "number": "",
+    "name": "Inglaterra Entrenamiento",
+    "category": "Inglaterra",
+    "price": 65000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Remera de entrenamiento de la selección de Inglaterra.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/england-gym.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "allblacks-alt",
+    "number": "",
+    "name": "All Blacks Alternativa",
+    "category": "Nueva Zelanda",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de los All Blacks (Nueva Zelanda).",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/allblacks-alt.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "allblacks-match26",
+    "number": "",
+    "name": "All Blacks Titular 26",
+    "category": "Nueva Zelanda",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de los All Blacks, temporada 2026.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/allblacks-match26.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "springboks-match",
+    "number": "",
+    "name": "Springboks Titular",
+    "category": "Sudáfrica",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de los Springboks (Sudáfrica), campeones del mundo.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/springboks-match.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "springboks-alt",
+    "number": "",
+    "name": "Springboks Alternativa",
+    "category": "Sudáfrica",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de los Springboks.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/springboks-alt.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "wallabies-gym",
+    "number": "",
+    "name": "Wallabies Entrenamiento",
+    "category": "Australia",
+    "price": 65000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Remera de entrenamiento de los Wallabies (selección de Australia).",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/wallabies-gym.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "northampton-2526",
+    "number": "",
+    "name": "Northampton Saints 25/26",
+    "category": "Northampton Saints",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de Northampton Saints, temporada 2025/26.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/northampton-2526.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "connacht-special",
+    "number": "",
+    "name": "Connacht Edición Especial",
+    "category": "Connacht Rugby",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Edición especial de Connacht Rugby. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/connacht-special.jpg",
+    "imageBack": "assets/images/connacht-special-espalda.jpg"
+  },
+  {
+    "id": "harlequins-gym",
+    "number": "",
+    "name": "Harlequins Entrenamiento",
+    "category": "Harlequins",
+    "price": 65000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Remera de entrenamiento de Harlequins. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/harlequins-gym.jpg",
+    "imageBack": "assets/images/harlequins-gym-espalda.jpg"
+  },
+  {
+    "id": "harlequins-match",
+    "number": "",
+    "name": "Harlequins Titular",
+    "category": "Harlequins",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de Harlequins, temporada actual.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/harlequins-match.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "harlequins-alt",
+    "number": "",
+    "name": "Harlequins Alternativa",
+    "category": "Harlequins",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de Harlequins.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/harlequins-alt.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "toulouse-entreno",
+    "number": "",
+    "name": "Toulouse Entrenamiento",
+    "category": "Stade Toulousain",
+    "price": 65000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Remera de entrenamiento del Stade Toulousain.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/toulouse-entreno.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "toulouse-match26",
+    "number": "",
+    "name": "Toulouse Titular 26",
+    "category": "Stade Toulousain",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular del Stade Toulousain, temporada 2026. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/toulouse-match26.jpg",
+    "imageBack": "assets/images/toulouse-match26-espalda.jpg"
+  },
+  {
+    "id": "munster-titular",
+    "number": "",
+    "name": "Munster Titular",
+    "category": "Munster Rugby",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de Munster Rugby, sponsor Bank of Ireland.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/munster-titular.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "polo-springboks",
+    "number": "",
+    "name": "Polo Springboks",
+    "category": "Sudáfrica",
+    "price": 55000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Polo oficial de los Springboks, ideal para uso casual.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/polo-springboks.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "polo-generico",
+    "number": "",
+    "name": "Polo Rugby",
+    "category": "Edición Especial",
+    "price": 50000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Polo deportivo de rugby, corte clásico.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/polo-generico.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "chomba-springboks",
+    "number": "",
+    "name": "Chomba Springboks",
+    "category": "Sudáfrica",
+    "price": 55000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Chomba oficial de los Springboks, tela piqué, ideal para uso diario.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/chomba-springboks.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "wallabies-match",
+    "number": "",
+    "name": "Wallabies Titular",
+    "category": "Australia",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de los Wallabies (Australia), sponsor Cadbury, marca Castore con motivo aborigen en las mangas. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/wallabies-match.jpg",
+    "imageBack": "assets/images/wallabies-match-espalda.jpg"
+  },
+  {
+    "id": "wallaroos-match",
+    "number": "",
+    "name": "Wallaroos Titular",
+    "category": "Australia",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de las Wallaroos (selección femenina de Australia), sponsor Santos, motivo aborigen. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/wallaroos-match.jpg",
+    "imageBack": "assets/images/wallaroos-match-espalda.jpg"
+  },
+  {
+    "id": "northampton-away",
+    "number": "",
+    "name": "Northampton Saints Alternativa",
+    "category": "Northampton Saints",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de Northampton Saints, rayas blanco y verde, sponsor cinch, marca Macron.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/northampton-away.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "springboks-heritage",
+    "number": "",
+    "name": "Springboks Heritage",
+    "category": "Sudáfrica",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta clásica de los Springboks con cuello polo, sponsor MTN, marca Nike.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/springboks-heritage.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "lions-short-2",
+    "number": "",
+    "name": "Short British & Irish Lions",
+    "category": "British & Irish Lions",
+    "price": 45000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Short oficial British & Irish Lions, azul marino, escudo bordado \"Since 1888\".",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/lions-short-2.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-01",
+    "number": "",
+    "name": "Camiseta sin identificar #1",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-01.jpg",
+    "imageBack": "assets/images/sin-id-01-espalda.jpg"
+  },
+  {
+    "id": "sin-id-02",
+    "number": "",
+    "name": "Camiseta sin identificar #2",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-02.jpg",
+    "imageBack": "assets/images/sin-id-02-espalda.jpg"
+  },
+  {
+    "id": "sin-id-03",
+    "number": "",
+    "name": "Camiseta sin identificar #3",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-03.jpg",
+    "imageBack": "assets/images/sin-id-03-espalda.jpg"
+  },
+  {
+    "id": "sin-id-04",
+    "number": "",
+    "name": "Camiseta sin identificar #4",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-04.jpg",
+    "imageBack": "assets/images/sin-id-04-espalda.jpg"
+  },
+  {
+    "id": "sin-id-05",
+    "number": "",
+    "name": "Camiseta sin identificar #5",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-05.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-06",
+    "number": "",
+    "name": "Camiseta sin identificar #6",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-06.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-07",
+    "number": "",
+    "name": "Camiseta sin identificar #7",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-07.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "prenda-fisica-01",
+    "number": "",
+    "name": "Prenda a confirmar #1",
+    "category": "Sin categoría",
+    "price": 45000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Foto tomada por vos de una prenda física — completar nombre/precio desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/prenda-fisica-01.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "prenda-fisica-02",
+    "number": "",
+    "name": "Prenda a confirmar #2",
+    "category": "Sin categoría",
+    "price": 45000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Foto tomada por vos de una prenda física — completar nombre/precio desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/prenda-fisica-02.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "prenda-fisica-03",
+    "number": "",
+    "name": "Prenda a confirmar #3",
+    "category": "Sin categoría",
+    "price": 45000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Foto tomada por vos de una prenda física — completar nombre/precio desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/prenda-fisica-03.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "prenda-fisica-04",
+    "number": "",
+    "name": "Prenda a confirmar #4",
+    "category": "Sin categoría",
+    "price": 45000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Foto tomada por vos de una prenda física — completar nombre/precio desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/prenda-fisica-04.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "prenda-fisica-05",
+    "number": "",
+    "name": "Prenda a confirmar #5",
+    "category": "Sin categoría",
+    "price": 45000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Foto tomada por vos de una prenda física — completar nombre/precio desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/prenda-fisica-05.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-08",
+    "number": "",
+    "name": "Camiseta sin identificar #8",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-08.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-09",
+    "number": "",
+    "name": "Camiseta sin identificar #9",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-09.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-10",
+    "number": "",
+    "name": "Camiseta sin identificar #10",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-10.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-11",
+    "number": "",
+    "name": "Camiseta sin identificar #11",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-11.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-12",
+    "number": "",
+    "name": "Camiseta sin identificar #12",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-12.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-13",
+    "number": "",
+    "name": "Camiseta sin identificar #13",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-13.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-14",
+    "number": "",
+    "name": "Foto sin identificar #14 (revisar)",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Imagen muy chica, revisar si es una prenda o un logo suelto.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-14.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-15",
+    "number": "",
+    "name": "Camiseta sin identificar #15",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-15.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-16",
+    "number": "",
+    "name": "Camiseta sin identificar #16",
+    "category": "Sin categoría",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/images/sin-id-16.jpg",
+    "imageBack": ""
   }
 ]
