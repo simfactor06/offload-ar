@@ -313,12 +313,14 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "partido"
+    ],
     "notes": "Macron en lila con detalles en violeta oscuro, escudo del cardo tono sobre tono. Auspicio Arnold Clark, bandera escocesa en manga.",
     "available": true,
-    "image": "assets/IMG_2406.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/IMG_2406.jpg"
   },
   {
     "id": "ar-16",
