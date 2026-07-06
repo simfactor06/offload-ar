@@ -245,7 +245,7 @@
     "number": "12",
     "name": "Connacht Rugby 140 Años",
     "category": "Connacht Rugby",
-    "price": 70000,
+    "price": 75000,
     "sizes": [
       "S",
       "M",
@@ -253,12 +253,14 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "partido"
+    ],
     "notes": "Macron verde con detalles dorados, escudo del águila de Connacht. Edición aniversario '140 · 1885-2025', auspicio Genesys.",
     "available": true,
-    "image": "assets/IMG_2400.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/IMG_2400.jpg"
   },
   {
     "id": "ar-13",
