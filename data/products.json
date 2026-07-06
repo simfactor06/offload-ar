@@ -870,8 +870,9 @@
     "immediate": false,
     "badge": "",
     "fitContain": true,
-    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356791172-short-british-irish-lions.png",
-    "imageBack": ""
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357088157-camiseta-sin-identificar-10.png",
+    "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356791172-short-british-irish-lions.png",
+    "imageExtra": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356841363-prenda-a-confirmar-1.png"
   },
   {
     "id": "sin-id-02",
@@ -940,8 +941,8 @@
   {
     "id": "sin-id-05",
     "number": "",
-    "name": "Camiseta sin identificar #5",
-    "category": "",
+    "name": "Lions Clásica Roja",
+    "category": "British & Irish Lions",
     "price": 70000,
     "sizes": [
       "S",
@@ -950,8 +951,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Jersey clásica British & Irish Lions en rojo, escudo de los cuatro países bordado \"Since 1888\".",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -1001,29 +1004,6 @@
     "imageBack": ""
   },
   {
-    "id": "prenda-fisica-01",
-    "number": "",
-    "name": "Prenda a confirmar #1",
-    "category": "",
-    "price": 45000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "tipos": [
-      "shorts"
-    ],
-    "notes": "Foto tomada por vos de una prenda física — completar nombre/precio desde el admin.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "fitContain": true,
-    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356841363-prenda-a-confirmar-1.png",
-    "imageBack": ""
-  },
-  {
     "id": "prenda-fisica-02",
     "number": "",
     "name": "Prenda a confirmar #2",
@@ -1044,30 +1024,7 @@
     "badge": "",
     "fitContain": true,
     "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356906497-prenda-a-confirmar-2.png",
-    "imageBack": ""
-  },
-  {
-    "id": "prenda-fisica-03",
-    "number": "",
-    "name": "Prenda a confirmar #3",
-    "category": "",
-    "price": 45000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "tipos": [
-      "shorts"
-    ],
-    "notes": "Foto tomada por vos de una prenda física — completar nombre/precio desde el admin.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "fitContain": true,
-    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356921529-prenda-a-confirmar-3.png",
-    "imageBack": ""
+    "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356921529-prenda-a-confirmar-3.png"
   },
   {
     "id": "prenda-fisica-04",
@@ -1134,28 +1091,6 @@
     "immediate": false,
     "badge": "",
     "image": "assets/sin-id-08.jpg",
-    "imageBack": ""
-  },
-  {
-    "id": "sin-id-10",
-    "number": "",
-    "name": "Camiseta sin identificar #10",
-    "category": "",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "fitContain": true,
-    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357088157-camiseta-sin-identificar-10.png",
     "imageBack": ""
   },
   {
@@ -1360,30 +1295,6 @@
     "fitContain": true
   },
   {
-    "id": "lions-clasica-roja",
-    "number": "",
-    "name": "Lions Clásica Roja",
-    "category": "British & Irish Lions",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [
-      "partido"
-    ],
-    "notes": "Jersey clásica British & Irish Lions en rojo, escudo de los cuatro países bordado \"Since 1888\".",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "image": "assets/IMG_2376-removebg-preview.png",
-    "imageBack": "",
-    "fitContain": true
-  },
-  {
     "id": "allblacks-retro",
     "number": "",
     "name": "All Blacks Retro",
@@ -1570,7 +1481,7 @@
     "immediate": false,
     "badge": "",
     "fitContain": false,
-    "image": "assets/2c1b9cd2.jpg",
-    "imageBack": "assets/5f6648eb.jpg"
+    "image": "assets/5f6648eb.jpg",
+    "imageBack": "assets/2c1b9cd2.jpg"
   }
 ]
