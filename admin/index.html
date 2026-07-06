@@ -283,6 +283,11 @@
           <option value="ultimas">Últimas unidades</option>
         </select>
 
+        <label style="display:flex; align-items:center; gap:8px; margin-top:16px;">
+          <input type="checkbox" id="fFitContain" style="width:auto;"> Mostrar la foto completa sin recortar
+        </label>
+        <div class="hint">Usalo para fotos donde el recorte automático corta la prenda (por ejemplo shorts fotografiados horizontales). Solo funciona bien si la foto ya tiene fondo blanco.</div>
+
         <button class="btn" id="saveBtn" onclick="saveProduct()">Guardar camiseta</button>
         <button class="btn btn-outline" id="cancelEditBtn" style="display:none;" onclick="cancelEdit()">Cancelar edición</button>
         <div class="status" id="formStatus"></div>
@@ -554,6 +559,7 @@
     document.getElementById('fAvailable').checked = true;
     document.getElementById('fImmediate').checked = false;
     document.getElementById('fBadge').value = '';
+    document.getElementById('fFitContain').checked = false;
     document.querySelectorAll('#sizeBoxes input').forEach(cb => cb.checked = false);
     document.querySelectorAll('#tipoBoxes input').forEach(cb => cb.checked = false);
     document.getElementById('cancelEditBtn').style.display = 'none';
@@ -575,6 +581,7 @@
     document.getElementById('fAvailable').checked = p.available !== false;
     document.getElementById('fImmediate').checked = !!p.immediate;
     document.getElementById('fBadge').value = p.badge || '';
+    document.getElementById('fFitContain').checked = !!p.fitContain;
     document.querySelectorAll('#sizeBoxes input').forEach(cb => {
       cb.checked = (p.sizes || []).includes(cb.value);
     });
@@ -671,6 +678,7 @@
         available: document.getElementById('fAvailable').checked,
         immediate: document.getElementById('fImmediate').checked,
         badge: document.getElementById('fBadge').value,
+        fitContain: document.getElementById('fFitContain').checked,
         image: rawUrl || (editingId ? (PRODUCTS.find(p => p.id === editingId)?.image || '') : ''),
         imageBack: rawUrlBack || (editingId ? (PRODUCTS.find(p => p.id === editingId)?.imageBack || '') : '')
       };
