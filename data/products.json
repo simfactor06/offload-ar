@@ -164,12 +164,14 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "partido"
+    ],
     "notes": "Macron con franjas negras, verdes y doradas, cuello polo a tono. Auspicio cinch, escudo del club al pecho.",
     "available": true,
-    "image": "assets/IMG_2388.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/IMG_2388.jpg"
   },
   {
     "id": "ar-09",
