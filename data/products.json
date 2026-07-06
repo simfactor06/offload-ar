@@ -473,11 +473,13 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "shorts"
+    ],
     "notes": "Short Canterbury azul marino a juego con la línea Lions. Escudo bordado y logo canterbury. Ideal para combinar con cualquiera de las camisetas Lions.",
     "available": true,
-    "image": "assets/42a2f715-42f4-44eb-bb1f-eb8719c73de7.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/42a2f715-42f4-44eb-bb1f-eb8719c73de7.jpg"
   }
 ]
