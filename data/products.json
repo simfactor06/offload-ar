@@ -142,12 +142,14 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "partido"
+    ],
     "notes": "Camiseta adidas bordó con detalles en violeta oscuro y grabado del venado en el frente. Auspicio Bank of Ireland.",
     "available": true,
-    "image": "assets/IMG_2383.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/IMG_2383.jpg"
   },
   {
     "id": "ar-08",
