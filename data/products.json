@@ -46,7 +46,7 @@
   {
     "id": "ar-03",
     "number": "03",
-    "name": "Lions Camuflaje Rojo — Musculosa",
+    "name": "Lions Rojo — Musculosa",
     "category": "British & Irish Lions",
     "price": 70000,
     "sizes": [
@@ -56,12 +56,14 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "entrenamiento"
+    ],
     "notes": "Musculosa Canterbury en la clásica gama roja de los Lions, mismo estampado camuflaje floral degradé. Escudo bordado y auspicio Howden.",
     "available": true,
-    "image": "assets/IMG_2373.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/IMG_2373.jpg"
   },
   {
     "id": "ar-04",
