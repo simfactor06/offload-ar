@@ -1241,5 +1241,27 @@
     "badge": "",
     "image": "assets/sin-id-16.jpg",
     "imageBack": ""
+  },
+  {
+    "id": "mr9h369r",
+    "number": "",
+    "name": "Camiseta sin identificar #11",
+    "category": "",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357628873-camiseta-sin-identificar-11.jpg",
+    "imageBack": ""
   }
 ]
