@@ -868,9 +868,9 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/lions-short-2.jpg",
-    "imageBack": "",
-    "fitContain": true
+    "fitContain": true,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356791172-short-british-irish-lions.png",
+    "imageBack": ""
   },
   {
     "id": "sin-id-01",
