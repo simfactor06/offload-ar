@@ -1,4 +1,4 @@
-  [
+[
   {
     "id": "crusaders-01",
     "number": "",
@@ -890,7 +890,8 @@
     "immediate": false,
     "badge": "",
     "image": "assets/lions-short-2.jpg",
-    "imageBack": ""
+    "imageBack": "",
+    "fitContain": true
   },
   {
     "id": "sin-id-01",
