@@ -1254,5 +1254,28 @@
     "badge": "",
     "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783352221017-short-sin-identificar.jpg",
     "imageBack": ""
+  },
+  {
+    "id": "mr9dwcee",
+    "number": "",
+    "name": "Short sin identificar",
+    "category": "",
+    "price": 55000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783352269940-short-sin-identificar.jpg",
+    "imageBack": ""
   }
 ]
