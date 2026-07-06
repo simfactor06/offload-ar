@@ -735,28 +735,6 @@
     "imageBack": ""
   },
   {
-    "id": "polo-generico",
-    "number": "",
-    "name": "Polo Rugby",
-    "category": "Edición Especial",
-    "price": 50000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "tipos": [
-      "shorts"
-    ],
-    "notes": "Polo deportivo de rugby, corte clásico.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "image": "assets/polo-generico.jpg",
-    "imageBack": ""
-  },
-  {
     "id": "chomba-springboks",
     "number": "",
     "name": "Chomba Springboks",
