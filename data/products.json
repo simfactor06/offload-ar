@@ -19,7 +19,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/crusaders-01.jpg",
+    "image": "assets/crusaders-01.jpg",
     "imageBack": ""
   },
   {
@@ -42,8 +42,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/crusaders-02.jpg",
-    "imageBack": "assets/images/crusaders-02-espalda.jpg"
+    "image": "assets/crusaders-02.jpg",
+    "imageBack": "assets/crusaders-02-espalda.jpg"
   },
   {
     "id": "highlanders-01",
@@ -65,7 +65,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/highlanders-01.jpg",
+    "image": "assets/highlanders-01.jpg",
     "imageBack": ""
   },
   {
@@ -88,8 +88,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/highlanders-02.jpg",
-    "imageBack": "assets/images/highlanders-02-espalda.jpg"
+    "image": "assets/highlanders-02.jpg",
+    "imageBack": "assets/highlanders-02-espalda.jpg"
   },
   {
     "id": "chiefs-01",
@@ -111,8 +111,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/chiefs-01.jpg",
-    "imageBack": "assets/images/chiefs-01-espalda.jpg"
+    "image": "assets/chiefs-01.jpg",
+    "imageBack": "assets/chiefs-01-espalda.jpg"
   },
   {
     "id": "chiefs-02",
@@ -134,8 +134,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/chiefs-02.jpg",
-    "imageBack": "assets/images/chiefs-02-espalda.jpg"
+    "image": "assets/chiefs-02.jpg",
+    "imageBack": "assets/chiefs-02-espalda.jpg"
   },
   {
     "id": "blues-01",
@@ -157,8 +157,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/blues-01.jpg",
-    "imageBack": "assets/images/blues-01-espalda.jpg"
+    "image": "assets/blues-01.jpg",
+    "imageBack": "assets/blues-01-espalda.jpg"
   },
   {
     "id": "hurricanes-01",
@@ -180,8 +180,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/hurricanes-01.jpg",
-    "imageBack": "assets/images/hurricanes-01-espalda.jpg"
+    "image": "assets/hurricanes-01.jpg",
+    "imageBack": "assets/hurricanes-01-espalda.jpg"
   },
   {
     "id": "hurricanes-02",
@@ -203,8 +203,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/hurricanes-02.jpg",
-    "imageBack": "assets/images/hurricanes-02-espalda.jpg"
+    "image": "assets/hurricanes-02.jpg",
+    "imageBack": "assets/hurricanes-02-espalda.jpg"
   },
   {
     "id": "irlanda-alt",
@@ -226,8 +226,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/irlanda-alt.jpg",
-    "imageBack": "assets/images/irlanda-alt-espalda.jpg"
+    "image": "assets/irlanda-alt.jpg",
+    "imageBack": "assets/irlanda-alt-espalda.jpg"
   },
   {
     "id": "irlanda-match",
@@ -249,7 +249,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/irlanda-match.jpg",
+    "image": "assets/irlanda-match.jpg",
     "imageBack": ""
   },
   {
@@ -272,8 +272,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/escocia-murrayfield.jpg",
-    "imageBack": "assets/images/escocia-murrayfield-espalda.jpg"
+    "image": "assets/escocia-murrayfield.jpg",
+    "imageBack": "assets/escocia-murrayfield-espalda.jpg"
   },
   {
     "id": "escocia-lila",
@@ -295,8 +295,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/escocia-lila.jpg",
-    "imageBack": "assets/images/escocia-lila-espalda.jpg"
+    "image": "assets/escocia-lila.jpg",
+    "imageBack": "assets/escocia-lila-espalda.jpg"
   },
   {
     "id": "escocia-titular",
@@ -318,8 +318,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/escocia-titular.jpg",
-    "imageBack": "assets/images/escocia-titular-espalda.jpg"
+    "image": "assets/escocia-titular.jpg",
+    "imageBack": "assets/escocia-titular-espalda.jpg"
   },
   {
     "id": "wales-match",
@@ -341,7 +341,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/wales-match.jpg",
+    "image": "assets/wales-match.jpg",
     "imageBack": ""
   },
   {
@@ -364,7 +364,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/england-match25.jpg",
+    "image": "assets/england-match25.jpg",
     "imageBack": ""
   },
   {
@@ -387,7 +387,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/england-match26.jpg",
+    "image": "assets/england-match26.jpg",
     "imageBack": ""
   },
   {
@@ -410,7 +410,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/england-gym.jpg",
+    "image": "assets/england-gym.jpg",
     "imageBack": ""
   },
   {
@@ -433,7 +433,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/allblacks-alt.jpg",
+    "image": "assets/allblacks-alt.jpg",
     "imageBack": ""
   },
   {
@@ -456,7 +456,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/allblacks-match26.jpg",
+    "image": "assets/allblacks-match26.jpg",
     "imageBack": ""
   },
   {
@@ -479,7 +479,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/springboks-match.jpg",
+    "image": "assets/springboks-match.jpg",
     "imageBack": ""
   },
   {
@@ -502,7 +502,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/springboks-alt.jpg",
+    "image": "assets/springboks-alt.jpg",
     "imageBack": ""
   },
   {
@@ -525,7 +525,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/wallabies-gym.jpg",
+    "image": "assets/wallabies-gym.jpg",
     "imageBack": ""
   },
   {
@@ -548,7 +548,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/northampton-2526.jpg",
+    "image": "assets/northampton-2526.jpg",
     "imageBack": ""
   },
   {
@@ -571,8 +571,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/connacht-special.jpg",
-    "imageBack": "assets/images/connacht-special-espalda.jpg"
+    "image": "assets/connacht-special.jpg",
+    "imageBack": "assets/connacht-special-espalda.jpg"
   },
   {
     "id": "harlequins-gym",
@@ -594,8 +594,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/harlequins-gym.jpg",
-    "imageBack": "assets/images/harlequins-gym-espalda.jpg"
+    "image": "assets/harlequins-gym.jpg",
+    "imageBack": "assets/harlequins-gym-espalda.jpg"
   },
   {
     "id": "harlequins-match",
@@ -617,7 +617,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/harlequins-match.jpg",
+    "image": "assets/harlequins-match.jpg",
     "imageBack": ""
   },
   {
@@ -640,7 +640,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/harlequins-alt.jpg",
+    "image": "assets/harlequins-alt.jpg",
     "imageBack": ""
   },
   {
@@ -663,7 +663,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/toulouse-entreno.jpg",
+    "image": "assets/toulouse-entreno.jpg",
     "imageBack": ""
   },
   {
@@ -686,8 +686,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/toulouse-match26.jpg",
-    "imageBack": "assets/images/toulouse-match26-espalda.jpg"
+    "image": "assets/toulouse-match26.jpg",
+    "imageBack": "assets/toulouse-match26-espalda.jpg"
   },
   {
     "id": "munster-titular",
@@ -709,7 +709,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/munster-titular.jpg",
+    "image": "assets/munster-titular.jpg",
     "imageBack": ""
   },
   {
@@ -731,7 +731,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/polo-springboks.jpg",
+    "image": "assets/polo-springboks.jpg",
     "imageBack": ""
   },
   {
@@ -753,7 +753,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/polo-generico.jpg",
+    "image": "assets/polo-generico.jpg",
     "imageBack": ""
   },
   {
@@ -775,7 +775,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/chomba-springboks.jpg",
+    "image": "assets/chomba-springboks.jpg",
     "imageBack": ""
   },
   {
@@ -798,8 +798,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/wallabies-match.jpg",
-    "imageBack": "assets/images/wallabies-match-espalda.jpg"
+    "image": "assets/wallabies-match.jpg",
+    "imageBack": "assets/wallabies-match-espalda.jpg"
   },
   {
     "id": "wallaroos-match",
@@ -821,8 +821,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/wallaroos-match.jpg",
-    "imageBack": "assets/images/wallaroos-match-espalda.jpg"
+    "image": "assets/wallaroos-match.jpg",
+    "imageBack": "assets/wallaroos-match-espalda.jpg"
   },
   {
     "id": "northampton-away",
@@ -844,7 +844,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/northampton-away.jpg",
+    "image": "assets/northampton-away.jpg",
     "imageBack": ""
   },
   {
@@ -867,7 +867,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/springboks-heritage.jpg",
+    "image": "assets/springboks-heritage.jpg",
     "imageBack": ""
   },
   {
@@ -889,7 +889,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/lions-short-2.jpg",
+    "image": "assets/lions-short-2.jpg",
     "imageBack": ""
   },
   {
@@ -910,8 +910,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-01.jpg",
-    "imageBack": "assets/images/sin-id-01-espalda.jpg"
+    "image": "assets/sin-id-01.jpg",
+    "imageBack": "assets/sin-id-01-espalda.jpg"
   },
   {
     "id": "sin-id-02",
@@ -931,8 +931,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-02.jpg",
-    "imageBack": "assets/images/sin-id-02-espalda.jpg"
+    "image": "assets/sin-id-02.jpg",
+    "imageBack": "assets/sin-id-02-espalda.jpg"
   },
   {
     "id": "sin-id-03",
@@ -952,8 +952,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-03.jpg",
-    "imageBack": "assets/images/sin-id-03-espalda.jpg"
+    "image": "assets/sin-id-03.jpg",
+    "imageBack": "assets/sin-id-03-espalda.jpg"
   },
   {
     "id": "sin-id-04",
@@ -973,8 +973,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-04.jpg",
-    "imageBack": "assets/images/sin-id-04-espalda.jpg"
+    "image": "assets/sin-id-04.jpg",
+    "imageBack": "assets/sin-id-04-espalda.jpg"
   },
   {
     "id": "sin-id-05",
@@ -994,7 +994,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-05.jpg",
+    "image": "assets/sin-id-05.jpg",
     "imageBack": ""
   },
   {
@@ -1015,7 +1015,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-06.jpg",
+    "image": "assets/sin-id-06.jpg",
     "imageBack": ""
   },
   {
@@ -1036,7 +1036,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-07.jpg",
+    "image": "assets/sin-id-07.jpg",
     "imageBack": ""
   },
   {
@@ -1058,7 +1058,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/prenda-fisica-01.jpg",
+    "image": "assets/prenda-fisica-01.jpg",
     "imageBack": ""
   },
   {
@@ -1080,7 +1080,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/prenda-fisica-02.jpg",
+    "image": "assets/prenda-fisica-02.jpg",
     "imageBack": ""
   },
   {
@@ -1102,7 +1102,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/prenda-fisica-03.jpg",
+    "image": "assets/prenda-fisica-03.jpg",
     "imageBack": ""
   },
   {
@@ -1124,7 +1124,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/prenda-fisica-04.jpg",
+    "image": "assets/prenda-fisica-04.jpg",
     "imageBack": ""
   },
   {
@@ -1146,7 +1146,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/prenda-fisica-05.jpg",
+    "image": "assets/prenda-fisica-05.jpg",
     "imageBack": ""
   },
   {
@@ -1167,7 +1167,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-08.jpg",
+    "image": "assets/sin-id-08.jpg",
     "imageBack": ""
   },
   {
@@ -1188,7 +1188,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-09.jpg",
+    "image": "assets/sin-id-09.jpg",
     "imageBack": ""
   },
   {
@@ -1209,7 +1209,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-10.jpg",
+    "image": "assets/sin-id-10.jpg",
     "imageBack": ""
   },
   {
@@ -1230,7 +1230,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-11.jpg",
+    "image": "assets/sin-id-11.jpg",
     "imageBack": ""
   },
   {
@@ -1251,7 +1251,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-12.jpg",
+    "image": "assets/sin-id-12.jpg",
     "imageBack": ""
   },
   {
@@ -1272,7 +1272,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-13.jpg",
+    "image": "assets/sin-id-13.jpg",
     "imageBack": ""
   },
   {
@@ -1293,7 +1293,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-14.jpg",
+    "image": "assets/sin-id-14.jpg",
     "imageBack": ""
   },
   {
@@ -1314,7 +1314,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-15.jpg",
+    "image": "assets/sin-id-15.jpg",
     "imageBack": ""
   },
   {
@@ -1335,7 +1335,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/images/sin-id-16.jpg",
+    "image": "assets/sin-id-16.jpg",
     "imageBack": ""
   }
 ]
