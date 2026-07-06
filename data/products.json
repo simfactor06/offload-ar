@@ -1168,6 +1168,7 @@
     "available": true,
     "immediate": false,
     "badge": "",
+    "fitContain": true,
     "image": "assets/sin-id-10.jpg",
     "imageBack": ""
   },
