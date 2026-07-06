@@ -231,6 +231,10 @@
         <input type="file" id="fImageBack" accept="image/*">
         <div class="hint">Si tenés foto de la espalda, se muestra como segunda miniatura en la ficha del producto.</div>
 
+        <label>Foto (ángulo extra) — opcional</label>
+        <input type="file" id="fImageExtra" accept="image/*">
+        <div class="hint">Para un tercer ángulo (ej: costado de un short). Se muestra como tercera miniatura.</div>
+
         <label>Nombre</label>
         <input type="text" id="fName" placeholder="Ej: Los Pumas Titular 2024">
 
@@ -551,6 +555,7 @@
     document.getElementById('formTitle').textContent = 'Agregar camiseta';
     document.getElementById('fImage').value = '';
     document.getElementById('fImageBack').value = '';
+    document.getElementById('fImageExtra').value = '';
     document.getElementById('fName').value = '';
     document.getElementById('fCategory').value = '';
     document.getElementById('fPrice').value = '';
@@ -656,6 +661,18 @@
         await ghPutFile(imageBackPath, base64, null, `Sube foto de espalda de ${name}`);
       }
 
+      let imageExtraPath = null;
+      const fileInputExtra = document.getElementById('fImageExtra');
+      if(fileInputExtra.files && fileInputExtra.files[0]){
+        setStatus(st, 'loading', 'Subiendo foto extra…');
+        const file = fileInputExtra.files[0];
+        const base64 = await fileToBase64(file);
+        const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
+        const filename = `${Date.now()}-${slugify(name)}-extra.${ext}`;
+        imageExtraPath = `images/${filename}`;
+        await ghPutFile(imageExtraPath, base64, null, `Sube foto extra de ${name}`);
+      }
+
       const sizes = [...document.querySelectorAll('#sizeBoxes input:checked')].map(cb => cb.value);
       const tipos = [...document.querySelectorAll('#tipoBoxes input:checked')].map(cb => cb.value);
       const s = getSetup();
@@ -664,6 +681,9 @@
         : null;
       const rawUrlBack = imageBackPath
         ? `https://raw.githubusercontent.com/${s.repo}/${s.branch}/${imageBackPath}`
+        : null;
+      const rawUrlExtra = imageExtraPath
+        ? `https://raw.githubusercontent.com/${s.repo}/${s.branch}/${imageExtraPath}`
         : null;
 
       const data = {
@@ -680,7 +700,8 @@
         badge: document.getElementById('fBadge').value,
         fitContain: document.getElementById('fFitContain').checked,
         image: rawUrl || (editingId ? (PRODUCTS.find(p => p.id === editingId)?.image || '') : ''),
-        imageBack: rawUrlBack || (editingId ? (PRODUCTS.find(p => p.id === editingId)?.imageBack || '') : '')
+        imageBack: rawUrlBack || (editingId ? (PRODUCTS.find(p => p.id === editingId)?.imageBack || '') : ''),
+        imageExtra: rawUrlExtra || (editingId ? (PRODUCTS.find(p => p.id === editingId)?.imageExtra || '') : '')
       };
 
       if(editingId){
