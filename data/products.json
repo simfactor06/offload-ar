@@ -1180,28 +1180,6 @@
     "imageBack": ""
   },
   {
-    "id": "sin-id-11",
-    "number": "",
-    "name": "Camiseta sin identificar #11",
-    "category": "",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "fitContain": false,
-    "image": "assets/sin-id-11.jpg",
-    "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783353521565-camiseta-sin-identificar-11-espalda.jpg"
-  },
-  {
     "id": "sin-id-12",
     "number": "",
     "name": "Camiseta sin identificar #12",
