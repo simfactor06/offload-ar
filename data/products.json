@@ -208,12 +208,14 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "partido"
+    ],
     "notes": "Adidas azul Francia con gallo bordado en rojo, cuello tricolor. Auspicio Altrad al frente.",
     "available": true,
-    "image": "assets/IMG_2394.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/IMG_2394.jpg"
   },
   {
     "id": "ar-11",
