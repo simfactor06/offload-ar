@@ -266,7 +266,7 @@
         </div>
 
         <label>Notas (opcional)</label>
-        <textarea id="fNotes" rows="2" placeholder="Ej: cuello redondo, réplica hincha"></textarea>
+        <textarea id="fNotes" rows="2" placeholder="Ej: cuello redondo, tela liviana"></textarea>
 
         <label style="display:flex; align-items:center; gap:8px; margin-top:16px;">
           <input type="checkbox" id="fAvailable" checked style="width:auto;"> Disponible (tildado = hay stock)
@@ -515,7 +515,7 @@
         ${p.image ? `<img src="${p.image}" alt="">` : `<div class="noimg">sin foto</div>`}
         <div class="info">
           <div class="name">${p.name} ${p.available === false ? '<span class="sold-tag">Agotada</span>' : ''}</div>
-          <div class="meta">${p.category || 'Sin categoría'} · $${Number(p.price||0).toLocaleString('es-AR')}</div>
+          <div class="meta">${p.category || 'Categoría pendiente'} · $${Number(p.price||0).toLocaleString('es-AR')}</div>
         </div>
         <div class="actions">
           <button onclick="editProduct('${p.id}')">Editar</button>
