@@ -78,12 +78,14 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "entrenamiento"
+    ],
     "notes": "Polo rugbero tradicional azul marino con cuello y puños blancos. Escudo bordado 'Since 1888' y auspicio Howden al frente.",
     "available": true,
-    "image": "assets/IMG_2375.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/IMG_2375.jpg"
   },
   {
     "id": "ar-05",
