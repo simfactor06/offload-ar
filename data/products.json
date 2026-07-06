@@ -2,7 +2,7 @@
   {
     "id": "ar-01",
     "number": "01",
-    "name": "Lions Camuflaje Azul — Manga Corta",
+    "name": "Lions Azul — Manga Corta",
     "category": "British & Irish Lions",
     "price": 70000,
     "sizes": [
@@ -12,12 +12,14 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "entrenamiento"
+    ],
     "notes": "Jersey Canterbury edición 'Since 1888', estampado camuflaje floral en tonos azules con degradé a negro. Auspicio Howden. Escudo de los cuatro países bordado.",
     "available": true,
-    "image": "assets/IMG_2372.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/IMG_2372.jpg"
   },
   {
     "id": "ar-02",
