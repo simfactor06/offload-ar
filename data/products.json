@@ -1277,27 +1277,6 @@
     "imageBack": ""
   },
   {
-    "id": "sin-id-15",
-    "number": "",
-    "name": "Camiseta sin identificar #15",
-    "category": "",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "image": "assets/sin-id-15.jpg",
-    "imageBack": ""
-  },
-  {
     "id": "sin-id-16",
     "number": "",
     "name": "Camiseta sin identificar #16",
