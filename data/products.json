@@ -1,4 +1,4 @@
-[
+  [
   {
     "id": "crusaders-01",
     "number": "",
@@ -15,7 +15,7 @@
     "tipos": [
       "partido"
     ],
-    "notes": "Réplica titular de los Crusaders, el club más ganador del Super Rugby. Escudo bordado, corte deportivo.",
+    "notes": "Camiseta titular de los Crusaders, el club más ganador del Super Rugby. Escudo bordado, corte deportivo.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -61,7 +61,7 @@
     "tipos": [
       "partido"
     ],
-    "notes": "Réplica titular de los Highlanders (Otago, Nueva Zelanda), en su clásico azul marino con detalles dorados.",
+    "notes": "Camiseta titular de los Highlanders (Otago, Nueva Zelanda), en su clásico azul marino con detalles dorados.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -107,7 +107,7 @@
     "tipos": [
       "partido"
     ],
-    "notes": "Réplica titular de los Chiefs (Waikato, Nueva Zelanda). Incluye vista de frente y espalda.",
+    "notes": "Camiseta titular de los Chiefs (Waikato, Nueva Zelanda). Incluye vista de frente y espalda.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -153,7 +153,7 @@
     "tipos": [
       "partido"
     ],
-    "notes": "Réplica titular de los Blues (Auckland, Nueva Zelanda), en azul característico. Incluye frente y espalda.",
+    "notes": "Camiseta titular de los Blues (Auckland, Nueva Zelanda), en azul característico. Incluye frente y espalda.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -176,7 +176,7 @@
     "tipos": [
       "partido"
     ],
-    "notes": "Réplica titular de los Hurricanes (Wellington, Nueva Zelanda). Incluye frente y espalda.",
+    "notes": "Camiseta titular de los Hurricanes (Wellington, Nueva Zelanda). Incluye frente y espalda.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -732,7 +732,29 @@
     "immediate": false,
     "badge": "",
     "image": "assets/polo-springboks.jpg",
-    "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783351904010-polo-springboks-espalda.jpg"
+    "imageBack": ""
+  },
+  {
+    "id": "polo-generico",
+    "number": "",
+    "name": "Polo Rugby",
+    "category": "Edición Especial",
+    "price": 50000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Polo deportivo de rugby, corte clásico.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/polo-generico.jpg",
+    "imageBack": ""
   },
   {
     "id": "chomba-springboks",
@@ -874,7 +896,7 @@
     "id": "sin-id-01",
     "number": "",
     "name": "Camiseta sin identificar #1",
-    "category": "Sin categoría",
+    "category": "",
     "price": 70000,
     "sizes": [
       "S",
@@ -895,7 +917,7 @@
     "id": "sin-id-02",
     "number": "",
     "name": "Camiseta sin identificar #2",
-    "category": "Sin categoría",
+    "category": "",
     "price": 70000,
     "sizes": [
       "S",
@@ -916,7 +938,7 @@
     "id": "sin-id-03",
     "number": "",
     "name": "Camiseta sin identificar #3",
-    "category": "Sin categoría",
+    "category": "",
     "price": 70000,
     "sizes": [
       "S",
@@ -937,7 +959,7 @@
     "id": "sin-id-04",
     "number": "",
     "name": "Camiseta sin identificar #4",
-    "category": "Sin categoría",
+    "category": "",
     "price": 70000,
     "sizes": [
       "S",
@@ -958,7 +980,7 @@
     "id": "sin-id-05",
     "number": "",
     "name": "Camiseta sin identificar #5",
-    "category": "Sin categoría",
+    "category": "",
     "price": 70000,
     "sizes": [
       "S",
@@ -979,7 +1001,7 @@
     "id": "sin-id-06",
     "number": "",
     "name": "Camiseta sin identificar #6",
-    "category": "Sin categoría",
+    "category": "",
     "price": 70000,
     "sizes": [
       "S",
@@ -1000,7 +1022,7 @@
     "id": "sin-id-07",
     "number": "",
     "name": "Camiseta sin identificar #7",
-    "category": "Sin categoría",
+    "category": "",
     "price": 70000,
     "sizes": [
       "S",
@@ -1021,7 +1043,7 @@
     "id": "prenda-fisica-01",
     "number": "",
     "name": "Prenda a confirmar #1",
-    "category": "Sin categoría",
+    "category": "",
     "price": 45000,
     "sizes": [
       "S",
@@ -1043,7 +1065,7 @@
     "id": "prenda-fisica-02",
     "number": "",
     "name": "Prenda a confirmar #2",
-    "category": "Sin categoría",
+    "category": "",
     "price": 45000,
     "sizes": [
       "S",
@@ -1065,7 +1087,7 @@
     "id": "prenda-fisica-03",
     "number": "",
     "name": "Prenda a confirmar #3",
-    "category": "Sin categoría",
+    "category": "",
     "price": 45000,
     "sizes": [
       "S",
@@ -1087,7 +1109,7 @@
     "id": "prenda-fisica-04",
     "number": "",
     "name": "Prenda a confirmar #4",
-    "category": "Sin categoría",
+    "category": "",
     "price": 45000,
     "sizes": [
       "S",
@@ -1109,7 +1131,7 @@
     "id": "prenda-fisica-05",
     "number": "",
     "name": "Prenda a confirmar #5",
-    "category": "Sin categoría",
+    "category": "",
     "price": 45000,
     "sizes": [
       "S",
@@ -1131,7 +1153,7 @@
     "id": "sin-id-08",
     "number": "",
     "name": "Camiseta sin identificar #8",
-    "category": "Sin categoría",
+    "category": "",
     "price": 70000,
     "sizes": [
       "S",
@@ -1149,10 +1171,52 @@
     "imageBack": ""
   },
   {
+    "id": "sin-id-09",
+    "number": "",
+    "name": "Camiseta sin identificar #9",
+    "category": "",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-09.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-10",
+    "number": "",
+    "name": "Camiseta sin identificar #10",
+    "category": "",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-10.jpg",
+    "imageBack": ""
+  },
+  {
     "id": "sin-id-11",
     "number": "",
     "name": "Camiseta sin identificar #11",
-    "category": "Sin categoría",
+    "category": "",
     "price": 70000,
     "sizes": [
       "S",
@@ -1167,13 +1231,13 @@
     "immediate": false,
     "badge": "",
     "image": "assets/sin-id-11.jpg",
-    "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783351760487-camiseta-sin-identificar-11-espalda.jpg"
+    "imageBack": ""
   },
   {
     "id": "sin-id-12",
     "number": "",
     "name": "Camiseta sin identificar #12",
-    "category": "Sin categoría",
+    "category": "",
     "price": 70000,
     "sizes": [
       "S",
@@ -1194,7 +1258,7 @@
     "id": "sin-id-13",
     "number": "",
     "name": "Camiseta sin identificar #13",
-    "category": "Sin categoría",
+    "category": "",
     "price": 70000,
     "sizes": [
       "S",
@@ -1212,10 +1276,52 @@
     "imageBack": ""
   },
   {
+    "id": "sin-id-14",
+    "number": "",
+    "name": "Foto sin identificar #14 (revisar)",
+    "category": "",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Imagen muy chica, revisar si es una prenda o un logo suelto.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-14.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-15",
+    "number": "",
+    "name": "Camiseta sin identificar #15",
+    "category": "",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-15.jpg",
+    "imageBack": ""
+  },
+  {
     "id": "sin-id-16",
     "number": "",
     "name": "Camiseta sin identificar #16",
-    "category": "Sin categoría",
+    "category": "",
     "price": 70000,
     "sizes": [
       "S",
@@ -1230,52 +1336,6 @@
     "immediate": false,
     "badge": "",
     "image": "assets/sin-id-16.jpg",
-    "imageBack": ""
-  },
-  {
-    "id": "mr9dv9nk",
-    "number": "",
-    "name": "Short sin identificar",
-    "category": "",
-    "price": 45000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [
-      "shorts"
-    ],
-    "notes": "",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783352221017-short-sin-identificar.jpg",
-    "imageBack": ""
-  },
-  {
-    "id": "mr9dwcee",
-    "number": "",
-    "name": "Short sin identificar",
-    "category": "",
-    "price": 55000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [
-      "shorts"
-    ],
-    "notes": "",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783352269940-short-sin-identificar.jpg",
     "imageBack": ""
   }
 ]
