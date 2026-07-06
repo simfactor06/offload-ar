@@ -1130,7 +1130,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/prenda-fisica-05.jpg",
+    "fitContain": true,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356952459-prenda-a-confirmar-5.png",
     "imageBack": ""
   },
   {
