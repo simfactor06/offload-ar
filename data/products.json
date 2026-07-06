@@ -24,7 +24,7 @@
   {
     "id": "ar-02",
     "number": "02",
-    "name": "Lions Camuflaje Azul — Musculosa",
+    "name": "Lions Azul — Musculosa",
     "category": "British & Irish Lions",
     "price": 70000,
     "sizes": [
@@ -34,12 +34,14 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "entrenamiento"
+    ],
     "notes": "Versión sin mangas del estampado camuflaje azul. Ideal para entrenar o combinar. Tela liviana Canterbury, auspicio Howden.",
     "available": true,
-    "image": "assets/IMG_2371.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/IMG_2371.jpg"
   },
   {
     "id": "ar-03",
