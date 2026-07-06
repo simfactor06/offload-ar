@@ -230,12 +230,15 @@
       "XL",
       "XXL"
     ],
+    "tipos": [
+      "partido",
+      "entrenamiento"
+    ],
     "notes": "Macron azul marino con cuello blanco, escudo del cardo bordado. Auspicio Arnold Clark, detalle 'Murrayfield 192_' en manga.",
     "available": true,
-    "image": "assets/IMG_2398.jpg",
     "immediate": false,
     "badge": "",
-    "tipos": []
+    "image": "assets/IMG_2398.jpg"
   },
   {
     "id": "ar-12",
