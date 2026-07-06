@@ -1242,5 +1242,27 @@
     "fitContain": false,
     "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357628873-camiseta-sin-identificar-11.jpg",
     "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357724793-camiseta-sin-identificar-11-espalda.jpg"
+  },
+  {
+    "id": "mr9h652p",
+    "number": "",
+    "name": "Camiseta sin identificar #1",
+    "category": "",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357766847-camiseta-sin-identificar-1.jpg",
+    "imageBack": ""
   }
 ]
