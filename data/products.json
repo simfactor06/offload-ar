@@ -911,7 +911,8 @@
     "available": true,
     "immediate": false,
     "badge": "",
-    "image": "assets/sin-id-02.jpg",
+    "fitContain": true,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356869920-camiseta-sin-identificar-2.png",
     "imageBack": "assets/sin-id-02-espalda.jpg"
   },
   {
