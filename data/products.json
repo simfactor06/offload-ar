@@ -1212,27 +1212,6 @@
     "imageBack": ""
   },
   {
-    "id": "sin-id-14",
-    "number": "",
-    "name": "Foto sin identificar #14 (revisar)",
-    "category": "Sin categoría",
-    "price": 70000,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "tipos": [],
-    "notes": "Imagen muy chica, revisar si es una prenda o un logo suelto.",
-    "available": true,
-    "immediate": false,
-    "badge": "",
-    "image": "assets/sin-id-14.jpg",
-    "imageBack": ""
-  },
-  {
     "id": "sin-id-16",
     "number": "",
     "name": "Camiseta sin identificar #16",
