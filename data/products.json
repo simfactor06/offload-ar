@@ -1286,5 +1286,291 @@
     "fitContain": false,
     "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357809294-camiseta-sin-identificar-17.jpg",
     "imageBack": ""
+  },
+  {
+    "id": "lions-camo-azul-musculosa",
+    "number": "",
+    "name": "Lions Camuflaje Azul — Musculosa",
+    "category": "British & Irish Lions",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Musculosa Canterbury edición \"Since 1888\", estampado camuflaje floral en tonos azules con degradé a negro. Auspicio Howden.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2371-removebg-preview.png",
+    "imageBack": "assets/Lions_musculosa_azul_detras-removebg-preview.png",
+    "fitContain": true
+  },
+  {
+    "id": "lions-camo-azul-remera",
+    "number": "",
+    "name": "Lions Camuflaje Azul — Manga Corta",
+    "category": "British & Irish Lions",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Jersey Canterbury edición \"Since 1888\", estampado camuflaje floral en tonos azules con degradé a negro. Auspicio Howden. Escudo de los cuatro países bordado.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2372-removebg-preview.png",
+    "imageBack": "assets/Lions_azul_detras-removebg-preview.png",
+    "fitContain": true
+  },
+  {
+    "id": "lions-camo-rojo-musculosa",
+    "number": "",
+    "name": "Lions Camuflaje Rojo — Musculosa",
+    "category": "British & Irish Lions",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Versión sin mangas del estampado camuflaje, en tonos rojos. Tela liviana Canterbury, auspicio Howden.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2373-removebg-preview.png",
+    "imageBack": "assets/Lions_Musculosa_roja_detras-removebg-preview.png",
+    "fitContain": true
+  },
+  {
+    "id": "lions-clasica-roja",
+    "number": "",
+    "name": "Lions Clásica Roja",
+    "category": "British & Irish Lions",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Jersey clásica British & Irish Lions en rojo, escudo de los cuatro países bordado \"Since 1888\".",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2376-removebg-preview.png",
+    "imageBack": "",
+    "fitContain": true
+  },
+  {
+    "id": "allblacks-retro",
+    "number": "",
+    "name": "All Blacks Retro",
+    "category": "Nueva Zelanda",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de los All Blacks, diseño clásico.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2381-removebg-preview.png",
+    "imageBack": "",
+    "fitContain": true
+  },
+  {
+    "id": "munster-alt",
+    "number": "",
+    "name": "Munster Alternativa Bordó",
+    "category": "Munster Rugby",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de Munster Rugby en bordó, sponsor Bank of Ireland.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/Munster_alternativa-removebg-preview.png",
+    "imageBack": "assets/Munster_alternativa_detras-removebg-preview.png",
+    "fitContain": true
+  },
+  {
+    "id": "francia-local",
+    "number": "",
+    "name": "Francia Local — Le Coq",
+    "category": "Francia",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Francia, marca Le Coq Sportif.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2394-removebg-preview.png",
+    "imageBack": "",
+    "fitContain": true
+  },
+  {
+    "id": "irlanda-blanca",
+    "number": "",
+    "name": "Irlanda Local Blanca",
+    "category": "Irlanda",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Irlanda, versión blanca.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2408-removebg-preview.png",
+    "imageBack": "",
+    "fitContain": true
+  },
+  {
+    "id": "allblacks-musculosa",
+    "number": "",
+    "name": "All Blacks Musculosa",
+    "category": "Nueva Zelanda",
+    "price": 68000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Musculosa alternativa de los All Blacks, ideal para entrenar o combinar.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": true,
+    "image": "assets/All_blacks_Musculosa-removebg-preview.png",
+    "imageBack": ""
+  },
+  {
+    "id": "francia-alternativa",
+    "number": "",
+    "name": "Francia Alternativa",
+    "category": "Francia",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de la selección de Francia. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "assets/francia-alternativa.jpg",
+    "imageBack": "assets/francia-alternativa-detras.jpg"
+  },
+  {
+    "id": "francia-match25",
+    "number": "",
+    "name": "Francia Titular 25",
+    "category": "Francia",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Francia, temporada 2025. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "assets/francia-match-25.jpg",
+    "imageBack": "assets/francia-match-25-detras.jpg"
+  },
+  {
+    "id": "sin-id-18",
+    "number": "",
+    "name": "Camiseta sin identificar #18",
+    "category": "",
+    "price": 70000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [],
+    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "assets/2c1b9cd2.jpg",
+    "imageBack": "assets/5f6648eb.jpg"
   }
 ]
