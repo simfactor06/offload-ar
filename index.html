@@ -836,7 +836,7 @@
     selectedSize = (p.sizes && p.sizes.length) ? null : 'Única';
     selectedQty = 1;
 
-    const images = [p.image, p.imageBack].filter(Boolean);
+    const images = [p.image, p.imageBack, p.imageExtra].filter(Boolean);
     const media = images.length
       ? `<img src="${images[0]}" alt="${p.name}" id="mainProductImg">`
       : `<div class="no-photo" style="height:100%;display:flex;align-items:center;justify-content:center;">Foto próximamente</div>`;
