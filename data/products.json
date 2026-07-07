@@ -1490,7 +1490,7 @@
   {
     "id": "sin-id-18",
     "number": "",
-    "name": "Munster Titular 2026",
+    "name": "Munster Titular 24/25",
     "category": "Munster Rugby",
     "price": 70000,
     "sizes": [
@@ -1509,6 +1509,7 @@
     "badge": "",
     "fitContain": false,
     "image": "assets/5f6648eb.jpg",
-    "imageBack": "assets/2c1b9cd2.jpg"
+    "imageBack": "assets/2c1b9cd2.jpg",
+    "imageExtra": ""
   }
 ]
