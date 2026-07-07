@@ -877,8 +877,8 @@
   {
     "id": "sin-id-02",
     "number": "",
-    "name": "Camiseta sin identificar #2",
-    "category": "",
+    "name": "Toulouse Auvergne 22-23",
+    "category": "Stade Toulousain",
     "price": 70000,
     "sizes": [
       "S",
@@ -887,8 +887,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta del Stade Toulousain, temporada 2022-23, edición Auvergne.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -899,8 +901,8 @@
   {
     "id": "sin-id-03",
     "number": "",
-    "name": "Camiseta sin identificar #3",
-    "category": "",
+    "name": "Toulouse Galaxy 22-23",
+    "category": "Stade Toulousain",
     "price": 70000,
     "sizes": [
       "S",
@@ -909,8 +911,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta del Stade Toulousain, temporada 2022-23, edición Galaxy.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -920,8 +924,8 @@
   {
     "id": "sin-id-04",
     "number": "",
-    "name": "Camiseta sin identificar #4",
-    "category": "",
+    "name": "Bath Titular 2026",
+    "category": "Bath Rugby",
     "price": 70000,
     "sizes": [
       "S",
@@ -930,8 +934,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de Bath Rugby, temporada 2026.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -964,8 +970,8 @@
   {
     "id": "sin-id-06",
     "number": "",
-    "name": "Camiseta sin identificar #6",
-    "category": "",
+    "name": "Lions Polo Rojo",
+    "category": "British & Irish Lions",
     "price": 70000,
     "sizes": [
       "S",
@@ -974,8 +980,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Polo oficial British & Irish Lions en rojo.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -985,8 +993,8 @@
   {
     "id": "sin-id-07",
     "number": "",
-    "name": "Camiseta sin identificar #7",
-    "category": "",
+    "name": "Lions Entrenamiento Verde",
+    "category": "British & Irish Lions",
     "price": 70000,
     "sizes": [
       "S",
@@ -995,8 +1003,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Remera de entrenamiento British & Irish Lions en verde.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -1006,8 +1016,8 @@
   {
     "id": "prenda-fisica-02",
     "number": "",
-    "name": "Prenda a confirmar #2",
-    "category": "",
+    "name": "Lions Short Blanco",
+    "category": "British & Irish Lions",
     "price": 45000,
     "sizes": [
       "S",
@@ -1018,7 +1028,7 @@
     "tipos": [
       "shorts"
     ],
-    "notes": "Foto tomada por vos de una prenda física — completar nombre/precio desde el admin.",
+    "notes": "Short oficial British & Irish Lions en blanco.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -1029,8 +1039,8 @@
   {
     "id": "prenda-fisica-04",
     "number": "",
-    "name": "Prenda a confirmar #4",
-    "category": "",
+    "name": "Lions 2021 Verde",
+    "category": "British & Irish Lions",
     "price": 45000,
     "sizes": [
       "S",
@@ -1039,9 +1049,9 @@
       "XL"
     ],
     "tipos": [
-      "shorts"
+      "partido"
     ],
-    "notes": "Foto tomada por vos de una prenda física — completar nombre/precio desde el admin.",
+    "notes": "Camiseta British & Irish Lions de la gira 2021, en verde.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -1052,8 +1062,8 @@
   {
     "id": "prenda-fisica-05",
     "number": "",
-    "name": "Prenda a confirmar #5",
-    "category": "",
+    "name": "All Blacks Edición Especial 25 Años",
+    "category": "Nueva Zelanda",
     "price": 45000,
     "sizes": [
       "S",
@@ -1062,9 +1072,9 @@
       "XL"
     ],
     "tipos": [
-      "shorts"
+      "partido"
     ],
-    "notes": "Foto tomada por vos de una prenda física — completar nombre/precio desde el admin.",
+    "notes": "Camiseta conmemorativa de los All Blacks, edición especial 25 años.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -1075,8 +1085,8 @@
   {
     "id": "sin-id-08",
     "number": "",
-    "name": "Camiseta sin identificar #8",
-    "category": "",
+    "name": "Francia Edición Especial 100 Años",
+    "category": "Francia",
     "price": 70000,
     "sizes": [
       "S",
@@ -1085,8 +1095,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta conmemorativa de la selección de Francia, edición especial 100 años.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -1096,8 +1108,8 @@
   {
     "id": "sin-id-12",
     "number": "",
-    "name": "Camiseta sin identificar #12",
-    "category": "",
+    "name": "All Blacks Musculosa Alternativa",
+    "category": "Nueva Zelanda",
     "price": 70000,
     "sizes": [
       "S",
@@ -1106,8 +1118,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Musculosa alternativa de los All Blacks.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -1117,8 +1131,8 @@
   {
     "id": "sin-id-13",
     "number": "",
-    "name": "Camiseta sin identificar #13",
-    "category": "",
+    "name": "Escocia Titular 23/24",
+    "category": "Escocia",
     "price": 70000,
     "sizes": [
       "S",
@@ -1127,8 +1141,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Escocia, temporada 2023/24.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -1138,8 +1154,8 @@
   {
     "id": "sin-id-16",
     "number": "",
-    "name": "Camiseta sin identificar #16",
-    "category": "",
+    "name": "Lions Entrenamiento Azul",
+    "category": "British & Irish Lions",
     "price": 70000,
     "sizes": [
       "S",
@@ -1148,8 +1164,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Remera de entrenamiento British & Irish Lions en azul.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -1159,8 +1177,8 @@
   {
     "id": "mr9h369r",
     "number": "",
-    "name": "Camiseta sin identificar #11",
-    "category": "",
+    "name": "Northampton Saints 25/26",
+    "category": "Northampton Saints",
     "price": 70000,
     "sizes": [
       "S",
@@ -1169,8 +1187,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "",
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de Northampton Saints, temporada 2025/26.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -1181,8 +1201,8 @@
   {
     "id": "mr9h652p",
     "number": "",
-    "name": "Camiseta sin identificar #1",
-    "category": "",
+    "name": "Toulouse Alternativa 23/24",
+    "category": "Stade Toulousain",
     "price": 70000,
     "sizes": [
       "S",
@@ -1191,8 +1211,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "",
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa del Stade Toulousain, temporada 2023/24.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -1203,8 +1225,8 @@
   {
     "id": "mr9h71kj",
     "number": "",
-    "name": "Camiseta sin identificar #17",
-    "category": "",
+    "name": "Toulouse Alternativa 24/25",
+    "category": "Stade Toulousain",
     "price": 70000,
     "sizes": [
       "S",
@@ -1213,8 +1235,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "",
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa del Stade Toulousain, temporada 2024/25.",
     "available": true,
     "immediate": false,
     "badge": "",
@@ -1465,8 +1489,8 @@
   {
     "id": "sin-id-18",
     "number": "",
-    "name": "Camiseta sin identificar #18",
-    "category": "",
+    "name": "Munster Titular 2026",
+    "category": "Munster Rugby",
     "price": 70000,
     "sizes": [
       "S",
@@ -1475,8 +1499,10 @@
       "XL",
       "XXL"
     ],
-    "tipos": [],
-    "notes": "Pendiente de identificar equipo/modelo — completar desde el admin.",
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de Munster Rugby, temporada 2026.",
     "available": true,
     "immediate": false,
     "badge": "",
