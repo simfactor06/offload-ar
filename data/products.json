@@ -1346,7 +1346,7 @@
   {
     "id": "munster-alt",
     "number": "",
-    "name": "Munster Alternativa Bordó",
+    "name": "Munster Alternativa",
     "category": "Munster Rugby",
     "price": 70000,
     "sizes": [
@@ -1363,9 +1363,10 @@
     "available": true,
     "immediate": false,
     "badge": "",
+    "fitContain": true,
     "image": "assets/Munster_alternativa-removebg-preview.png",
     "imageBack": "assets/Munster_alternativa_detras-removebg-preview.png",
-    "fitContain": true
+    "imageExtra": ""
   },
   {
     "id": "francia-local",
