@@ -743,11 +743,13 @@
     "notes": "Camiseta titular del Stade Toulousain, temporada 2026. Incluye frente y espalda.",
     "available": true,
     "immediate": false,
+    "featured": true,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/toulouse-match26.jpg",
     "imageBack": "assets/toulouse-match26-espalda.jpg",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "munster-titular",
