@@ -253,6 +253,10 @@
           </div>
         </div>
 
+        <label>Precio con descuento ($) — opcional</label>
+        <input type="number" id="fSalePrice" placeholder="Dejalo vacío si no tiene descuento">
+        <div class="hint">Si ponés un valor acá (menor al precio normal), en la web se muestra el precio tachado y este como precio final, con una etiqueta "Descuento".</div>
+
         <label>Talles disponibles</label>
         <div class="sizes" id="sizeBoxes">
           <label><input type="checkbox" value="S"> S</label>
@@ -280,6 +284,11 @@
           <input type="checkbox" id="fImmediate" style="width:auto;"> Entrega inmediata (ya la tenés físicamente)
         </label>
         <div class="hint">Si no la tildás, aparece solo en el Catálogo (por encargo). Si la tildás, también aparece en la pestaña "Stock".</div>
+
+        <label style="display:flex; align-items:center; gap:8px; margin-top:12px;">
+          <input type="checkbox" id="fFeatured" style="width:auto;"> Destacado (aparece en el carrusel de Inicio)
+        </label>
+        <div class="hint">Si no marcás ninguna camiseta como destacada, el Inicio muestra las primeras que tengan foto por defecto.</div>
 
         <label>Etiqueta especial (opcional)</label>
         <select id="fBadge">
@@ -520,12 +529,16 @@
   }
 
   function buildListItem(p){
+    const hasSale = p.salePrice && Number(p.salePrice) > 0 && Number(p.salePrice) < Number(p.price);
+    const priceText = hasSale
+      ? `<s>$${Number(p.price).toLocaleString('es-AR')}</s> $${Number(p.salePrice).toLocaleString('es-AR')}`
+      : `$${Number(p.price||0).toLocaleString('es-AR')}`;
     return `
       <div class="list-item">
         ${p.image ? `<img src="${p.image}" alt="">` : `<div class="noimg">sin foto</div>`}
         <div class="info">
-          <div class="name">${p.name} ${p.available === false ? '<span class="sold-tag">Agotada</span>' : ''}</div>
-          <div class="meta">${p.category || 'Categoría pendiente'} · $${Number(p.price||0).toLocaleString('es-AR')}</div>
+          <div class="name">${p.name} ${p.available === false ? '<span class="sold-tag">Agotada</span>' : ''} ${p.featured ? '<span class="stock-tag">Destacado</span>' : ''} ${hasSale ? '<span class="sold-tag" style="background:#C8203D;">Descuento</span>' : ''}</div>
+          <div class="meta">${p.category || 'Categoría pendiente'} · ${priceText}</div>
         </div>
         <div class="actions">
           <button onclick="editProduct('${p.id}')">Editar</button>
@@ -564,6 +577,8 @@
     document.getElementById('fNotes').value = '';
     document.getElementById('fAvailable').checked = true;
     document.getElementById('fImmediate').checked = false;
+    document.getElementById('fFeatured').checked = false;
+    document.getElementById('fSalePrice').value = '';
     document.getElementById('fBadge').value = '';
     document.getElementById('fFitContain').checked = false;
     document.querySelectorAll('#sizeBoxes input').forEach(cb => cb.checked = false);
@@ -586,6 +601,8 @@
     document.getElementById('fNotes').value = p.notes || '';
     document.getElementById('fAvailable').checked = p.available !== false;
     document.getElementById('fImmediate').checked = !!p.immediate;
+    document.getElementById('fFeatured').checked = !!p.featured;
+    document.getElementById('fSalePrice').value = p.salePrice || '';
     document.getElementById('fBadge').value = p.badge || '';
     document.getElementById('fFitContain').checked = !!p.fitContain;
     document.querySelectorAll('#sizeBoxes input').forEach(cb => {
@@ -698,6 +715,8 @@
         notes: document.getElementById('fNotes').value.trim(),
         available: document.getElementById('fAvailable').checked,
         immediate: document.getElementById('fImmediate').checked,
+        featured: document.getElementById('fFeatured').checked,
+        salePrice: document.getElementById('fSalePrice').value ? Number(document.getElementById('fSalePrice').value) : '',
         badge: document.getElementById('fBadge').value,
         fitContain: document.getElementById('fFitContain').checked,
         image: rawUrl || (editingId ? (PRODUCTS.find(p => p.id === editingId)?.image || '') : ''),
