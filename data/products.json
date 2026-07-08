@@ -293,11 +293,13 @@
     "notes": "Edición especial de Escocia conmemorativa de Murrayfield. Incluye frente y espalda.",
     "available": true,
     "immediate": false,
+    "featured": true,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/escocia-murrayfield.jpg",
     "imageBack": "assets/escocia-murrayfield-espalda.jpg",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "escocia-lila",
