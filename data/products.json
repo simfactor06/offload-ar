@@ -1377,12 +1377,13 @@
     "notes": "Musculosa Canterbury edición \"Since 1888\", estampado camuflaje floral en tonos azules con degradé a negro. Auspicio Howden.",
     "available": true,
     "immediate": false,
+    "featured": true,
+    "salePrice": "",
     "badge": "",
+    "fitContain": true,
     "image": "assets/IMG_2371-removebg-preview.png",
     "imageBack": "assets/Lions_musculosa_azul_detras-removebg-preview.png",
-    "fitContain": true,
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "lions-camo-azul-remera",
