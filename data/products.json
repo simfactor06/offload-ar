@@ -493,11 +493,13 @@
     "notes": "Camiseta titular de los All Blacks, temporada 2026.",
     "available": true,
     "immediate": false,
+    "featured": true,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/allblacks-match26.jpg",
     "imageBack": "",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "springboks-match",
