@@ -1298,13 +1298,13 @@
     "notes": "Camiseta titular de Northampton Saints, temporada 2025/26.",
     "available": true,
     "immediate": false,
+    "featured": true,
+    "salePrice": "",
     "badge": "",
     "fitContain": false,
     "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357628873-camiseta-sin-identificar-11.jpg",
     "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357724793-camiseta-sin-identificar-11-espalda.jpg",
-    "imageExtra": "",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "mr9h652p",
