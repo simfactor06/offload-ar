@@ -1334,15 +1334,16 @@
       "XXL"
     ],
     "tipos": [
-      "partido"
+      "entrenamiento"
     ],
     "notes": "Camiseta alternativa de los All Blacks, diseño clásico.",
     "available": true,
     "immediate": false,
     "badge": "",
+    "fitContain": true,
     "image": "assets/IMG_2381-removebg-preview.png",
     "imageBack": "",
-    "fitContain": true
+    "imageExtra": ""
   },
   {
     "id": "munster-alt",
