@@ -1513,12 +1513,13 @@
     "notes": "Camiseta titular de la selección de Francia, marca Le Coq Sportif.",
     "available": true,
     "immediate": false,
+    "featured": true,
+    "salePrice": "",
     "badge": "",
+    "fitContain": true,
     "image": "assets/IMG_2394-removebg-preview.png",
     "imageBack": "",
-    "fitContain": true,
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "irlanda-blanca",
