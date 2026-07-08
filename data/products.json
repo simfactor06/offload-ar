@@ -1,67 +1,1517 @@
 [
-  {"id":"crusaders-01","number":"","name":"Crusaders Titular","category":"Crusaders","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de los Crusaders, el club más ganador del Super Rugby. Escudo bordado, corte deportivo.","available":true,"immediate":false,"badge":"","image":"assets/crusaders-01.jpg","imageBack":""},
-  {"id":"crusaders-02","number":"","name":"Crusaders Oficial","category":"Crusaders","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Versión oficial de la camiseta de los Crusaders, con escudo y sponsors bordados. Incluye vista de espalda.","available":true,"immediate":false,"badge":"","image":"assets/crusaders-02.jpg","imageBack":"assets/crusaders-02-espalda.jpg"},
-  {"id":"highlanders-01","number":"","name":"Highlanders Titular","category":"Highlanders","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de los Highlanders (Otago, Nueva Zelanda), en su clásico azul marino con detalles dorados.","available":true,"immediate":false,"badge":"","image":"assets/highlanders-01.jpg","imageBack":""},
-  {"id":"highlanders-02","number":"","name":"Highlanders Oficial","category":"Highlanders","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Versión oficial de los Highlanders, escudo bordado. Incluye vista de frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/highlanders-02.jpg","imageBack":"assets/highlanders-02-espalda.jpg"},
-  {"id":"chiefs-01","number":"","name":"Chiefs Titular","category":"Chiefs","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de los Chiefs (Waikato, Nueva Zelanda). Incluye vista de frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/chiefs-01.jpg","imageBack":"assets/chiefs-01-espalda.jpg"},
-  {"id":"chiefs-02","number":"","name":"Chiefs Alternativa","category":"Chiefs","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Versión alternativa de los Chiefs. Incluye vista de frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/chiefs-02.jpg","imageBack":"assets/chiefs-02-espalda.jpg"},
-  {"id":"blues-01","number":"","name":"Blues Titular","category":"Blues","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de los Blues (Auckland, Nueva Zelanda), en azul característico. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/blues-01.jpg","imageBack":"assets/blues-01-espalda.jpg"},
-  {"id":"hurricanes-01","number":"","name":"Hurricanes Titular","category":"Hurricanes","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de los Hurricanes (Wellington, Nueva Zelanda). Incluye frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/hurricanes-01.jpg","imageBack":"assets/hurricanes-01-espalda.jpg"},
-  {"id":"hurricanes-02","number":"","name":"Hurricanes Alternativa","category":"Hurricanes","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Versión alternativa de los Hurricanes. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/hurricanes-02.jpg","imageBack":"assets/hurricanes-02-espalda.jpg"},
-  {"id":"irlanda-alt","number":"","name":"Irlanda Alternativa","category":"Irlanda","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta alternativa de la selección de Irlanda. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/irlanda-alt.jpg","imageBack":"assets/irlanda-alt-espalda.jpg"},
-  {"id":"irlanda-match","number":"","name":"Irlanda Titular","category":"Irlanda","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de la selección de Irlanda, temporada actual.","available":true,"immediate":false,"badge":"","image":"assets/irlanda-match.jpg","imageBack":""},
-  {"id":"escocia-murrayfield","number":"","name":"Escocia Edición Especial Murrayfield","category":"Escocia","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Edición especial de Escocia conmemorativa de Murrayfield. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/escocia-murrayfield.jpg","imageBack":"assets/escocia-murrayfield-espalda.jpg"},
-  {"id":"escocia-lila","number":"","name":"Escocia Alternativa Lila","category":"Escocia","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Jersey Macron en lila, sponsor Arnold Clark, escudo del cardo bordado. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/escocia-lila.jpg","imageBack":"assets/escocia-lila-espalda.jpg"},
-  {"id":"escocia-titular","number":"","name":"Escocia Titular","category":"Escocia","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de la selección de Escocia. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/escocia-titular.jpg","imageBack":"assets/escocia-titular-espalda.jpg"},
-  {"id":"wales-match","number":"","name":"Gales Titular","category":"Gales","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de la selección de Gales, temporada actual.","available":true,"immediate":false,"badge":"","image":"assets/wales-match.jpg","imageBack":""},
-  {"id":"england-match25","number":"","name":"Inglaterra Titular 25","category":"Inglaterra","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de la selección de Inglaterra, temporada 2025.","available":true,"immediate":false,"badge":"","image":"assets/england-match25.jpg","imageBack":""},
-  {"id":"england-match26","number":"","name":"Inglaterra Titular 26","category":"Inglaterra","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de la selección de Inglaterra, temporada 2026.","available":true,"immediate":false,"badge":"","image":"assets/england-match26.jpg","imageBack":""},
-  {"id":"england-gym","number":"","name":"Inglaterra Entrenamiento","category":"Inglaterra","price":65000,"sizes":["S","M","L","XL","XXL"],"tipos":["entrenamiento"],"notes":"Remera de entrenamiento de la selección de Inglaterra.","available":true,"immediate":false,"badge":"","image":"assets/england-gym.jpg","imageBack":""},
-  {"id":"allblacks-alt","number":"","name":"All Blacks Alternativa","category":"Nueva Zelanda","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta alternativa de los All Blacks (Nueva Zelanda).","available":true,"immediate":false,"badge":"","image":"assets/allblacks-alt.jpg","imageBack":""},
-  {"id":"allblacks-match26","number":"","name":"All Blacks Titular 26","category":"Nueva Zelanda","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de los All Blacks, temporada 2026.","available":true,"immediate":false,"badge":"","image":"assets/allblacks-match26.jpg","imageBack":""},
-  {"id":"springboks-match","number":"","name":"Springboks Titular","category":"Sudáfrica","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de los Springboks (Sudáfrica), campeones del mundo.","available":true,"immediate":false,"badge":"","image":"assets/springboks-match.jpg","imageBack":""},
-  {"id":"springboks-alt","number":"","name":"Springboks Alternativa","category":"Sudáfrica","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta alternativa de los Springboks.","available":true,"immediate":false,"badge":"","image":"assets/springboks-alt.jpg","imageBack":""},
-  {"id":"wallabies-gym","number":"","name":"Wallabies Entrenamiento","category":"Australia","price":65000,"sizes":["S","M","L","XL","XXL"],"tipos":["entrenamiento"],"notes":"Remera de entrenamiento de los Wallabies (selección de Australia).","available":true,"immediate":false,"badge":"","image":"assets/wallabies-gym.jpg","imageBack":""},
-  {"id":"northampton-2526","number":"","name":"Northampton Saints 25/26","category":"Northampton Saints","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de Northampton Saints, temporada 2025/26.","available":true,"immediate":false,"badge":"","image":"assets/northampton-2526.jpg","imageBack":""},
-  {"id":"connacht-special","number":"","name":"Connacht Edición Especial","category":"Connacht Rugby","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Edición especial de Connacht Rugby. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/connacht-special.jpg","imageBack":"assets/connacht-special-espalda.jpg"},
-  {"id":"harlequins-gym","number":"","name":"Harlequins Entrenamiento","category":"Harlequins","price":65000,"sizes":["S","M","L","XL","XXL"],"tipos":["entrenamiento"],"notes":"Remera de entrenamiento de Harlequins. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/harlequins-gym.jpg","imageBack":"assets/harlequins-gym-espalda.jpg"},
-  {"id":"harlequins-match","number":"","name":"Harlequins Titular","category":"Harlequins","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de Harlequins, temporada actual.","available":true,"immediate":false,"badge":"","image":"assets/harlequins-match.jpg","imageBack":""},
-  {"id":"harlequins-alt","number":"","name":"Harlequins Alternativa","category":"Harlequins","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta alternativa de Harlequins.","available":true,"immediate":false,"badge":"","image":"assets/harlequins-alt.jpg","imageBack":""},
-  {"id":"toulouse-entreno","number":"","name":"Toulouse Entrenamiento","category":"Stade Toulousain","price":65000,"sizes":["S","M","L","XL","XXL"],"tipos":["entrenamiento"],"notes":"Remera de entrenamiento del Stade Toulousain.","available":true,"immediate":false,"badge":"","image":"assets/toulouse-entreno.jpg","imageBack":""},
-  {"id":"toulouse-match26","number":"","name":"Toulouse Titular 26","category":"Stade Toulousain","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular del Stade Toulousain, temporada 2026. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/toulouse-match26.jpg","imageBack":"assets/toulouse-match26-espalda.jpg"},
-  {"id":"munster-titular","number":"","name":"Munster Titular","category":"Munster Rugby","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de Munster Rugby, sponsor Bank of Ireland.","available":true,"immediate":false,"badge":"","fitContain":true,"image":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357512862-munster-titular.png","imageBack":""},
-  {"id":"polo-springboks","number":"","name":"Polo Springboks","category":"Sudáfrica","price":55000,"sizes":["S","M","L","XL"],"tipos":[],"notes":"Polo oficial de los Springboks, ideal para uso casual.","available":true,"immediate":false,"badge":"","fitContain":false,"image":"assets/polo-springboks.jpg","imageBack":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783353497348-polo-springboks-espalda.jpg"},
-  {"id":"chomba-springboks","number":"","name":"Chomba Springboks","category":"Sudáfrica","price":55000,"sizes":["S","M","L","XL"],"tipos":[],"notes":"Chomba oficial de los Springboks, tela piqué, ideal para uso diario.","available":true,"immediate":false,"badge":"","image":"assets/chomba-springboks.jpg","imageBack":""},
-  {"id":"wallabies-match","number":"","name":"Wallabies Titular","category":"Australia","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de los Wallabies (Australia), sponsor Cadbury, marca Castore con motivo aborigen en las mangas. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/wallabies-match.jpg","imageBack":"assets/wallabies-match-espalda.jpg"},
-  {"id":"wallaroos-match","number":"","name":"Wallaroos Titular","category":"Australia","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de las Wallaroos (selección femenina de Australia), sponsor Santos, motivo aborigen. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","image":"assets/wallaroos-match.jpg","imageBack":"assets/wallaroos-match-espalda.jpg"},
-  {"id":"northampton-away","number":"","name":"Northampton Saints Alternativa","category":"Northampton Saints","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta alternativa de Northampton Saints, rayas blanco y verde, sponsor cinch, marca Macron.","available":true,"immediate":false,"badge":"","image":"assets/northampton-away.jpg","imageBack":""},
-  {"id":"springboks-heritage","number":"","name":"Springboks Heritage","category":"Sudáfrica","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta clásica de los Springboks con cuello polo, sponsor MTN, marca Nike.","available":true,"immediate":false,"badge":"","image":"assets/springboks-heritage.jpg","imageBack":""},
-  {"id":"lions-short-2","number":"","name":"Short British & Irish Lions","category":"British & Irish Lions","price":45000,"sizes":["S","M","L","XL"],"tipos":["shorts"],"notes":"Short oficial British & Irish Lions, azul marino, escudo bordado \"Since 1888\".","available":true,"immediate":false,"badge":"","fitContain":true,"image":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357088157-camiseta-sin-identificar-10.png","imageBack":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356791172-short-british-irish-lions.png","imageExtra":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356841363-prenda-a-confirmar-1.png"},
-  {"id":"sin-id-02","number":"","name":"Toulouse Auvergne 22-23","category":"Stade Toulousain","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta del Stade Toulousain, temporada 2022-23, edición Auvergne.","available":true,"immediate":false,"badge":"","fitContain":false,"image":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357067108-camiseta-sin-identificar-2.jpg","imageBack":"assets/sin-id-02-espalda.jpg"},
-  {"id":"sin-id-03","number":"","name":"Toulouse Galaxy 22-23","category":"Stade Toulousain","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta del Stade Toulousain, temporada 2022-23, edición Galaxy.","available":true,"immediate":false,"badge":"","image":"assets/sin-id-03.jpg","imageBack":"assets/sin-id-03-espalda.jpg"},
-  {"id":"sin-id-04","number":"","name":"Bath Titular 2026","category":"Bath Rugby","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de Bath Rugby, temporada 2026.","available":true,"immediate":false,"badge":"","image":"assets/sin-id-04.jpg","imageBack":"assets/sin-id-04-espalda.jpg"},
-  {"id":"sin-id-05","number":"","name":"Lions Clásica Roja","category":"British & Irish Lions","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Jersey clásica British & Irish Lions en rojo, escudo de los cuatro países bordado \"Since 1888\".","available":true,"immediate":false,"badge":"","image":"assets/sin-id-05.jpg","imageBack":""},
-  {"id":"sin-id-06","number":"","name":"Lions Polo Rojo","category":"British & Irish Lions","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":[],"notes":"Polo oficial British & Irish Lions en rojo.","available":true,"immediate":false,"badge":"","image":"assets/sin-id-06.jpg","imageBack":""},
-  {"id":"sin-id-07","number":"","name":"Lions Entrenamiento Verde","category":"British & Irish Lions","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["entrenamiento"],"notes":"Remera de entrenamiento British & Irish Lions en verde.","available":true,"immediate":false,"badge":"","image":"assets/sin-id-07.jpg","imageBack":""},
-  {"id":"prenda-fisica-02","number":"","name":"Lions Short Blanco","category":"British & Irish Lions","price":45000,"sizes":["S","M","L","XL"],"tipos":["shorts"],"notes":"Short oficial British & Irish Lions en blanco.","available":true,"immediate":false,"badge":"","fitContain":true,"image":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356906497-prenda-a-confirmar-2.png","imageBack":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356921529-prenda-a-confirmar-3.png"},
-  {"id":"prenda-fisica-04","number":"","name":"Lions 2021 Verde","category":"British & Irish Lions","price":45000,"sizes":["S","M","L","XL"],"tipos":["partido"],"notes":"Camiseta British & Irish Lions de la gira 2021, en verde.","available":true,"immediate":false,"badge":"","fitContain":true,"image":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357487527-prenda-a-confirmar-4.png","imageBack":""},
-  {"id":"prenda-fisica-05","number":"","name":"All Blacks Edición Especial 25 Años","category":"Nueva Zelanda","price":45000,"sizes":["S","M","L","XL"],"tipos":["partido"],"notes":"Camiseta conmemorativa de los All Blacks, edición especial 25 años.","available":true,"immediate":false,"badge":"","fitContain":true,"image":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356952459-prenda-a-confirmar-5.png","imageBack":""},
-  {"id":"sin-id-08","number":"","name":"Francia Edición Especial 100 Años","category":"Francia","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta conmemorativa de la selección de Francia, edición especial 100 años.","available":true,"immediate":false,"badge":"","image":"assets/sin-id-08.jpg","imageBack":""},
-  {"id":"sin-id-12","number":"","name":"All Blacks Musculosa Alternativa","category":"Nueva Zelanda","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["entrenamiento"],"notes":"Musculosa alternativa de los All Blacks.","available":true,"immediate":false,"badge":"","image":"assets/sin-id-12.jpg","imageBack":""},
-  {"id":"sin-id-13","number":"","name":"Escocia Titular 23/24","category":"Escocia","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de la selección de Escocia, temporada 2023/24.","available":true,"immediate":false,"badge":"","image":"assets/sin-id-13.jpg","imageBack":""},
-  {"id":"sin-id-16","number":"","name":"Lions Entrenamiento Azul","category":"British & Irish Lions","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["entrenamiento"],"notes":"Remera de entrenamiento British & Irish Lions en azul.","available":true,"immediate":false,"badge":"","image":"assets/sin-id-16.jpg","imageBack":""},
-  {"id":"mr9h369r","number":"","name":"Northampton Saints 24/25","category":"Northampton Saints","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de Northampton Saints, temporada 2025/26.","available":true,"immediate":false,"badge":"","fitContain":false,"image":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357628873-camiseta-sin-identificar-11.jpg","imageBack":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357724793-camiseta-sin-identificar-11-espalda.jpg","imageExtra":""},
-  {"id":"mr9h652p","number":"","name":"Toulouse Alternativa 23/24","category":"Stade Toulousain","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta alternativa del Stade Toulousain, temporada 2023/24.","available":true,"immediate":false,"badge":"","fitContain":false,"image":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357766847-camiseta-sin-identificar-1.jpg","imageBack":""},
-  {"id":"mr9h71kj","number":"","name":"Toulouse Alternativa 24/25","category":"Stade Toulousain","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta alternativa del Stade Toulousain, temporada 2024/25.","available":true,"immediate":false,"badge":"","fitContain":false,"image":"https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357809294-camiseta-sin-identificar-17.jpg","imageBack":""},
-  {"id":"lions-camo-azul-musculosa","number":"","name":"Lions Camuflaje Azul — Musculosa","category":"British & Irish Lions","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Musculosa Canterbury edición \"Since 1888\", estampado camuflaje floral en tonos azules con degradé a negro. Auspicio Howden.","available":true,"immediate":false,"badge":"","image":"assets/IMG_2371-removebg-preview.png","imageBack":"assets/Lions_musculosa_azul_detras-removebg-preview.png","fitContain":true},
-  {"id":"lions-camo-azul-remera","number":"","name":"Lions Camuflaje Azul — Manga Corta","category":"British & Irish Lions","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Jersey Canterbury edición \"Since 1888\", estampado camuflaje floral en tonos azules con degradé a negro. Auspicio Howden. Escudo de los cuatro países bordado.","available":true,"immediate":false,"badge":"","image":"assets/IMG_2372-removebg-preview.png","imageBack":"assets/Lions_azul_detras-removebg-preview.png","fitContain":true},
-  {"id":"lions-camo-rojo-musculosa","number":"","name":"Lions Camuflaje Rojo — Musculosa","category":"British & Irish Lions","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Versión sin mangas del estampado camuflaje, en tonos rojos. Tela liviana Canterbury, auspicio Howden.","available":true,"immediate":false,"badge":"","image":"assets/IMG_2373-removebg-preview.png","imageBack":"assets/Lions_Musculosa_roja_detras-removebg-preview.png","fitContain":true},
-  {"id":"allblacks-retro","number":"","name":"All Blacks Retro","category":"Nueva Zelanda","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta alternativa de los All Blacks, diseño clásico.","available":true,"immediate":false,"badge":"","image":"assets/IMG_2381-removebg-preview.png","imageBack":"","fitContain":true},
-  {"id":"munster-alt","number":"","name":"Munster Alternativa","category":"Munster Rugby","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta alternativa de Munster Rugby en bordó, sponsor Bank of Ireland.","available":true,"immediate":false,"badge":"","fitContain":true,"image":"assets/Munster_alternativa-removebg-preview.png","imageBack":"assets/Munster_alternativa_detras-removebg-preview.png","imageExtra":""},
-  {"id":"francia-local","number":"","name":"Francia Local — Le Coq","category":"Francia","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de la selección de Francia, marca Le Coq Sportif.","available":true,"immediate":false,"badge":"","image":"assets/IMG_2394-removebg-preview.png","imageBack":"","fitContain":true},
-  {"id":"irlanda-blanca","number":"","name":"Irlanda Local Blanca","category":"Irlanda","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de la selección de Irlanda, versión blanca.","available":true,"immediate":false,"badge":"","image":"assets/IMG_2408-removebg-preview.png","imageBack":"","fitContain":true},
-  {"id":"allblacks-musculosa","number":"","name":"All Blacks Musculosa","category":"Nueva Zelanda","price":68000,"sizes":["S","M","L","XL","XXL"],"tipos":["entrenamiento"],"notes":"Musculosa alternativa de los All Blacks, ideal para entrenar o combinar.","available":true,"immediate":false,"badge":"","fitContain":true,"image":"assets/All_blacks_Musculosa-removebg-preview.png","imageBack":""},
-  {"id":"francia-alternativa","number":"","name":"Francia Alternativa","category":"Francia","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta alternativa de la selección de Francia. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","fitContain":false,"image":"assets/francia-alternativa.jpg","imageBack":"assets/francia-alternativa-detras.jpg"},
-  {"id":"francia-match25","number":"","name":"Francia Titular 25","category":"Francia","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de la selección de Francia, temporada 2025. Incluye frente y espalda.","available":true,"immediate":false,"badge":"","fitContain":false,"image":"assets/francia-match-25.jpg","imageBack":"assets/francia-match-25-detras.jpg"},
-  {"id":"sin-id-18","number":"","name":"Munster Titular 24/25","category":"Munster Rugby","price":70000,"sizes":["S","M","L","XL","XXL"],"tipos":["partido"],"notes":"Camiseta titular de Munster Rugby, temporada 2026.","available":true,"immediate":false,"badge":"","fitContain":false,"image":"assets/5f6648eb.jpg","imageBack":"assets/2c1b9cd2.jpg","imageExtra":""}
+  {
+    "id": "crusaders-01",
+    "number": "",
+    "name": "Crusaders Titular",
+    "category": "Crusaders",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de los Crusaders, el club más ganador del Super Rugby. Escudo bordado, corte deportivo.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/crusaders-01.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "crusaders-02",
+    "number": "",
+    "name": "Crusaders Oficial",
+    "category": "Crusaders",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Versión oficial de la camiseta de los Crusaders, con escudo y sponsors bordados. Incluye vista de espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/crusaders-02.jpg",
+    "imageBack": "assets/crusaders-02-espalda.jpg"
+  },
+  {
+    "id": "highlanders-01",
+    "number": "",
+    "name": "Highlanders Titular",
+    "category": "Highlanders",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de los Highlanders (Otago, Nueva Zelanda), en su clásico azul marino con detalles dorados.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/highlanders-01.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "highlanders-02",
+    "number": "",
+    "name": "Highlanders Oficial",
+    "category": "Highlanders",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Versión oficial de los Highlanders, escudo bordado. Incluye vista de frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/highlanders-02.jpg",
+    "imageBack": "assets/highlanders-02-espalda.jpg"
+  },
+  {
+    "id": "chiefs-01",
+    "number": "",
+    "name": "Chiefs Titular",
+    "category": "Chiefs",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de los Chiefs (Waikato, Nueva Zelanda). Incluye vista de frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/chiefs-01.jpg",
+    "imageBack": "assets/chiefs-01-espalda.jpg"
+  },
+  {
+    "id": "chiefs-02",
+    "number": "",
+    "name": "Chiefs Alternativa",
+    "category": "Chiefs",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Versión alternativa de los Chiefs. Incluye vista de frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/chiefs-02.jpg",
+    "imageBack": "assets/chiefs-02-espalda.jpg"
+  },
+  {
+    "id": "blues-01",
+    "number": "",
+    "name": "Blues Titular",
+    "category": "Blues",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de los Blues (Auckland, Nueva Zelanda), en azul característico. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/blues-01.jpg",
+    "imageBack": "assets/blues-01-espalda.jpg"
+  },
+  {
+    "id": "hurricanes-01",
+    "number": "",
+    "name": "Hurricanes Titular",
+    "category": "Hurricanes",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de los Hurricanes (Wellington, Nueva Zelanda). Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/hurricanes-01.jpg",
+    "imageBack": "assets/hurricanes-01-espalda.jpg"
+  },
+  {
+    "id": "hurricanes-02",
+    "number": "",
+    "name": "Hurricanes Alternativa",
+    "category": "Hurricanes",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Versión alternativa de los Hurricanes. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/hurricanes-02.jpg",
+    "imageBack": "assets/hurricanes-02-espalda.jpg"
+  },
+  {
+    "id": "irlanda-alt",
+    "number": "",
+    "name": "Irlanda Alternativa",
+    "category": "Irlanda",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de la selección de Irlanda. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/irlanda-alt.jpg",
+    "imageBack": "assets/irlanda-alt-espalda.jpg"
+  },
+  {
+    "id": "irlanda-match",
+    "number": "",
+    "name": "Irlanda Titular",
+    "category": "Irlanda",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Irlanda, temporada actual.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/irlanda-match.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "escocia-murrayfield",
+    "number": "",
+    "name": "Escocia Edición Especial Murrayfield",
+    "category": "Escocia",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Edición especial de Escocia conmemorativa de Murrayfield. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/escocia-murrayfield.jpg",
+    "imageBack": "assets/escocia-murrayfield-espalda.jpg"
+  },
+  {
+    "id": "escocia-lila",
+    "number": "",
+    "name": "Escocia Alternativa Lila",
+    "category": "Escocia",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Jersey Macron en lila, sponsor Arnold Clark, escudo del cardo bordado. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/escocia-lila.jpg",
+    "imageBack": "assets/escocia-lila-espalda.jpg"
+  },
+  {
+    "id": "escocia-titular",
+    "number": "",
+    "name": "Escocia Titular",
+    "category": "Escocia",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Escocia. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/escocia-titular.jpg",
+    "imageBack": "assets/escocia-titular-espalda.jpg"
+  },
+  {
+    "id": "wales-match",
+    "number": "",
+    "name": "Gales Titular",
+    "category": "Gales",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Gales, temporada actual.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/wales-match.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "england-match25",
+    "number": "",
+    "name": "Inglaterra Titular 25",
+    "category": "Inglaterra",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Inglaterra, temporada 2025.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/england-match25.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "england-match26",
+    "number": "",
+    "name": "Inglaterra Titular 26",
+    "category": "Inglaterra",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Inglaterra, temporada 2026.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/england-match26.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "england-gym",
+    "number": "",
+    "name": "Inglaterra Entrenamiento",
+    "category": "Inglaterra",
+    "price": 68500,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Remera de entrenamiento de la selección de Inglaterra.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/england-gym.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "allblacks-alt",
+    "number": "",
+    "name": "All Blacks Alternativa",
+    "category": "Nueva Zelanda",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de los All Blacks (Nueva Zelanda).",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/allblacks-alt.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "allblacks-match26",
+    "number": "",
+    "name": "All Blacks Titular 26",
+    "category": "Nueva Zelanda",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de los All Blacks, temporada 2026.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/allblacks-match26.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "springboks-match",
+    "number": "",
+    "name": "Springboks Titular",
+    "category": "Sudáfrica",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de los Springboks (Sudáfrica), campeones del mundo.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/springboks-match.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "springboks-alt",
+    "number": "",
+    "name": "Springboks Alternativa",
+    "category": "Sudáfrica",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de los Springboks.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/springboks-alt.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "wallabies-gym",
+    "number": "",
+    "name": "Wallabies Entrenamiento",
+    "category": "Australia",
+    "price": 68500,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Remera de entrenamiento de los Wallabies (selección de Australia).",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/wallabies-gym.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "northampton-2526",
+    "number": "",
+    "name": "Northampton Saints 25/26",
+    "category": "Northampton Saints",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de Northampton Saints, temporada 2025/26.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/northampton-2526.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "connacht-special",
+    "number": "",
+    "name": "Connacht Edición Especial",
+    "category": "Connacht Rugby",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Edición especial de Connacht Rugby. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/connacht-special.jpg",
+    "imageBack": "assets/connacht-special-espalda.jpg"
+  },
+  {
+    "id": "harlequins-gym",
+    "number": "",
+    "name": "Harlequins Entrenamiento",
+    "category": "Harlequins",
+    "price": 68500,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Remera de entrenamiento de Harlequins. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/harlequins-gym.jpg",
+    "imageBack": "assets/harlequins-gym-espalda.jpg"
+  },
+  {
+    "id": "harlequins-match",
+    "number": "",
+    "name": "Harlequins Titular",
+    "category": "Harlequins",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de Harlequins, temporada actual.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/harlequins-match.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "harlequins-alt",
+    "number": "",
+    "name": "Harlequins Alternativa",
+    "category": "Harlequins",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de Harlequins.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/harlequins-alt.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "toulouse-entreno",
+    "number": "",
+    "name": "Toulouse Entrenamiento",
+    "category": "Stade Toulousain",
+    "price": 68500,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Remera de entrenamiento del Stade Toulousain.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/toulouse-entreno.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "toulouse-match26",
+    "number": "",
+    "name": "Toulouse Titular 26",
+    "category": "Stade Toulousain",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular del Stade Toulousain, temporada 2026. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/toulouse-match26.jpg",
+    "imageBack": "assets/toulouse-match26-espalda.jpg"
+  },
+  {
+    "id": "munster-titular",
+    "number": "",
+    "name": "Munster Titular",
+    "category": "Munster Rugby",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de Munster Rugby, sponsor Bank of Ireland.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": true,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357512862-munster-titular.png",
+    "imageBack": ""
+  },
+  {
+    "id": "polo-springboks",
+    "number": "",
+    "name": "Polo Springboks",
+    "category": "Polos",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "polo"
+    ],
+    "notes": "Polo oficial de los Springboks, ideal para uso casual.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "assets/polo-springboks.jpg",
+    "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783353497348-polo-springboks-espalda.jpg"
+  },
+  {
+    "id": "chomba-springboks",
+    "number": "",
+    "name": "Chomba Springboks",
+    "category": "Polos",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "polo"
+    ],
+    "notes": "Chomba oficial de los Springboks, tela piqué, ideal para uso diario.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/chomba-springboks.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "wallabies-match",
+    "number": "",
+    "name": "Wallabies Titular",
+    "category": "Australia",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de los Wallabies (Australia), sponsor Cadbury, marca Castore con motivo aborigen en las mangas. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/wallabies-match.jpg",
+    "imageBack": "assets/wallabies-match-espalda.jpg"
+  },
+  {
+    "id": "wallaroos-match",
+    "number": "",
+    "name": "Wallaroos Titular",
+    "category": "Australia",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de las Wallaroos (selección femenina de Australia), sponsor Santos, motivo aborigen. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/wallaroos-match.jpg",
+    "imageBack": "assets/wallaroos-match-espalda.jpg"
+  },
+  {
+    "id": "northampton-away",
+    "number": "",
+    "name": "Northampton Saints Alternativa",
+    "category": "Northampton Saints",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de Northampton Saints, rayas blanco y verde, sponsor cinch, marca Macron.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/northampton-away.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "springboks-heritage",
+    "number": "",
+    "name": "Springboks Heritage",
+    "category": "Sudáfrica",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta clásica de los Springboks con cuello polo, sponsor MTN, marca Nike.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/springboks-heritage.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "lions-short-2",
+    "number": "",
+    "name": "Short British & Irish Lions",
+    "category": "British & Irish Lions",
+    "price": 65000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Short oficial British & Irish Lions, azul marino, escudo bordado \"Since 1888\".",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": true,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357088157-camiseta-sin-identificar-10.png",
+    "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356791172-short-british-irish-lions.png",
+    "imageExtra": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356841363-prenda-a-confirmar-1.png"
+  },
+  {
+    "id": "sin-id-02",
+    "number": "",
+    "name": "Toulouse Auvergne 22-23",
+    "category": "Stade Toulousain",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta del Stade Toulousain, temporada 2022-23, edición Auvergne.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357067108-camiseta-sin-identificar-2.jpg",
+    "imageBack": "assets/sin-id-02-espalda.jpg"
+  },
+  {
+    "id": "sin-id-03",
+    "number": "",
+    "name": "Toulouse Galaxy 22-23",
+    "category": "Stade Toulousain",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta del Stade Toulousain, temporada 2022-23, edición Galaxy.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-03.jpg",
+    "imageBack": "assets/sin-id-03-espalda.jpg"
+  },
+  {
+    "id": "sin-id-04",
+    "number": "",
+    "name": "Bath Titular 2026",
+    "category": "Bath Rugby",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de Bath Rugby, temporada 2026.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-04.jpg",
+    "imageBack": "assets/sin-id-04-espalda.jpg"
+  },
+  {
+    "id": "sin-id-05",
+    "number": "",
+    "name": "Lions Clásica Roja",
+    "category": "British & Irish Lions",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Jersey clásica British & Irish Lions en rojo, escudo de los cuatro países bordado \"Since 1888\".",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-05.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-06",
+    "number": "",
+    "name": "Lions Polo Rojo",
+    "category": "Polos",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "polo"
+    ],
+    "notes": "Polo oficial British & Irish Lions en rojo.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-06.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-07",
+    "number": "",
+    "name": "Lions Entrenamiento Verde",
+    "category": "British & Irish Lions",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Remera de entrenamiento British & Irish Lions en verde.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-07.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "prenda-fisica-02",
+    "number": "",
+    "name": "Lions Short Blanco",
+    "category": "British & Irish Lions",
+    "price": 65000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "Short oficial British & Irish Lions en blanco.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": true,
+    "image": "assets/lions-short-blanco-frente.png",
+    "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356906497-prenda-a-confirmar-2.png",
+    "imageExtra": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356921529-prenda-a-confirmar-3.png"
+  },
+  {
+    "id": "prenda-fisica-04",
+    "number": "",
+    "name": "Lions 2021 Verde",
+    "category": "British & Irish Lions",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta British & Irish Lions de la gira 2021, en verde.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": true,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357487527-prenda-a-confirmar-4.png",
+    "imageBack": ""
+  },
+  {
+    "id": "prenda-fisica-05",
+    "number": "",
+    "name": "All Blacks Edición Especial 25 Años",
+    "category": "Nueva Zelanda",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta conmemorativa de los All Blacks, edición especial 25 años.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": true,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356952459-prenda-a-confirmar-5.png",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-08",
+    "number": "",
+    "name": "Francia Edición Especial 100 Años",
+    "category": "Francia",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta conmemorativa de la selección de Francia, edición especial 100 años.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-08.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-12",
+    "number": "",
+    "name": "All Blacks Musculosa Alternativa",
+    "category": "Nueva Zelanda",
+    "price": 68500,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Musculosa alternativa de los All Blacks.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-12.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-13",
+    "number": "",
+    "name": "Escocia Titular 23/24",
+    "category": "Escocia",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Escocia, temporada 2023/24.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-13.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "sin-id-16",
+    "number": "",
+    "name": "Lions Entrenamiento Azul",
+    "category": "British & Irish Lions",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Remera de entrenamiento British & Irish Lions en azul.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/sin-id-16.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "mr9h369r",
+    "number": "",
+    "name": "Northampton Saints 24/25",
+    "category": "Northampton Saints",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de Northampton Saints, temporada 2025/26.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357628873-camiseta-sin-identificar-11.jpg",
+    "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357724793-camiseta-sin-identificar-11-espalda.jpg",
+    "imageExtra": ""
+  },
+  {
+    "id": "mr9h652p",
+    "number": "",
+    "name": "Toulouse Alternativa 23/24",
+    "category": "Stade Toulousain",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa del Stade Toulousain, temporada 2023/24.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357766847-camiseta-sin-identificar-1.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "mr9h71kj",
+    "number": "",
+    "name": "Toulouse Alternativa 24/25",
+    "category": "Stade Toulousain",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa del Stade Toulousain, temporada 2024/25.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357809294-camiseta-sin-identificar-17.jpg",
+    "imageBack": ""
+  },
+  {
+    "id": "lions-camo-azul-musculosa",
+    "number": "",
+    "name": "Lions Camuflaje Azul — Musculosa",
+    "category": "British & Irish Lions",
+    "price": 68500,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Musculosa Canterbury edición \"Since 1888\", estampado camuflaje floral en tonos azules con degradé a negro. Auspicio Howden.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2371-removebg-preview.png",
+    "imageBack": "assets/Lions_musculosa_azul_detras-removebg-preview.png",
+    "fitContain": true
+  },
+  {
+    "id": "lions-camo-azul-remera",
+    "number": "",
+    "name": "Lions Camuflaje Azul — Manga Corta",
+    "category": "British & Irish Lions",
+    "price": 68500,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Jersey Canterbury edición \"Since 1888\", estampado camuflaje floral en tonos azules con degradé a negro. Auspicio Howden. Escudo de los cuatro países bordado.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2372-removebg-preview.png",
+    "imageBack": "assets/Lions_azul_detras-removebg-preview.png",
+    "fitContain": true
+  },
+  {
+    "id": "lions-camo-rojo-musculosa",
+    "number": "",
+    "name": "Lions Camuflaje Rojo — Musculosa",
+    "category": "British & Irish Lions",
+    "price": 68500,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Versión sin mangas del estampado camuflaje, en tonos rojos. Tela liviana Canterbury, auspicio Howden.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2373-removebg-preview.png",
+    "imageBack": "assets/Lions_Musculosa_roja_detras-removebg-preview.png",
+    "fitContain": true
+  },
+  {
+    "id": "allblacks-retro",
+    "number": "",
+    "name": "All Blacks Retro",
+    "category": "Nueva Zelanda",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de los All Blacks, diseño clásico.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2381-removebg-preview.png",
+    "imageBack": "",
+    "fitContain": true
+  },
+  {
+    "id": "munster-alt",
+    "number": "",
+    "name": "Munster Alternativa",
+    "category": "Munster Rugby",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de Munster Rugby en bordó, sponsor Bank of Ireland.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": true,
+    "image": "assets/Munster_alternativa-removebg-preview.png",
+    "imageBack": "assets/Munster_alternativa_detras-removebg-preview.png",
+    "imageExtra": ""
+  },
+  {
+    "id": "francia-local",
+    "number": "",
+    "name": "Francia Local — Le Coq",
+    "category": "Francia",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Francia, marca Le Coq Sportif.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2394-removebg-preview.png",
+    "imageBack": "",
+    "fitContain": true
+  },
+  {
+    "id": "irlanda-blanca",
+    "number": "",
+    "name": "Irlanda Local Blanca",
+    "category": "Irlanda",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Irlanda, versión blanca.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "image": "assets/IMG_2408-removebg-preview.png",
+    "imageBack": "",
+    "fitContain": true
+  },
+  {
+    "id": "allblacks-musculosa",
+    "number": "",
+    "name": "All Blacks Musculosa",
+    "category": "Nueva Zelanda",
+    "price": 68500,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "entrenamiento"
+    ],
+    "notes": "Musculosa alternativa de los All Blacks, ideal para entrenar o combinar.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": true,
+    "image": "assets/All_blacks_Musculosa-removebg-preview.png",
+    "imageBack": ""
+  },
+  {
+    "id": "francia-alternativa",
+    "number": "",
+    "name": "Francia Alternativa",
+    "category": "Francia",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta alternativa de la selección de Francia. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "assets/francia-alternativa.jpg",
+    "imageBack": "assets/francia-alternativa-detras.jpg"
+  },
+  {
+    "id": "francia-match25",
+    "number": "",
+    "name": "Francia Titular 25",
+    "category": "Francia",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de la selección de Francia, temporada 2025. Incluye frente y espalda.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "assets/francia-match-25.jpg",
+    "imageBack": "assets/francia-match-25-detras.jpg"
+  },
+  {
+    "id": "sin-id-18",
+    "number": "",
+    "name": "Munster Titular 24/25",
+    "category": "Munster Rugby",
+    "price": 75000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "tipos": [
+      "partido"
+    ],
+    "notes": "Camiseta titular de Munster Rugby, temporada 2026.",
+    "available": true,
+    "immediate": false,
+    "badge": "",
+    "fitContain": false,
+    "image": "assets/5f6648eb.jpg",
+    "imageBack": "assets/2c1b9cd2.jpg",
+    "imageExtra": ""
+  }
 ]
