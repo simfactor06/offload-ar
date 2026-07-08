@@ -217,6 +217,9 @@
   .card-cat{font-family:'Space Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:var(--muted);}
   .card-name{font-family:'Anton', sans-serif; font-size:18px; line-height:1.15;}
   .card-price{font-family:'Space Mono', monospace; font-weight:700; font-size:16px; margin-top:auto; padding-top:8px;}
+  .price-old{text-decoration:line-through; color:var(--muted); font-weight:400; font-size:.85em;}
+  .price-sale{color:var(--red); font-weight:700;}
+  .badge-descuento{background:var(--red); color:var(--bone); font-family:'Space Mono', monospace; font-size:9px; text-transform:uppercase; letter-spacing:.06em; padding:4px 9px; border-radius:999px;}
   .empty{grid-column:1/-1; padding:8vh 2vw; text-align:center; color:var(--muted); font-family:'Space Mono', monospace; text-transform:uppercase; letter-spacing:.08em; font-size:13px; background:var(--bone);}
   .stock-note{
     font-size:13px; color:var(--muted); line-height:1.6; margin:-16px 0 26px;
@@ -582,6 +585,14 @@
 
   /* ---------- helpers ---------- */
   function money(n){ return '$' + Number(n).toLocaleString('es-AR'); }
+  function hasDiscount(p){ return p.salePrice && Number(p.salePrice) > 0 && Number(p.salePrice) < Number(p.price); }
+  function effectivePrice(p){ return hasDiscount(p) ? Number(p.salePrice) : Number(p.price); }
+  function priceHtml(p){
+    if(hasDiscount(p)){
+      return `<span class="price-old">${money(p.price)}</span> <span class="price-sale">${money(p.salePrice)}</span>`;
+    }
+    return money(p.price);
+  }
 
   function waLink(text){
     const num = (CONFIG.whatsappNumber || '').replace(/\D/g,'');
@@ -664,7 +675,8 @@
 
   function renderDestacados(){
     updateDestPerView();
-    destItems = PRODUCTS.filter(p => p.image).slice(0, 10);
+    const marcados = PRODUCTS.filter(p => p.featured && p.image);
+    destItems = marcados.length ? marcados : PRODUCTS.filter(p => p.image).slice(0, 10);
     const track = document.getElementById('destTrack');
     const dots = document.getElementById('destDots');
 
@@ -680,7 +692,7 @@
         <div class="dest-body">
           <span class="dest-tag">${p.category || 'Rugby'}</span>
           <div class="dest-name">${p.name}</div>
-          <div class="dest-price">${money(p.price)}</div>
+          <div class="dest-price">${priceHtml(p)}</div>
           <span class="dest-btn">Ver detalle</span>
         </div>
       </button>
@@ -784,9 +796,10 @@
     const media = p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy">` : `<div class="no-photo">Foto próximamente</div>`;
     const sold = p.available === false ? `<div class="sold-badge">Agotada</div>` : '';
     const b = badgeLabel(p.badge);
-    const topRight = (p.immediate || b) ? `
+    const topRight = (p.immediate || b || hasDiscount(p)) ? `
       <div class="badges-topright">
         ${p.immediate ? `<span class="stock-badge">Stock ya</span>` : ''}
+        ${hasDiscount(p) ? `<span class="badge-descuento">Descuento</span>` : ''}
         ${b ? `<span class="${b.cls}">${b.text}</span>` : ''}
       </div>` : '';
     return `
@@ -800,7 +813,7 @@
         <div class="card-body">
           <div class="card-cat">${p.category || ''}</div>
           <div class="card-name">${p.name}</div>
-          <div class="card-price">${money(p.price)}</div>
+          <div class="card-price">${priceHtml(p)}</div>
         </div>
       </button>`;
   }
@@ -875,7 +888,7 @@
           ${p.immediate ? `<span class="stock-badge" style="margin-left:8px;">Stock ya</span>` : ''}
           ${(() => { const b = badgeLabel(p.badge); return b ? `<span class="${b.cls}" style="margin-left:8px;">${b.text}</span>` : ''; })()}
           <h1 class="product-name">${p.name}</h1>
-          <div class="product-price">${money(p.price)}</div>
+          <div class="product-price">${priceHtml(p)}</div>
           <p class="product-desc">${p.notes || ''}</p>
           ${sizeBlock}
           <div class="field-label">Cantidad</div>
@@ -953,7 +966,7 @@
     const rows = cart.map((item, idx) => {
       const p = PRODUCTS.find(x => x.id === item.id);
       if(!p) return '';
-      const lineTotal = p.price * item.qty;
+      const lineTotal = effectivePrice(p) * item.qty;
       total += lineTotal;
       const media = p.image ? `<img src="${p.image}" alt="${p.name}">` : `<div class="noimg">sin foto</div>`;
       return `
@@ -961,7 +974,7 @@
           ${media}
           <div class="info">
             <div class="name">${p.name}</div>
-            <div class="meta">Talle ${item.size} · ${money(p.price)} c/u</div>
+            <div class="meta">Talle ${item.size} · ${money(effectivePrice(p))} c/u</div>
             <div class="qty-row">
               <button class="qty-btn" onclick="cartChangeQty(${idx}, -1)">–</button>
               <span class="qty-value">${item.qty}</span>
@@ -1002,7 +1015,7 @@
     const lines = cart.map(item => {
       const p = PRODUCTS.find(x => x.id === item.id);
       if(!p) return '';
-      const lineTotal = p.price * item.qty;
+      const lineTotal = effectivePrice(p) * item.qty;
       total += lineTotal;
       return `- ${p.name} (talle ${item.size}) x${item.qty} — ${money(lineTotal)}`;
     }).join('\n');
@@ -1051,5 +1064,8 @@
 
   init();
 </script>
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f817f8b3790c48bebf2ca2887cf57766"}'></script>
+<!-- End Cloudflare Web Analytics -->
 </body>
 </html>
