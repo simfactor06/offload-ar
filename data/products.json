@@ -1076,11 +1076,13 @@
     "notes": "Polo oficial British & Irish Lions en rojo.",
     "available": true,
     "immediate": false,
+    "featured": true,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/sin-id-06.jpg",
     "imageBack": "",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "sin-id-07",
