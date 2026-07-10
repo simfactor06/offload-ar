@@ -432,7 +432,8 @@
   @media (max-width:640px){
     header{padding:14px 5vw; flex-wrap:wrap;}
     .brand-text span{display:none;}
-    nav{order:3; width:100%; justify-content:flex-start; overflow-x:auto; padding-top:10px; border-top:1px solid var(--line); margin-top:10px; -webkit-overflow-scrolling:touch;}
+    nav{order:3; width:100%; justify-content:flex-start; flex-wrap:nowrap; overflow-x:auto; padding-top:10px; border-top:1px solid var(--line); margin-top:10px; -webkit-overflow-scrolling:touch;}
+    .navlink, .cart-btn{flex-shrink:0;}
     .filters{position:static; top:auto;}
     .hero-actions .btn{flex:1 1 auto; text-align:center;}
     table.sizes{font-size:12px;}
