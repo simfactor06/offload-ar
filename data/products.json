@@ -1413,13 +1413,14 @@
     ],
     "notes": "Jersey Canterbury edición \"Since 1888\", estampado camuflaje floral en tonos azules con degradé a negro. Auspicio Howden. Escudo de los cuatro países bordado.",
     "available": true,
-    "immediate": false,
+    "immediate": true,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
+    "fitContain": true,
     "image": "assets/IMG_2372-removebg-preview.png",
     "imageBack": "assets/Lions_azul_detras-removebg-preview.png",
-    "fitContain": true,
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "lions-camo-rojo-musculosa",
