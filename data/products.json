@@ -523,12 +523,14 @@
     ],
     "notes": "Camiseta titular de los Springboks (Sudáfrica), campeones del mundo.",
     "available": true,
-    "immediate": false,
+    "immediate": true,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/springboks-match.jpg",
     "imageBack": "",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "springboks-alt",
