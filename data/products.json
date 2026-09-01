@@ -1569,7 +1569,7 @@
     "number": "",
     "name": "All Blacks Musculosa",
     "category": "Nueva Zelanda",
-    "price": 68500,
+    "price": 70000,
     "sizes": [
       "S",
       "M",
@@ -1583,12 +1583,13 @@
     "notes": "Musculosa alternativa de los All Blacks, ideal para entrenar o combinar.",
     "available": true,
     "immediate": false,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
     "fitContain": true,
     "image": "assets/All_blacks_Musculosa-removebg-preview.png",
     "imageBack": "",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "francia-alternativa",
