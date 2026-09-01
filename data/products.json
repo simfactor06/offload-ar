@@ -947,7 +947,7 @@
     "number": "",
     "name": "Short British & Irish Lions",
     "category": "British & Irish Lions",
-    "price": 65000,
+    "price": 70000,
     "sizes": [
       "S",
       "M",
@@ -960,13 +960,13 @@
     "notes": "Short oficial British & Irish Lions, azul marino, escudo bordado \"Since 1888\".",
     "available": true,
     "immediate": false,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
     "fitContain": true,
     "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783357088157-camiseta-sin-identificar-10.png",
     "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356791172-short-british-irish-lions.png",
-    "imageExtra": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356841363-prenda-a-confirmar-1.png",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356841363-prenda-a-confirmar-1.png"
   },
   {
     "id": "sin-id-02",
