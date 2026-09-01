@@ -726,11 +726,13 @@
     "notes": "Remera de entrenamiento del Stade Toulousain.",
     "available": true,
     "immediate": false,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/toulouse-entreno.jpg",
     "imageBack": "",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "toulouse-match26",
