@@ -321,12 +321,14 @@
     ],
     "notes": "Jersey Macron en lila, sponsor Arnold Clark, escudo del cardo bordado. Incluye frente y espalda.",
     "available": true,
-    "immediate": false,
+    "immediate": true,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/escocia-lila.jpg",
     "imageBack": "assets/escocia-lila-espalda.jpg",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "escocia-titular",
