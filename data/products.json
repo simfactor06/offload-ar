@@ -1672,5 +1672,29 @@
     "imageExtra": "",
     "featured": false,
     "salePrice": ""
+  },
+  {
+    "id": "mtipvxhj",
+    "number": "",
+    "name": "Short Pumas Nike Match",
+    "category": "Pumas",
+    "price": 70000,
+    "sizes": [
+      "L",
+      "XL"
+    ],
+    "tipos": [
+      "shorts"
+    ],
+    "notes": "",
+    "available": true,
+    "immediate": true,
+    "featured": false,
+    "salePrice": "",
+    "badge": "",
+    "fitContain": false,
+    "image": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1788270161223-short-pumas-nike-match.jpeg",
+    "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1788270165899-short-pumas-nike-match-espalda.jpeg",
+    "imageExtra": ""
   }
 ]
