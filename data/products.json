@@ -1437,7 +1437,7 @@
     "number": "",
     "name": "Lions Camuflaje Rojo — Musculosa",
     "category": "British & Irish Lions",
-    "price": 68500,
+    "price": 70000,
     "sizes": [
       "S",
       "M",
@@ -1451,12 +1451,13 @@
     "notes": "Versión sin mangas del estampado camuflaje, en tonos rojos. Tela liviana Canterbury, auspicio Howden.",
     "available": true,
     "immediate": false,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
+    "fitContain": true,
     "image": "assets/IMG_2373-removebg-preview.png",
     "imageBack": "assets/Lions_Musculosa_roja_detras-removebg-preview.png",
-    "fitContain": true,
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "allblacks-retro",
