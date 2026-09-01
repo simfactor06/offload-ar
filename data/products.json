@@ -564,7 +564,7 @@
     "number": "",
     "name": "Wallabies Entrenamiento",
     "category": "Australia",
-    "price": 68500,
+    "price": 70000,
     "sizes": [
       "S",
       "M",
@@ -578,11 +578,13 @@
     "notes": "Remera de entrenamiento de los Wallabies (selección de Australia).",
     "available": true,
     "immediate": false,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/wallabies-gym.jpg",
     "imageBack": "",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "northampton-2526",
