@@ -1452,7 +1452,7 @@
     ],
     "notes": "Versión sin mangas del estampado camuflaje, en tonos rojos. Tela liviana Canterbury, auspicio Howden.",
     "available": true,
-    "immediate": false,
+    "immediate": true,
     "featured": false,
     "salePrice": "",
     "badge": "",
