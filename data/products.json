@@ -1126,7 +1126,7 @@
     "number": "",
     "name": "Lions Short Blanco",
     "category": "British & Irish Lions",
-    "price": 65000,
+    "price": 70000,
     "sizes": [
       "S",
       "M",
@@ -1139,13 +1139,13 @@
     "notes": "Short oficial British & Irish Lions en blanco.",
     "available": true,
     "immediate": false,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
     "fitContain": true,
     "image": "assets/lions-short-blanco-frente.png",
     "imageBack": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356906497-prenda-a-confirmar-2.png",
-    "imageExtra": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356921529-prenda-a-confirmar-3.png",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": "https://raw.githubusercontent.com/simfactor06/offload-ar/main/images/1783356921529-prenda-a-confirmar-3.png"
   },
   {
     "id": "prenda-fisica-04",
