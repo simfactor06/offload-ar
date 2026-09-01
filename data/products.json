@@ -760,7 +760,7 @@
     ],
     "notes": "Camiseta titular del Stade Toulousain, temporada 2026. Incluye frente y espalda.",
     "available": true,
-    "immediate": false,
+    "immediate": true,
     "featured": true,
     "salePrice": "",
     "badge": "",
