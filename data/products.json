@@ -433,7 +433,7 @@
     "number": "",
     "name": "Inglaterra Entrenamiento",
     "category": "Inglaterra",
-    "price": 68500,
+    "price": 70000,
     "sizes": [
       "S",
       "M",
@@ -447,11 +447,13 @@
     "notes": "Remera de entrenamiento de la selección de Inglaterra.",
     "available": true,
     "immediate": false,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/england-gym.jpg",
     "imageBack": "",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "allblacks-alt",
