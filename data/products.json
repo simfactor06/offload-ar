@@ -641,7 +641,7 @@
     "number": "",
     "name": "Harlequins Entrenamiento",
     "category": "Harlequins",
-    "price": 68500,
+    "price": 70000,
     "sizes": [
       "S",
       "M",
@@ -655,11 +655,13 @@
     "notes": "Remera de entrenamiento de Harlequins. Incluye frente y espalda.",
     "available": true,
     "immediate": false,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/harlequins-gym.jpg",
     "imageBack": "assets/harlequins-gym-espalda.jpg",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "harlequins-match",
