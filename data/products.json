@@ -631,12 +631,14 @@
     ],
     "notes": "Edición especial de Connacht Rugby. Incluye frente y espalda.",
     "available": true,
-    "immediate": false,
+    "immediate": true,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/connacht-special.jpg",
     "imageBack": "assets/connacht-special-espalda.jpg",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "harlequins-gym",
