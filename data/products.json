@@ -839,12 +839,14 @@
     ],
     "notes": "Chomba oficial de los Springboks, tela piqué, ideal para uso diario.",
     "available": true,
-    "immediate": false,
+    "immediate": true,
+    "featured": true,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/chomba-springboks.jpg",
     "imageBack": "",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "wallabies-match",
