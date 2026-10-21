@@ -1424,8 +1424,8 @@
       "entrenamiento"
     ],
     "notes": "Jersey Canterbury edición \"Since 1888\", estampado camuflaje floral en tonos azules con degradé a negro. Auspicio Howden. Escudo de los cuatro países bordado.",
-    "available": true,
-    "immediate": true,
+    "available": false,
+    "immediate": false,
     "featured": false,
     "salePrice": "",
     "badge": "",
