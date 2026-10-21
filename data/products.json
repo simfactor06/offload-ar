@@ -191,8 +191,8 @@
       "partido"
     ],
     "notes": "Camiseta titular de los Hurricanes (Wellington, Nueva Zelanda). Incluye frente y espalda.",
-    "available": true,
-    "immediate": true,
+    "available": false,
+    "immediate": false,
     "featured": false,
     "salePrice": "",
     "badge": "",
