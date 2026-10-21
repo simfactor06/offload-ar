@@ -475,12 +475,14 @@
     ],
     "notes": "Camiseta alternativa de los All Blacks (Nueva Zelanda).",
     "available": true,
-    "immediate": false,
+    "immediate": true,
+    "featured": false,
+    "salePrice": "",
     "badge": "",
+    "fitContain": false,
     "image": "assets/allblacks-alt.jpg",
     "imageBack": "",
-    "featured": false,
-    "salePrice": ""
+    "imageExtra": ""
   },
   {
     "id": "allblacks-match26",
